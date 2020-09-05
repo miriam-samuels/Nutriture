@@ -1,0 +1,808 @@
+head , body {
+  height: 100%;
+}
+body{
+  font-family: Poppins;
+  font-style: normal;
+  background-color: rgb(253, 253, 253);
+  color: #16323E;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+:focus{
+  outline: none;
+}
+  /* 
+  ========================
+      HeroBg section
+  ========================
+   */
+#heroBg{
+  margin: 0;
+  background-color: #20495B;
+  position: relative;
+  display: block;
+}
+#heroBg .union{
+  position: absolute;
+  width: 28.82px;
+  opacity: 70%;
+}
+#heroBg .union1{
+  right: 8%;
+  top: 50%;
+}
+#heroBg .union2{
+  right: 4%;
+  bottom: 20%;
+}
+#heroBg .union3{
+  right: 10%;
+  top: 10%;  
+}
+#heroBg .union4{
+  left: 1%;
+  bottom: 0%; 
+}
+#heroBg .union5{
+  left: 50%;
+  bottom: 10%;  
+}
+#heroBg .union6{
+  left: 10%;
+  top: 25%;  
+}
+#heroBg .navBar {
+  background-color: #fff;
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+#heroBg .navBar img {
+  width: 70px;
+  height: 46px;
+  position: absolute;
+  left: 1%;
+}
+#heroBg .navBar ul{
+  list-style: none;
+  padding: 0;
+}
+#heroBg .navBar .navItem{
+  display: none;
+}
+#heroBg .navBar .login{
+  position: absolute;
+  right: 3%;
+}
+#heroBg .navBar button{
+  margin: 0 0 0 20px;
+  font-family: poppins;
+  width: 87px;
+  height: 35px;
+  background-color: #20495B;
+  color: #fff;
+  border: transparent;
+  border-radius: 25px;
+}
+#heroBg .navBar button a{
+  text-decoration: none;
+  color: #fff;
+}
+#heroBg .heroContent{
+  position: relative;
+  height: 500px;
+}
+#heroBg .heroContent .heroWords{
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+#heroBg .heroContent .heroWords h2{
+  margin-top: 3em;
+  color: #fff;
+  line-height: 35px;
+}
+#heroBg .heroContent .heroWords p{
+  color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+#heroBg .heroContent .heroWords button{
+  width: 105px;
+  height: 40px;
+  background-color: #fff;
+  border: transparent;
+  border-radius: 25px;
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 14px;
+}
+#heroBg .heroContent .heroImg{
+  width:80%;
+  margin: auto;
+}
+#heroBg .heroContent .heroImg .hero2{
+  width: 100%;
+  margin: 20px 0px;
+}
+#heroBg .heroContent .heroImg .hero1{
+  display: none;
+}
+  /* 
+  ======================
+        Why section
+  ======================
+   */
+#why{
+  position: relative;
+  box-shadow: 1px 1px 10px 1px #D8D8D8;
+  padding: 2em 0;
+  width: 100%;
+  margin: auto;
+}
+#why .whyImg {
+  display: none;
+ }
+ #why .whyWords{
+  text-align: center;
+  padding: 0em 1em;
+ }
+ #why .whyWords h3{
+  font-weight: 500; 
+  font-size: 25px;
+  line-height: 48px;
+
+ }
+ #why .whyWords p{
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+ }
+ #why .whyWords li{
+  display: inline-block;
+  width: 120px;
+  margin: 10px 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+ }
+ #why .whyWords ul li::before {
+  content: "\2021";
+  font-weight: bolder;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+#why .union7{
+  position: absolute;
+  width: 40.44px;
+  left: 7%;
+  bottom:25%;
+  opacity: 70%;
+  }
+  #why .union8{
+    position: absolute;
+  width: 40.83px;
+  right: 7%;
+  top: 7%;
+  opacity: 70%;
+  }
+  /* 
+  =========================
+       Who section
+  =========================
+   */
+#who{
+  position: relative;
+  background-color: #F4F9FB;
+  padding:2em 0;
+  text-align: center;
+ }
+.whoWords{
+  width: 90%;
+  text-align: left;
+  padding: 0 1em;
+}
+#who .whoWords h3{
+  font-weight: 500;
+  line-height: 48px;
+  font-size: 25px;
+ }
+ #who .whoWords p{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+ }
+ #who button{
+  display: inline-block;
+  font-family: poppins;
+  margin:10px;
+  padding: 10px 0;
+  width: 110px;
+  border: transparent;
+  border-radius: 10px;
+  background-color: #02BE75;
+  color: white;
+  box-shadow: 1px 1px 10px 1px #E9E9E9;
+
+ }
+ #who .union9{
+  position: absolute;
+  width: 28.03px;
+  height: 27.3px;
+  right: 10%;
+  top: 20%;
+}
+#who .union10{
+  position: absolute;
+  width: 28.03px;
+  height: 27.3px;
+  left: 1%;
+  bottom: 0%;
+}
+/* 
+==============================
+    Health Wallet section
+==============================
+ */
+ #healthWallet{
+  margin: auto;
+  text-align: center;
+  padding: 2em 1em;
+}
+#healthWallet .walletWords{
+  width: 95%;
+  text-align: left;
+}
+#healthWallet .walletWords h3{
+  font-weight: 500;
+  line-height: 48px;
+  font-size: 25px;
+ }
+ #healthWallet .walletWords p{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+ }
+ #healthWallet  .healthTabs .tabs{
+  height: 220px;
+  padding: 34px 20px;
+  background-color: #F4F9FB;
+  margin:20px 10px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  box-shadow: 1px 1px 8px 1px #D8D8D8;
+ }
+ #healthWallet  .healthTabs .tabs img{
+  width: 60px;
+  height: 60px;
+ }
+ #healthWallet .healthTabs .tabs b{
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+ }
+ #healthWallet .healthTabs .tabs p{
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+ }
+ /* 
+  ===============================
+         Benefits section 
+  ===============================
+    */
+#benefits{
+  background-color: #F4F9FB;
+      position: relative;
+      padding:2em 1em ;
+    }
+    #benefits .ellipse{
+      display: none;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      margin: 0;
+      padding: 0;
+    }
+    #benefits .benefitWords{
+      width: 90%;
+    }
+    #benefits .benefitWords h3{
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 48px;
+    }
+    #benefits .benefitWords p{
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    #benefits .benefitBtns{
+      text-align: center;
+    } 
+    #benefits .benefitBtns button{
+      width: 225px;
+      height: 55px;
+      border: transparent;
+      border-radius: 35px;
+      background-color: #02BE75;
+      color: #fff;
+      font-family: poppins;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 30px 10px 5px 10px;
+    }
+    #who .union10{
+      position: absolute;
+      width: 28.03px;
+      height: 27.3px;
+      left: 100.98px;
+      bottom: 10%;
+    }
+    #benefits .union11{
+      position: absolute;
+      width: 28.03px;
+      height: 27.3px;
+      left: 10%;
+      bottom: 20%;
+    }
+    #benefits .union12{
+      position: absolute;
+      width: 28.03px;
+      height: 27.3px;
+      left: 100.98px;
+      bottom: 12%;
+    }
+    #benefits .union13{
+      position: absolute;
+      width: 28.03px;
+      height: 27.3px;
+      left: 10%;
+    }
+/* 
+  ==============================
+     Resources section
+  ==============================
+   */
+   #resources{
+    margin: auto;
+    padding: 2em 1em;
+  }
+  #resources .resourcesWords{
+    width: 95%;
+  }
+  #resources .resourcesWords h3{
+   font-weight: 500;
+   font-size: 25px;
+   line-height: 48px;
+  }
+  #resources .resourcesWords p{
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 24px;
+  }
+  #resources  .resourcesTabs{
+   text-align: center;
+   margin: 2em 0;
+  }
+  #resources .resourcesTabs .tab{
+    display: inline-block;
+    height: 220px;
+    background-color: #20495B;
+    color: #fff;
+    margin: 20px 0;
+    padding:25px 15px 18px 15px;
+    vertical-align: top;
+    box-shadow: 1px 1px 10px 1px #D8D8D8;
+  }
+  #resources .resourcesTabs .tab b{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #resources .resourcesTabs .tab p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #resources .resourcesTabs .tab button{
+    float: right;
+    width: 50px;
+    height: 50px;
+    background-color: #02BE75;
+    color: #fff;
+    border: transparent;
+    border-radius: 30px;
+    font-size: 30px;
+    margin: 5px 20px;
+  }
+  /* 
+  ============================
+       Agent section
+  ============================
+   */
+   #agent{
+    position: relative;
+    padding: 2em 1em;
+    background-color: #F4F9FB;
+  }
+  #agent .agentImg {
+   text-align: center;
+   width: 45%;
+   display: none;
+  }
+  #agent .agentImg img {
+   width: 400px;
+   height: 350px;
+  }
+  #agent .agentWords{
+   width: 95%;
+  }
+  #agent .agentWords h3{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 48px;
+   }
+   #agent .agentWords p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+   }
+   #agent .agentWords button{
+     background-color: #20495B;
+     color: #fff;
+     width: 124px;
+     height: 42px;
+     border: transparent;
+     border-radius: 30px;
+     font-family: poppins;
+   }
+/* 
+  =========================
+        Games section
+  =========================
+   */
+   #games{
+    margin: 0;
+    padding: 2em 1em;
+    background: linear-gradient(104.51deg, #1E4B62 -2.19%, #2D6650 6.95%, #1F4D61 13.72%, #1E4B62 66.86%, #1E4B62 80.35%, #20495B 90.78%, #02BE75 110.88%);
+    position: relative;
+  }
+  #games .gamesWords{
+    width: 95%;
+  }
+  #games .gamesWords h3{
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 48px
+  }
+  #games .gamesWords p{
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #games .gamesWords img{
+    width: 114px;
+    margin: 10px 10px 10px 0;
+  }
+  #games .gamesImg{
+    display: none;
+    margin: 0 20px;
+  }
+  #games .gamesImg img{
+    height: 361.47px;
+  }
+/* 
+  ==============================
+      Unlimited section
+  ==============================
+   */
+   #unlimited{
+    position: relative;
+    padding:2em 0;
+  }
+  #unlimited .union{
+   position: absolute;
+   width: 28.82px;
+ }
+  #unlimited .union1{
+   left: 10%;
+   bottom: 20%;
+ }
+ #unlimited .union2{
+   right: 4%;
+   bottom: 20%;
+ }
+ #unlimited .union3{
+   right: 10%;
+   top: 119.88px;  
+   opacity: 50%;
+ }
+ #unlimited .union4{
+   left: 1%;
+   bottom: 0%; 
+   opacity: 50%;
+ }
+ #unlimited .unlimitedWords{
+   text-align: center;
+ }
+ #unlimited .unlimitedWords h3{
+   font-weight: 500;
+   font-size: 30px;
+   line-height: 48px;
+   color: #16323E;
+ }
+ #unlimited .unlimitedWords button{
+   font-family: poppins;
+   width: 150px;
+   height: 42px;
+   background-color: #20495B;
+   color: #fff;
+   border: transparent;
+   border-radius: 25px;
+ }
+ /* 
+================================
+     for bigger screens
+================================
+ */
+ @media (min-width:600px){
+#heroBg .heroContent{
+  height: 600px;
+}
+#healthWallet  .healthTabs .tabs{
+  width: 224px;
+}
+#resources .resourcesTabs .tab{
+  width: 236px;
+  height: 225px;
+  margin: 20px 9px;
+}
+}
+@media (min-width:680px){
+  #healthWallet  .healthTabs .tabs{
+    width: 254px;
+    margin: 20px 15px;
+  }
+  #resources .resourcesTabs .tab{
+    width: 256px;
+    height: 220px;
+    margin: 20px 15px;
+  }
+}
+@media (min-width:768px){
+  #heroBg .navBar .navItem{
+    text-decoration: none;
+    display: inline-block;
+    margin:0 20px;
+  }
+  #heroBg .navBar .navItem a{
+    text-decoration: none;
+    color:#16323E ;
+  }
+  #heroBg .heroContent{
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+  #heroBg .heroContent .heroWords{
+    width: 98%;
+    margin: 0 1em;
+    text-align: left;
+  }
+  #heroBg .heroContent .heroWords h2{
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    line-height: 60px;
+  }
+  #heroBg .heroContent .heroWords p{
+    color: #fff;
+  }
+  #heroBg .heroContent .heroImg .hero2{
+    position: absolute;
+    width: 300px;
+    right: 4%;
+    top: 26%;
+  }
+  #heroBg .heroContent .heroImg .hero1{
+    display: block;
+    position: absolute;
+    width: 250px;
+    right: 2%;
+    top: 37%;
+  }
+  .whoWords{
+    width: 70%;
+    padding: 0 2em;
+  }
+  #healthWallet .walletWords{
+    width: 70%;
+    padding: 0 1em;
+  }
+  #healthWallet  .healthTabs .tabs{
+    width: 284px;
+    margin: 20px 18px;
+  }
+  #benefits .benefitWords{
+    width: 70%;
+    padding: 0 1em;
+  }
+  #resources .resourcesWords{
+    width: 70%;
+    padding: 0 1em;
+  }
+  #resources .resourcesTabs .tab{
+    width: 290px;
+    margin: 20px 18px;
+  }
+  #agent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #agent .agentImg {
+    text-align: center;
+    width: 80%;
+    display: block;
+   }
+   #agent .agentImg img {
+    width: 300px;
+    height: 270px;
+
+   }
+   #agent .agentWords{
+    padding: 0 0 0 2em;
+    width: 90%;
+   }
+   #games{
+    padding: 1em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   #games .gamesWords{
+    width: 50%;
+  }
+  #games .gamesWords img{
+    width: 160px;
+    margin: 0 15px 0 0;
+  }
+   #games .gamesImg{
+    margin: 0 2em;
+    display: block;
+  }
+  #games .gamesImg img{
+    height: 361.47px;
+  }
+}
+@media (min-width:1000px){
+  #heroBg .heroContent{
+    height: 580px;
+  }
+  #heroBg .heroContent .heroWords{
+    margin: 0 2em;
+  }
+  #heroBg .heroContent .heroImg .hero2{
+    position: absolute;
+    width: 400px;
+    right: 4%;
+    top: 25%;
+  }
+  #heroBg .heroContent .heroImg .hero1{
+    display: block;
+    position: absolute;
+    width: 300px;
+    right: 2%;
+    top: 37%;
+  }
+  #who{
+    text-align: left;
+  }
+   #who .whoBtns{
+    padding: 0 0 0 2em;
+   }
+  #healthWallet  .healthTabs .tabs{
+    width: 260px;
+    margin: 20px 11px;
+  }
+  #benefits .ellipse{
+    display: block;
+    height: 400px;
+  }
+  #benefits .benefitWords{
+    width: 60%;
+   }
+  #benefits .benefitBtns{
+    width: 80%;
+    text-align: center;
+  } 
+  #resources .resourcesTabs .tab{
+    width: 270px;
+    margin: 20px 11px;
+  }
+}
+@media (min-width:1200px){
+  #heroBg .heroContent{
+    height: 600px;
+  }
+  #heroBg .heroContent .heroWords{
+    width: 85%;
+  }
+  #heroBg .heroContent .heroImg .hero2{
+    width: 430px;
+    right: 5%;
+    top: 22%;
+  }
+  #heroBg .heroContent .heroImg .hero1{
+    width: 360px;
+    right: 3%;
+    top: 34%;
+  }
+  .whoWords{
+    padding: 0 3em;
+  }
+  #healthWallet .walletWords{
+    width: 60%;
+    padding: 0 2em;
+  }
+  #healthWallet  .healthTabs .tabs{
+    width: 300px;
+    margin: 20px;
+  }
+  #benefits .benefitWords{
+    padding: 0 2em;
+  } 
+  #benefits .benefitBtns{
+    width: 70%;
+    text-align: center;
+  }
+  #resources .resourcesWords{
+    width: 70%;
+    padding: 0 2em;
+  }
+  #resources .resourcesTabs .tab{
+    width: 315px;
+    margin: 20px;
+  }
+  #agent .agentImg {
+    width: 70%;
+   }
+  #agent .agentWords{
+    padding: 0 2em 0 0;
+    width: 50%;
+   }
+}
+@media (min-width:1300px){
+  #heroBg .heroContent .heroWords{
+    margin: 0 3em;
+  }
+  #heroBg .heroContent .heroImg .hero2{
+    position: absolute;
+    width: 500px;
+    right: 6%;
+    top: 20%;
+  }
+  #heroBg .heroContent .heroImg .hero1{
+    width: 400px;
+    right: 4%;
+    top: 35%;
+  }
+}

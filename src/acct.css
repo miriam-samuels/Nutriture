@@ -1,3 +1,315 @@
+/* 
+=============================
+    SignUp section
+=============================
+ */
+#signup{
+  height: 100%;
+  padding: 1em 0;
+  font-family: poppins;
+  color: #16323E;
+}
 #signup .logo{
   display: block;
+  margin: 0 10px;
+}
+#signup .vector{
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+}
+#signup .signupWords{
+  text-align: center;
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#signup .signupWords p{
+  line-height: 34px;
+}
+#signup .signupBtns{
+  padding: 1em 0;
+}
+#signup .signupBtns button{
+  width: 133px;
+  height: 40px;
+  margin: 9px;
+  border: transparent;
+  border-radius: 15px;
+  background-color: #20495B;
+  color: #ffffff;
+  font-family: poppins;
+}
+/* 
+=============================
+    login section
+=============================
+ */
+ #login{
+  height: 100%;
+  padding: 1em 0;
+  font-family: poppins;
+  color: #16323E;
+}
+#login .logo{
+  display: block;
+  margin: 0 10px;
+}
+#login .vector{
+  width: 100%;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+}
+#login .login{
+  text-align: center;
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#login .login input{
+  width: 80%;
+  padding:10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 15px;
+  margin: 10px;
+}
+#login .login label{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+}
+#login .login label span a{
+  text-decoration: none;
+  color: #02BE75;
+}
+#login .login .forgot{
+  float: right;
+  margin: 0px 20px;
+  color: #02BE75;
+}
+#login .login button{
+  width: 85%;
+  padding:12px;
+  border: transparent;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: #20495B;
+  color: #ffffff;
+  font-weight: bolder;
+}
+/*
+============================
+    user signup
+===========================
+ */
+ #login .userlogin{
+   width: 95%;
+   margin: auto;
+ }
+ #login .userlogin h1, #login .userlogin p{
+  text-align: center;
+}
+ #login .userlogin label{
+  font-size: 14px;
+  line-height: 24px;
+  color: #313030;
+  margin: 10px;
+ }
+ #login .userlogin form span{
+   display:inline-block;
+   width: 46.3%;
+   margin: 10px 10px 10px 0;
+ }
+ #login .userlogin input{
+  border: 1px solid #D8D8D8;
+  border-radius: 15px;
+  width:92%;
+  padding:10px  5px;
+  margin: 10px ;
+  text-align: left;
+  display: block;
+}
+#login .userlogin input[type="checkbox"]{
+  width: 15px;
+  height: 15px;
+  margin: 10px 0;
+  display: inline-block;
+}
+#login .userlogin input[type="email"],#login .userlogin input[type="password"]{
+  width: 90%;
+}
+#login .userlogin .agree{
+  font-size: 13px;
+}
+#login .userlogin .agree span{
+  color: #02BE75;
+  padding: 0;
+  display: inline;
+}
+#login .userlogin button{
+  width: 94%;
+  padding:13px ;
+  border: transparent;
+  border-radius: 15px;
+  margin: 25px 0 10em 10px;
+  background-color: #20495B;
+  color: #ffffff;
+
+}
+/* 
+===================================
+        user profile
+===================================
+ */
+#profileBar{
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  height: 65px;
+  background: linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
+  background: -moz-linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
+  background: -webkit-linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
+  box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
+}
+#profileBar .logo{
+  float: left;
+  margin: 0 30px;
+}
+#profileBar input{
+  padding: 10px;
+  width: 400px;
+  border-radius: 15px;
+  margin: 0 20px;
+  background-color: #f1f1f1;
+}
+#profileBar div{
+  position: absolute;
+  right: 5%;
+  color: #ffffff;
+  font-size: 16px;
+}
+#profileBar div span img{
+  width: 30px;
+}
+#userProfile{
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+#userProfile .profileMenu{
+  width: 16%;
+  height: 100%;
+}
+#userProfile .profileMenu div{
+  margin: 10px;
+  padding: 10px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 14px;
+}
+#userProfile .profileMenu div img{
+  margin: 0 5px;
+}
+#userProfile .dash{
+  background-color: #eeeeee;
+  width: 85%;
+  height: 100%;
+}
+#userProfile .dash .tab{
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  width: 45%;
+  height: 275px;
+  box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
+  vertical-align: top;
+  background-color: #ffffff;
+}
+#userProfile .dash .tab button{
+ position: absolute;
+ bottom: 5%;
+ right: 5%;
+ border: none;
+ background-color: transparent;
+ color: #02BE75;
+}
+#userProfile .dash .tab b{
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+}
+#userProfile .dash .consultations div {
+  display: inline-block;
+  width: 29%;
+  margin:10px;
+}
+
+@media (min-width:600px){
+  #signup .signupWords{
+    width: 78%;
+  } 
+  #signup .signupBtns button{
+    width: 136px;
+    height: 42px;
+    margin: 10px;
+    font-size: 16px;
+  }
+  #login .login{
+    width:570px;
+  }
+  #login .login input{
+    padding:20px;
+  }
+  #login .login button{
+    width: 87%;
+    padding:22px;
+  }
+  #login .userlogin{
+    width: 60%;
+  }
+}
+@media (min-width:790px){
+  #signup .signupWords{
+    width: 60%;
+  } 
+  #signup .signupBtns button{
+    width: 138px;
+    height: 48px;
+    margin: 10px;
+  }
+}
+@media (min-width:1000px){
+  #signup .signupWords{
+    width: 55%;
+  } 
+  #signup .signupBtns button{
+    width: 150px;
+    height: 50px;
+    margin: 15px;
+  }
+  #login .userlogin{
+    width: 50%; 
+  }
+}
+@media (min-width:1200px){
+  #signup .signupWords{
+    width: 50%;
+  } 
+  #signup .signupBtns button{
+    width: 170px;
+    height: 50px;
+    margin: 20px;
+  }
+  #login .userlogin{
+    width: 40%;
+    
+  }
 }

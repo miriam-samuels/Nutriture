@@ -29,7 +29,7 @@ class home extends Component {
                             <li className="navItem"><Link to = "/contact" >Contact</Link></li>
                         </ul>
                         <div className="login">
-                        <span>Log In</span>
+                        <span><Link to = "/login">Log In </Link></span>
                         <button><Link to = "/signup">Sign Up </Link></button>
                         </div>
                     </nav>
@@ -53,6 +53,8 @@ class home extends Component {
                     <img src={Union} alt="union" className="union4 union"/>
                     <img src={Union} alt="union" className="union5 union"/>
                     <img src={Union} alt="union" className="union6 union"/>
+                    <img src={Union} alt="union" className="union7 union"/>
+                    <img src={Union} alt="union" className="union8 union"/>
                 </section>
 
                 <section id="why"> 
@@ -70,8 +72,6 @@ class home extends Component {
                             <li className="whyItem">Instant Access</li>
                         </ul>
                     </div>
-                    <img src={Union} alt="union" className="union7"/>
-                    <img src={Union} alt="union" className="union8"/>
                 </section>
 
                 <section id="who">
@@ -88,7 +88,7 @@ class home extends Component {
                         <button>Nuritionists</button>
                         <button>Companies</button>
                         <button>Health Vendors</button>
-                        <button>HMOs</button>
+                        {/* <button>HMOs</button> */}
                     </div>
                     <img src={Union} alt="union" className="union9"/>
                     <img src={Union} alt="union" className="union10"/>

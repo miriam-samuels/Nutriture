@@ -186,11 +186,13 @@
   right: 5%;
   color: #ffffff;
   font-size: 16px;
-  display: flex;
 }
 #profileBar div span img{
   width:50px;
   margin:0 10px;
+}
+#profileBar div span b{
+  display: block;
 }
 #userProfile .profileMenu{
   width: 200px;

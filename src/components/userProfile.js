@@ -61,10 +61,9 @@ class userProfile extends Component {
                     <input type="text" placeholder="&#9906; Search" />
                     <div>
                         <span><img src={Notify} alt="." />notifications </span>
-                        <span>
+                        <span className="note">
                         <img src={Dashboard} alt="" className="userpic" />
                         <b>Username <br/> nutriture.email.com</b>
-                        <b></b>
                         </span>
                     </div>
                 </section>

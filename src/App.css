@@ -560,6 +560,65 @@ button{
    border-radius: 25px;
  }
  /* 
+===============================
+    Footer Section
+===============================
+ */
+ .credits{
+  background-color: #F4F9FB;
+  padding: 10px 5px;
+  text-align: center;
+}
+.credits .credit{
+  vertical-align: text-top;
+  margin-top: auto;
+  font-size: 11px;
+  padding: 0;
+}
+.credits .links{
+  padding: 0;
+
+}
+.credits .links .link{
+  display: inline-block;
+  width: 45%;
+  vertical-align: text-top;
+  padding: 0;
+}
+.credits .connect span{
+  display: inline-block;
+}
+.credits .credit ul{
+  padding: 0;
+  margin: 10px 5px;
+}
+.credits .credit ul li{
+  list-style-type:none;
+  line-height: 23px;
+}
+.credits .credit ul li a{
+  text-decoration: none;
+  color: #16323E;
+}
+.credits .credit .connect img{
+  width: 20px;
+  margin:0px 15px ;
+}
+.credits .lg img{
+  width: 100px;
+}
+.credits .lg b{
+  margin-left: 20px;
+}
+.credits b{
+  color: #16323E;
+  font-size: 12px;
+}
+.credits p{
+  color: #16323E;
+  font-size: 10px;
+}
+ /* 
 ================================
      for bigger screens
 ================================
@@ -576,6 +635,15 @@ button{
   width: 236px;
   height: 225px;
   margin: 20px 9px;
+}
+.credits .credit{
+  display: inline-block;
+  width: 33%;
+  text-align: left;
+}
+.credits .links .link{
+  width: 50%;
+  text-align: left;
 }
 }
 @media (min-width:680px){

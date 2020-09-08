@@ -14,6 +14,10 @@ import Ellipse from '../Images/ellipse.png';
 import Playstore from '../Images/playstore.png'
 import Applestore from '../Images/applestore.png'
 import Frutty from '../Images/frutty.png'
+import Fb from '../Images/Facebook.svg';
+import Ig from '../Images/Instagram.svg';
+import Tweet from '../Images/Twitter.svg';
+import Whatsapp from '../Images/Whatsapp.svg';
 
 class home extends Component {    
     render() {
@@ -216,6 +220,55 @@ class home extends Component {
                     <img src={Union} alt="union" className="union2 union"/>
                     <img src={Union} alt="union" className="union3 union"/>
                 </section>
+
+                <footer>
+                <div className="credits">
+            <div className="credit lg">
+                <img src={Logo} alt="Logo" className="logo" /><br/>
+                <div className="connect"><br/>
+                <span><Link to="/"><img src={Fb} alt=""/></Link></span>
+                <span><Link to="/menu"><img src={Ig} alt=""/></Link></span>
+                <span><Link to="/blog"><img src={Tweet} alt=""/></Link></span>
+                <span><Link to="/about"><img src={Whatsapp} alt=""/></Link></span>
+                </div>
+            </div>
+            <div className="credit links">
+            <div className="link">
+                <ul>
+                    <li> <b>QuickLinks</b></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/menu">Menu</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+                            </ul>
+        </div>
+        <div className="link">
+                <ul>
+                <li><b>Nutriture</b></li>
+                <li><Link to="/">Features</Link></li>
+                <li><Link to="/menu">Terms of use</Link></li>
+                <li><Link to="/blog">Privacy Policy</Link></li>
+                <li><Link to="/about">Health Market</Link></li>
+                <li><Link to="/contact">Helth Community</Link></li>
+                            </ul>
+        </div>
+
+            </div>
+            <div className="credit">
+ 
+            <ul>
+                <li><b>App Download</b></li>
+            <li><Link to="/AddRestaurant">Ios</Link></li>
+            <li><Link to="/AddDriver">Android</Link></li>
+
+                        </ul>
+
+            </div>
+            <p>&copy;copyright 2020 TasteClan All Right Reserved</p>
+
+            </div>
+                </footer>
             </div>
         )
     }

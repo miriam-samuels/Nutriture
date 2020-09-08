@@ -63,9 +63,9 @@ class home extends Component {
                     </div>
                     <div className="whyWords">
                         <h3>Why Use Nutriture ?</h3>
-                        <p>We understand what you need to stay healthy, we have brought the benefits professionals,medicals and 'naturals'
-                            and skills you can trust from around the world, to serve you. We ensured the development,
-                             effective and innovative application of technology taillored to your personal health management.                         </p>
+                        <p>We ensured the development, effective and innovative application of 
+                            technology taillored to your personal health management. Why you yet should use 
+                            Nutriture                        </p>
                         <ul>
                             <li className="whyItem">Safe and Secure</li>
                             <li className="whyItem">Fast Response</li>

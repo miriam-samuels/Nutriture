@@ -23,13 +23,14 @@ button{
    */
 #heroBg{
   margin: 0;
-  background-color: #20495B;
+  /* background-color: #20495B; */
+  background: linear-gradient(115.51deg, #1E4B62 -2.19%, #2D6650 6.95%, #1F4D61 13.72%, #1E4B62 66.86%, #1E4B62 80.35%, #20495B 90.78%, #02BE75 110.88%);
   position: relative;
   display: block;
 }
 #heroBg .union{
   position: absolute;
-  width: 28.82px;
+  width: 35.82px;
   opacity: 70%;
 }
 #heroBg .union1{
@@ -162,21 +163,22 @@ button{
 #why{
   position: relative;
   box-shadow: 1px 1px 10px 1px #D8D8D8;
-  padding: 2em 0;
-  width: 100%;
-  margin: auto;
+  padding: 1em 0;
+  width: 90%;
+  margin:4em auto;
 }
 #why .whyImg {
   display: none;
  }
+
  #why .whyWords{
-  text-align: center;
   padding: 0em 1em;
  }
  #why .whyWords h3{
   font-weight: 500; 
   font-size: 25px;
   line-height: 48px;
+  text-align: center;
 
  }
  #why .whyWords p{
@@ -197,7 +199,7 @@ button{
   font-weight: bolder;
   display: inline-block; 
   width: 1em;
-  margin-left: -1em;
+  margin-left: -2.5em;
 }
   /* 
   =========================
@@ -207,7 +209,7 @@ button{
 #who{
   position: relative;
   background-color: #F4F9FB;
-  padding:2em 0;
+  padding:4em 0;
   text-align: center;
  }
 .whoWords{
@@ -219,6 +221,7 @@ button{
   font-weight: 500;
   line-height: 48px;
   font-size: 25px;
+  margin: 0;
  }
  #who .whoWords p{
   font-weight: normal;
@@ -309,7 +312,7 @@ button{
 #benefits{
   background-color: #F4F9FB;
       position: relative;
-      padding:2em 1em ;
+      padding:4em 1em ;
     }
     #benefits .ellipse{
       display: none;
@@ -326,6 +329,7 @@ button{
       font-weight: 500;
       font-size: 25px;
       line-height: 48px;
+      margin: 0;
     }
     #benefits .benefitWords p{
       font-weight: normal;
@@ -348,32 +352,26 @@ button{
       line-height: 24px;
       margin: 30px 10px 5px 10px;
     }
-    #who .union10{
-      position: absolute;
-      width: 28.03px;
-      height: 27.3px;
-      left: 100.98px;
-      bottom: 10%;
-    }
     #benefits .union11{
       position: absolute;
       width: 28.03px;
       height: 27.3px;
       left: 10%;
-      bottom: 20%;
+      bottom: 40%;
     }
     #benefits .union12{
       position: absolute;
       width: 28.03px;
       height: 27.3px;
       left: 100.98px;
-      bottom: 12%;
+      bottom: 25%;
     }
     #benefits .union13{
       position: absolute;
       width: 28.03px;
       height: 27.3px;
       left: 10%;
+      bottom: 14%;
     }
 /* 
   ==============================
@@ -570,6 +568,7 @@ button{
 #heroBg .heroContent{
   height: 600px;
 }
+
 #healthWallet  .healthTabs .tabs{
   width: 224px;
 }
@@ -604,6 +603,7 @@ button{
     height: 500px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   #heroBg .heroContent .heroWords{
     width: 98%;
@@ -623,15 +623,37 @@ button{
     position: absolute;
     width: 300px;
     right: 4%;
-    top: 26%;
+    top: 23%;
   }
   #heroBg .heroContent .heroImg .hero1{
     display: block;
     position: absolute;
     width: 250px;
     right: 2%;
-    top: 37%;
+    top: 35%;
   }
+  #why{
+    box-shadow: none;
+    width: 89%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #why .whyImg {
+    display: block;
+   }
+   #why .whyImg img{
+    width: 350px;
+  }
+  #why .whyWords{
+    padding: 0em 0 0 2em;
+   }
+   #why .whyWords h3{
+    text-align: left;
+   }
+   #why .whyWords li{
+    display: block;
+   }
   .whoWords{
     width: 70%;
     padding: 0 2em;
@@ -703,19 +725,27 @@ button{
   }
   #heroBg .heroContent .heroWords{
     margin: 0 2em;
+    width: 70%;
   }
   #heroBg .heroContent .heroImg .hero2{
     position: absolute;
     width: 400px;
-    right: 4%;
+    right: 7%;
     top: 25%;
   }
   #heroBg .heroContent .heroImg .hero1{
     display: block;
     position: absolute;
     width: 300px;
-    right: 2%;
+    right: 4%;
     top: 37%;
+  }
+  #why{
+    box-shadow: none;
+    width: 80%;
+  }
+  #why .whyImg img{
+    width: 400px;
   }
   #who{
     text-align: left;
@@ -745,21 +775,35 @@ button{
 }
 @media (min-width:1200px){
   #heroBg .heroContent{
-    height: 600px;
+    height: 610px;
   }
   #heroBg .heroContent .heroWords{
-    width: 85%;
+    width: 55%;
+    margin: 0 0 0 7em;
   }
   #heroBg .heroContent .heroImg .hero2{
     width: 430px;
-    right: 5%;
+    right: 8%;
     top: 22%;
   }
   #heroBg .heroContent .heroImg .hero1{
     width: 360px;
-    right: 3%;
+    right: 5%;
     top: 34%;
   }
+  #why{
+    box-shadow: none;
+    width: 70%;
+    display: flex;
+  }
+  #why .whyImg img{
+    width: 460px;
+  }
+  #why .whyWords{
+    text-align: left;
+    width: 40%;
+    padding: 0em 0 0 5em;
+   }
   .whoWords{
     padding: 0 3em;
   }
@@ -767,10 +811,7 @@ button{
     width: 60%;
     padding: 0 2em;
   }
-  #healthWallet  .healthTabs .tabs{
-    width: 300px;
-    margin: 20px;
-  }
+
   #benefits .benefitWords{
     padding: 0 2em;
   } 
@@ -779,7 +820,7 @@ button{
     text-align: center;
   }
   #resources .resourcesWords{
-    width: 70%;
+    width: 60%;
     padding: 0 2em;
   }
   #resources .resourcesTabs .tab{
@@ -799,17 +840,36 @@ button{
     height: 650px;
   }
   #heroBg .heroContent .heroWords{
-    margin: 0 3em;
+    width: 50%;
+    margin: 0 0 0 8em;
   }
   #heroBg .heroContent .heroImg .hero2{
     position: absolute;
-    width: 500px;
-    right: 6%;
+    width: 520px;
+    right: 10%;
     top: 20%;
   }
   #heroBg .heroContent .heroImg .hero1{
-    width: 400px;
-    right: 4%;
+    width: 410px;
+    right: 6%;
     top: 35%;
+  }
+  #healthWallet .walletWords{
+    width: 50%;
+  }
+  #healthWallet  .healthTabs .tabs{
+    width: 350px;
+    margin: 25px;
+  }
+  #benefits .benefitWords{
+    width: 40%;
+  }
+  #benefits .benefitBtns{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  #games .gamesWords{
+    width: 40%;
   }
 }

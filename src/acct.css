@@ -123,14 +123,14 @@
  #login .userlogin form span{
    display:inline-block;
    width: 46.3%;
-   margin: 10px 10px 10px 0;
+   margin: 10px 10px 5px 0;
  }
  #login .userlogin input{
   border: 1px solid #D8D8D8;
   border-radius: 15px;
   width:92%;
   padding:10px  5px;
-  margin: 10px ;
+  margin: 5px ;
   text-align: left;
   display: block;
 }
@@ -166,7 +166,7 @@
         user profile
 ===================================
  */
-#profileBar{
+ #profileBar{
   position: relative;
   display: flex;
   align-items: center;
@@ -178,34 +178,24 @@
   background: -webkit-linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
   box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
 }
-#profileBar .logo{
-  float: left;
-  margin: 0 30px;
-}
 #profileBar input{
-  padding: 10px;
-  width: 400px;
-  border-radius: 15px;
-  margin: 0 20px;
-  background-color: #f1f1f1;
+  display: none;
 }
 #profileBar div{
   position: absolute;
   right: 5%;
   color: #ffffff;
   font-size: 16px;
+  display: flex;
 }
 #profileBar div span img{
-  width: 30px;
-}
-#userProfile{
-  position: relative;
-  display: flex;
-  width: 100%;
+  width:50px;
+  margin:0 10px;
 }
 #userProfile .profileMenu{
-  width: 16%;
+  width: 200px;
   height: 100%;
+  display: none;
 }
 #userProfile .profileMenu div{
   margin: 10px;
@@ -217,21 +207,21 @@
 #userProfile .profileMenu div img{
   margin: 0 5px;
 }
-#userProfile .dash{
-  background-color: #eeeeee;
-  width: 85%;
-  height: 100%;
-}
-#userProfile .dash .tab{
+#userProfile .dash .tab,#userProfile .account div{
   position: relative;
   display: inline-block;
-  margin: 20px;
+  margin: 10px ;
   padding: 10px;
-  width: 45%;
+  width: 87.4%;
   height: 275px;
   box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
   vertical-align: top;
   background-color: #ffffff;
+}
+#userProfile .account div{
+  margin: 10px;
+  width: 87.4%;
+  height: 400px;
 }
 #userProfile .dash .tab button{
  position: absolute;
@@ -248,13 +238,19 @@
 }
 #userProfile .dash .consultations div {
   display: inline-block;
-  width: 29%;
+  /* width: 90px; */
   margin:10px;
 }
-
+#userProfile .dash .consultations div b{
+  font-size:11px;
+  font-weight: lighter;
+}
+#userProfile .view{
+  display: none;
+}
 @media (min-width:600px){
   #signup .signupWords{
-    width: 78%;
+  width: 78%;
   } 
   #signup .signupBtns button{
     width: 136px;
@@ -275,6 +271,35 @@
   #login .userlogin{
     width: 60%;
   }
+  #userProfile{
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  #userProfile .profileMenu{
+    display: block;
+    width: 40%;
+  }
+  #userProfile .profileMenu div img{
+    margin: 0 5px;
+  }
+  #profileBar input{
+    padding: 10px;
+    width: 150px;
+    border-radius: 15px;
+    margin: 0 20px;
+    background-color: #f1f1f1;
+    display: block;
+  }
+  #userProfile .dash,#userProfile .account {
+    background-color: #eeeeee;
+    width: 85%;
+    height: 100%;
+  }
+  #userProfile .account .one{
+    width: 350px;
+  }
+
 }
 @media (min-width:790px){
   #signup .signupWords{
@@ -286,6 +311,19 @@
     margin: 10px;
   }
 }
+@media (max-height:950px){
+
+}
+@media (min-height:1250px){
+  #login .userlogin{
+    position: absolute;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
 @media (min-width:1000px){
   #signup .signupWords{
     width: 55%;
@@ -297,6 +335,10 @@
   }
   #login .userlogin{
     width: 50%; 
+  }
+  #profileBar input{
+    width: 350px;
+    margin: 0 0 0 5em;
   }
 }
 @media (min-width:1200px){
@@ -310,6 +352,56 @@
   }
   #login .userlogin{
     width: 40%;
-    
+  }
+  #profileBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    height: 65px;
+  }
+  #profileBar .logo{
+    float: left;
+    margin: 0 30px;
+  }
+
+  #profileBar div{
+    position: absolute;
+    right: 5%;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  #profileBar div span img{
+    width: 30px;
+  }
+  #userProfile{
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  #userProfile .profileMenu{
+    display: block;
+    width: 17%;
+  }
+  #userProfile .dash{
+    background-color: #eeeeee;
+    width: 85%;
+    height: 100%;
+  }
+  #userProfile .dash .tab{
+    margin: 20px;
+    width: 44%;
+    height: 275px;
+  }
+  #userProfile .account div{
+    margin: 20px;
+    width: 44%;
+    height: 400px;
+  }
+  #userProfile .dash .consultations div {
+    display: inline-block;
+    width: 27%;
+    margin:10px;
   }
 }

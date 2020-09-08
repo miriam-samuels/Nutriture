@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './components/home.js';
-// import Error404 from './components/404Error.js';
+import Error404 from './components/404Error.js';
 import Signup from './components/signup.js';
 import Login from './components/login.js';
 import Patient from './components/patient';
@@ -28,8 +28,8 @@ function App() {
         <Route path = '/company' exact component = {Company} />
         <Route path = '/profile' exact component = {Profile} />
 
-        {/* <Route path = "/" component = {Error404} /> */}
-        <Route path ='/' render={()=><div>404 ERROR</div>}/>
+        <Route path = "/" component = {Error404} />
+        {/* <Route path ='/' render={()=><div>404 ERROR</div>}/> */}
 
       </Switch>
       </BrowserRouter>

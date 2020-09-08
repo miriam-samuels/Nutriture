@@ -18,7 +18,8 @@ import Fb from '../Images/Facebook.svg';
 import Ig from '../Images/Instagram.svg';
 import Tweet from '../Images/Twitter.svg';
 import Whatsapp from '../Images/Whatsapp.svg';
-
+import Android from '../Images/adr.svg';
+import Ios from '../Images/ios.svg';
 class home extends Component {    
     render() {
         return (
@@ -28,7 +29,7 @@ class home extends Component {
                         <img src = {Logo} alt="Nutriturelogo"/>
                         <ul>
                         <li className="navItem" ><Link to = "/about" >About</Link></li>
-                            <li className="navItem"><Link to = "/features" >Features</Link></li>
+                            <li className="navItem"><Link to = "/products" >Products</Link></li>
                             <li className="navItem"><Link to = "/blog" >Blog</Link></li>
                             <li className="navItem"><Link to = "/contact" >Contact</Link></li>
                         </ul>
@@ -94,8 +95,8 @@ class home extends Component {
                         <button>Health Vendors</button>
                         {/* <button>HMOs</button> */}
                     </div>
-                    <img src={Union} alt="union" className="union9"/>
-                    <img src={Union} alt="union" className="union10"/>
+                    {/* <img src={Union} alt="union" className="union9"/> */}
+                    {/* <img src={Union} alt="union" className="union10"/> */}
                 </section>
 
                 <section id="healthWallet">
@@ -214,7 +215,7 @@ class home extends Component {
                 <section id="unlimited">
                     <div className="unlimitedWords">
                         <h3>Enjoy unlimited health services</h3>
-                        <button>Sign Up</button>
+                        <Link to = "/signup"><button>Sign Up</button></Link>
                     </div>
                     <img src={Union} alt="union" className="union1 union"/>
                     <img src={Union} alt="union" className="union2 union"/>
@@ -237,7 +238,7 @@ class home extends Component {
                 <ul>
                     <li> <b>QuickLinks</b></li>
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/menu">Menu</Link></li>
+                <li><Link to="/products">Products</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
@@ -246,11 +247,11 @@ class home extends Component {
         <div className="link">
                 <ul>
                 <li><b>Nutriture</b></li>
-                <li><Link to="/">Features</Link></li>
-                <li><Link to="/menu">Terms of use</Link></li>
-                <li><Link to="/blog">Privacy Policy</Link></li>
-                <li><Link to="/about">Health Market</Link></li>
-                <li><Link to="/contact">Helth Community</Link></li>
+                <li><Link to="/products">Products</Link></li>
+                <li><Link to="/terms">Terms of use</Link></li>
+                <li><Link to="/privacy">Privacy Policy</Link></li>
+                <li><Link to="/market">Health Market</Link></li>
+                <li><Link to="/community">Helth Community</Link></li>
                             </ul>
         </div>
 
@@ -259,8 +260,8 @@ class home extends Component {
  
             <ul>
                 <li><b>App Download</b></li>
-            <li><Link to="/AddRestaurant">Ios</Link></li>
-            <li><Link to="/AddDriver">Android</Link></li>
+            <li><Link to="/AddRestaurant"><img src={Ios} alt="IOS"/></Link></li>
+            <li><Link to="/AddDriver"><img src={Android} alt="Andriod"/></Link></li>
 
                         </ul>
 

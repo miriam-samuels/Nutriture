@@ -14,7 +14,7 @@ export class patient extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={formSubmitted}>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" reqiured />
+                        <input type="email" id="email" required />
                         <span><label htmlFor="username">Username</label>
                         <input type="text" id="username" required />
                         </span>

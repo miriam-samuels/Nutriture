@@ -4,10 +4,6 @@ import {Link} from 'react-router-dom';
 
 const styles = {
     width:"100%",
-    position:"absolute",
-    top:"50%",
-    left:"50%",
-    transform:"translate(-50% ,-50%)",
     textAlign:"center",
     backgroundColor:"#fff",
 }

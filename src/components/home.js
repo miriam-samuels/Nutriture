@@ -168,8 +168,8 @@ class home extends Component {
                     <div className="resourcesTabs">
                     <div className="tab">
                         <b>Learn About Your Health</b><br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                        eiusmod tempor incididunt. lorem Ut eiusmod tempor incididunt.tempor incididunt. </p>
+                        <p>You can learn a lt about how to maintain a healthy lifestyle, ranging from 
+                            nutritional facts to daily ealth tips and all other mediums you need to stay healthy. </p>
                         <button>&#8620;</button>
                     </div>
                     <div className="tab">

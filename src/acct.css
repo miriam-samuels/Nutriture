@@ -163,20 +163,22 @@
 }
 /* 
 ===================================
-        user profile
+        user profile Bar
 ===================================
  */
  #profileBar{
   position: relative;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   width: 100%;
   height: 65px;
   background: linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
   background: -moz-linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
   background: -webkit-linear-gradient(90.01deg, #20495B 12.1%, #1C5C43 18.47%, #20495B 33.2%, #1F5C4E 62.36%, #20495B 68.47%, #20495B 94.71%, #199867 102.49%, #176B63 108.99%);
   box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
+}
+#profileBar img.logo{
+  margin: 0 10px;
 }
 #profileBar input{
   display: none;
@@ -186,14 +188,30 @@
   right: 5%;
   color: #ffffff;
   font-size: 16px;
+  vertical-align: top;
 }
-#profileBar div span img{
+#profileBar div span.notifications img{
+  vertical-align: middle;
+}
+#profileBar div span.avatar{
+  display: inline-block;
+  margin: 0 0px;
+  text-align: left;
+  vertical-align: middle;
+}
+#profileBar div span.avatar img{
   width:50px;
-  margin:0 10px;
+  margin:0 5px;
+  border-radius: 30px;
 }
-#profileBar div span b{
-  display: block;
+#profileBar div span.avatar b{
+  display: none;
 }
+/* 
+============================
+      User Profile Menu
+============================
+*/
 #userProfile .profileMenu{
   width: 200px;
   height: 100%;
@@ -205,43 +223,51 @@
   font-family: Poppins;
   font-weight: 500;
   font-size: 14px;
+  color: #D8D8D8;
 }
 #userProfile .profileMenu div img{
   margin: 0 5px;
 }
-#userProfile .dash .tab,#userProfile .account div{
+/* 
+===============================
+      User Profile Details
+===============================
+ */
+ #userProfile .dash{
+  width: 95%;
+  margin: auto;
+ }
+
+#userProfile .dash .tab{
   position: relative;
   display: inline-block;
-  margin: 10px ;
-  padding: 10px;
-  width: 87.4%;
+  margin-bottom: 20px ;
+  padding: 10px 0;
+  width: 100%;
   height: 275px;
   box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
   vertical-align: top;
   background-color: #ffffff;
 }
-#userProfile .account div{
-  margin: 10px;
-  width: 87.4%;
-  height: 400px;
-}
 #userProfile .dash .tab button{
- position: absolute;
- bottom: 5%;
- right: 5%;
- border: none;
- background-color: transparent;
- color: #02BE75;
-}
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border: none;
+  background-color: transparent;
+  color: #02BE75;
+ }
 #userProfile .dash .tab b{
   display: block;
+  margin: 5px;
   font-size: 15px;
   font-weight: bold;
 }
-#userProfile .dash .consultations div {
+#userProfile .dash .consultations div.sub div {
   display: inline-block;
-  /* width: 90px; */
-  margin:10px;
+  width: 30%;
+  text-align: center;
+  padding:10px 3px;
 }
 #userProfile .dash .consultations div b{
   font-size:11px;
@@ -249,6 +275,81 @@
 }
 #userProfile .view{
   display: none;
+}
+#userProfile .account{
+  width: 90%;
+  margin: auto;
+}
+#userProfile .account .tab{
+  display: inline-block;
+  background-color: #ffffff;
+  width: 100%;
+  height: 500px;
+  box-shadow: 0px 5px 16px rgba(190, 189, 189, 0.37);
+  vertical-align: top;
+  background-color: #ffffff;
+  margin-bottom: 2em;
+}
+#userProfile .account .profile{
+  height: 400px;
+}
+#userProfile .account .profile{
+  text-align: center;
+}
+#userProfile .account .profile img{
+  margin: 20px 0 0 0;
+  width:130px;
+  height:130px;
+  border-radius: 100px;
+}
+#userProfile .account .edit .details{
+  display: none;
+}
+#userProfile .account .edit b{
+  display: inline-block;
+  width: 22%;
+  font-size: 11px;
+  margin: 0 4px;
+  color: #D8D8D8;
+}
+#userProfile .account .edit .editProfile label{
+  font-size: 14px;
+  line-height: 24px;
+  color: #313030;
+  margin: 10px;
+ }
+ #userProfile .account .edit .editProfile form{
+   margin:20px 0;
+ }
+ #userProfile .account .edit .editProfile form span{
+   display:inline-block;
+   width: 46.3%;
+   margin: 10px 10px 5px 0;
+ }
+ #userProfile .account .edit .editProfile input{
+  border: 1px solid #D8D8D8;
+  border-radius: 15px;
+  width:92%;
+  padding:10px  5px;
+  margin: 5px ;
+  text-align: left;
+  display: block;
+}
+#userProfile .account .edit .editProfile button{
+  width: 94%;
+  padding:13px ;
+  border: transparent;
+  border-radius: 15px;
+  margin: 25px 0 10em 10px;
+  background-color: #20495B;
+  color: #ffffff;
+}
+#userProfile .account .edit .upload label{
+  display: block;
+  margin: 20px 0 5px 10px;
+}
+#userProfile .account .edit .upload input{
+  margin: 5px 0 5px 10px;
 }
 @media (min-width:600px){
   #signup .signupWords{
@@ -273,35 +374,50 @@
   #login .userlogin{
     width: 60%;
   }
-  #userProfile{
-    position: relative;
-    display: flex;
-    width: 100%;
-  }
-  #userProfile .profileMenu{
-    display: block;
-    width: 40%;
-  }
-  #userProfile .profileMenu div img{
-    margin: 0 5px;
-  }
   #profileBar input{
     padding: 10px;
-    width: 150px;
+    width: 160px;
     border-radius: 15px;
-    margin: 0 20px;
+    margin: 0 0 0 3em;
     background-color: #f1f1f1;
     display: block;
   }
-  #userProfile .dash,#userProfile .account {
-    background-color: #eeeeee;
-    width: 85%;
-    height: 100%;
+  #userProfile{
+    position: relative;
+    width: 100%; 
+    display: flex;
   }
-  #userProfile .account .one{
-    width: 350px;
+  #userProfile .profileMenu{
+    display:block;
+    width: 35%;
   }
+  #userProfile .dash, #userProfile .account{
+    width: 64.4%;
+    margin: 0;
+   }
 
+   #userProfile .dash .consultations div b{
+    font-size:14px;
+  }  
+  #userProfile .account .edit b{
+    font-size: 14px;
+  } 
+  /* 
+
+  #userProfile .account .profile{
+    width: 300px;
+  }
+  */
+}
+@media (min-width:768px){
+  #profileBar input{
+    width: 220px;
+  }
+  #profileBar div span.avatar b {
+    display: inline-block;
+    margin: 6px 0 0 0;
+    vertical-align: top;
+  }
 }
 @media (min-width:790px){
   #signup .signupWords{
@@ -313,9 +429,7 @@
     margin: 10px;
   }
 }
-@media (max-height:950px){
 
-}
 @media (min-height:1250px){
   #login .userlogin{
     position: absolute;
@@ -359,7 +473,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     width: 100%;
     height: 65px;
   }
@@ -377,33 +490,23 @@
   #profileBar div span img{
     width: 30px;
   }
-  #userProfile{
-    position: relative;
-    display: flex;
-    width: 100%;
-  }
   #userProfile .profileMenu{
-    display: block;
-    width: 17%;
+    display:block;
+    width: 23%;
   }
-  #userProfile .dash{
-    background-color: #eeeeee;
-    width: 85%;
-    height: 100%;
+  #userProfile .dash, #userProfile .account{
+    width: 77%;
+    margin: 0;
+   }
+   #userProfile .dash .tab{
+    margin: 20px 10px;
+    width: 47%;
   }
-  #userProfile .dash .tab{
-    margin: 20px;
-    width: 44%;
-    height: 275px;
+  #userProfile .account .tab{
+    margin: 20px 30px;
+    width: 47%;
   }
-  #userProfile .account div{
-    margin: 20px;
-    width: 44%;
-    height: 400px;
-  }
-  #userProfile .dash .consultations div {
-    display: inline-block;
-    width: 27%;
-    margin:10px;
+  #userProfile .account .profile{
+    width: 360px;
   }
 }

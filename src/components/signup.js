@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function signup() {
     return (
         <div id="signup"> 
-            <img src={Logo} alt="nutriture logo" className="logo" />
+            <Link to = "/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
 
             <div className="signupWords">
                 <h2>Choose Account type</h2>

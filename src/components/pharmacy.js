@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
@@ -9,7 +9,8 @@ export class pharmacy extends Component {
 
         return (
             <div id="login">
-                <img src={Logo} alt="nutriture logo" className="logo" />
+                <Link to = "/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
+
                 <div className="userlogin">
                     <h1 id="heading">Register as a Pharmacy</h1>
                     <p>Kindly fill in your details as requested</p>

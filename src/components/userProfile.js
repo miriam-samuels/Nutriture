@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import Logo from '../Images/whitelogo.svg'
 import Dashboard from '../Images/dashboard.svg';
 import Consultation from '../Images/consultation.svg';
@@ -8,7 +9,8 @@ import Account from '../Images/account.svg';
 import Setting from '../Images/settings.svg';
 import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
-import Dropdown from '../Images/Dropdown.svg'
+import Dropdown from '../Images/Dropdown.svg';
+import Avatar from '../Images/avatar6.png';
 
 let n = 0;
 class userProfile extends Component {
@@ -20,7 +22,12 @@ class userProfile extends Component {
         }
     }
 
-
+    loadimg = (e) =>{
+        let img = document.getElementById('output');
+        let img2 = document.getElementById('output2');
+        img.src = URL.createObjectURL(e.target.files[0]);
+        img2.src = URL.createObjectURL(e.target.files[0]);
+    }
     show = () => {
         let click = document.querySelector("#userProfile .profileMenu");
         if (this.state.show === false) {
@@ -42,32 +49,45 @@ class userProfile extends Component {
 
         for (var i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
-            bar[i].style.color = "#000";
-            bar[i].style.background = "#fff";
+            bar[i].style.color = "#D8D8D8";
+            bar[i].style.background = "#FFF";
 }
             slides[slideIndex].style.display = "block";
-            bar[slideIndex].style.color = "#fff";
+            bar[slideIndex].style.color = "#FFF";
             bar[slideIndex].style.background = "#000";
+
+    }
+    showDetails = (slideIndex) => {
+        const bar = Array.from(document.querySelectorAll(" #userProfile .account .edit b"));
+        const slides = Array.from(document.querySelectorAll("#userProfile .account .edit .details"));
+
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            bar[i].style.color = "#D8D8D8";
+}
+            slides[slideIndex].style.display = "block";
+            bar[slideIndex].style.color = "#000";
 
     }
     componentDidMount() {
         setTimeout(this.showSlides(n), 1);
+        setTimeout(this.showDetails(0), 1);
     }
     render() {
         return (
             <div>
                 <section id="profileBar">
-                    <img src={Logo} alt="logo" className="logo" />
+                    <Link to = "/" ><img src={Logo} alt="logo" className="logo" /></Link>
                     <input type="text" placeholder="&#9906; Search" />
                     <div>
-                        <span><img src={Notify} alt="." />notifications </span>
-                        <span className="note">
-                        <img src={Dashboard} alt="" className="userpic" />
+                        <span className="notifications"><img src={Notify} alt="." /> </span>
+                        <span className="avatar">
+                        <img id="output" src={Avatar} className="userpic" alt="FilePic"/>
                         <b>Username <br/> nutriture.email.com</b>
                         </span>
                     </div>
                 </section>
-                <img src={Dropdown} alt="." className="drpDwn" onClick={this.show} />
+                <img src={Dropdown} alt="." width="35px" className="drpDwn" onClick={this.show} />
                 <section id="userProfile">
 
                     <div className="profileMenu">
@@ -80,7 +100,7 @@ class userProfile extends Component {
                         <div onClick={() => this.showSlides(6)}><img src={Logout} alt="." />Log out</div>
                     </div>
                     {/* ------------------ */}
-                    <div className="dash view">
+                    <div className="dash view ">
                         <div className="availableDocs tab">
                             <b>Available Doctors</b>
                             <button>View all</button>
@@ -88,18 +108,21 @@ class userProfile extends Component {
 
                         <div className="consultations tab">
                             <b>Consultation History</b>
+                            <div className="sub">
                             <div className="docVisited">
-                                <b>Doctor visited</b>
+                                <b>Doctor </b>
 
                             </div>
                             <div className="activity">
-                                <b>Activity Done</b>
+                                <b>Activity</b>
 
                             </div>
                             <div className="prescription">
-                                <b>Prescription Made</b>
+                                <b>Prescription</b>
 
                             </div>
+                            </div>
+
                             <button onClick={() => this.showSlides(1)}>View all</button>
                         </div>
 
@@ -131,18 +154,62 @@ class userProfile extends Component {
 
                     {/* ------------- */}
                     <div className="account view">
-                        <div className="one">
-                        <img src="" alt="" className="userpic" />
+                        <div className="profile tab">
+                        <img id="output2" src={Avatar}  alt="FilePic"/>
                             <h6>username</h6>
                             <p>occupation</p>
                         </div>
-                        <div className="two">
-                            <b>Edit profile</b>
-                            <form>
+                        <div className="edit tab">
+                            <nav>
+                            <b  onClick={() => this.showDetails(0)}>Edit profile</b>
+                            <b  onClick={() => this.showDetails(1)}>Upload Files</b>
+                            <b  onClick={() => this.showDetails(2)}>Bank Details</b>
+                            <b  onClick={() => this.showDetails(3)}>Prescriptions</b>
+                            </nav>
 
-                            </form>
+                            <div className="editProfile details">
+                                <form>
+                                <label htmlFor="email">Email</label>
+                                <input type="email" id="email" required />
+                                <span><label htmlFor="username">Username</label>
+                                <input type="text" id="username" required />
+                                </span>
+                                <span><label htmlFor="number">Phone Number</label>
+                                <input type="tel" id="number" required />
+                                </span>
+                                <span><label htmlFor="genotype">Genotype</label>
+                                <input type="text" id="genotype" required />
+                                </span>
+                                <span><label htmlFor="bloodgroup">Blood Group</label>
+                                <input type="text" id="bloodgroup" required />
+                                </span>
+                                <span><label htmlFor="height">Height</label>
+                                <input type="text" id="height" required />
+                                </span>
+                                <span><label htmlFor="weight">Weight</label>
+                                <input type="text" id="weight" required />
+                                </span>
+                                 <button type="submit">Update Profile</button><br/>
 
+                                </form>
+                           
+                            </div>
+                            <div className="upload details">
+                            <label htmlFor="file">Upload Your Profile Image</label>
+                            <input type="file"  name="image" id="file" onChange={this.loadimg} />
+                            <label htmlFor="records">Upload Medical Records</label>
+                            <input type="file" id="records" />
+                            <label htmlFor="extra">Upload Any Other File</label>
+                            <input type="file" id="extra" />
+                            </div>
+                            <div className="bank details">
+                        
+                            </div>
+                            <div className="prescription details">
+                             
+                            </div>
                         </div>
+
 
                     </div>
                     {/* ------------- */}

@@ -19,7 +19,7 @@ class login extends Component {
         const { emailChange, passwordChange, formSubmitted} = this.props;
         return (
             <div id="login">
-                <img src={Logo} alt="nutriture logo" className="logo" />
+            <Link to = "/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
                 <div className="login">
                     <h1>Login to your account</h1>
                     <form onSubmit={formSubmitted}>

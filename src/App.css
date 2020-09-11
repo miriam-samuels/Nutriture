@@ -2,10 +2,9 @@ head , body {
   height: 100%;
 }
 body{
-  font-family: Poppins;
   font-style: normal;
   background-color: rgb(253, 253, 253);
-  color: #16323E;
+  color:  #16323E;;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -105,7 +104,7 @@ button{
 }
 #heroBg .navBar button{
   margin: 0 0 0 20px;
-  font-family: poppins;
+  font-family:'Poppins';
   width: 87px;
   height: 35px;
   background-color: #20495B;
@@ -129,13 +128,15 @@ button{
   text-align: center;
 }
 #heroBg .heroContent .heroWords h2{
+  font-family:'Poppins';
   color: #fff;
   line-height: 35px;
 }
 #heroBg .heroContent .heroWords p{
+  font-family:'Poppins';
   color: #fff;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 }
 #heroBg .heroContent .heroWords button{
@@ -144,7 +145,7 @@ button{
   background-color: #fff;
   border: transparent;
   border-radius: 25px;
-  font-family: poppins;
+  font-family:'Poppins';
   font-weight: 500;
   font-size: 14px;
 }
@@ -179,10 +180,11 @@ button{
   padding: 0em 1em;
  }
  #why .whyWords h3{
-  font-weight: 500; 
-  font-size: 25px;
-  line-height: 48px;
-  text-align: center;
+  font-family:'Poppins';
+  font-weight: 600; 
+  font-size: 23px;
+  line-height: 40px;
+  text-align: center;margin: 0;
 
  }
  #why .whyWords p{
@@ -224,8 +226,9 @@ button{
   padding: 0 1em;
 }
 #who .whoWords h3{
-  font-weight: 500;
-  line-height: 48px;
+  font-family:'Poppins';
+  font-weight: 600;
+  line-height: 40px;
   font-size: 25px;
   margin: 0;
  }
@@ -236,7 +239,7 @@ button{
  }
  #who button{
   display: inline-block;
-  font-family: poppins;
+  font-family:'Poppins';
   margin:10px;
   padding: 10px 0;
   width: 110px;
@@ -276,8 +279,9 @@ button{
   text-align: left;
 }
 #healthWallet .walletWords h3{
-  font-weight: 500;
-  line-height: 48px;
+  font-family:'Poppins';
+  font-weight: 600;
+  line-height: 40px;
   font-size: 25px;
  }
  #healthWallet .walletWords p{
@@ -300,9 +304,9 @@ button{
   height: 60px;
  }
  #healthWallet .healthTabs .tabs b{
-  font-family: poppins;
-  font-weight: 500;
-  font-size: 18px;
+  font-family:'Poppins';
+  font-weight: 600;
+  font-size: 16px;
   line-height: 30px;
  }
  #healthWallet .healthTabs .tabs p{
@@ -332,10 +336,11 @@ button{
       width: 90%;
     }
     #benefits .benefitWords h3{
-      font-weight: 500;
-      font-size: 25px;
-      line-height: 48px;
-      margin: 0;
+    font-family:'Poppins';
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 40px;
+    margin: 0;
     }
     #benefits .benefitWords p{
       font-weight: normal;
@@ -352,7 +357,7 @@ button{
       border-radius: 35px;
       background-color: #02BE75;
       color: #fff;
-      font-family: poppins;
+      font-family:'Poppins';
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
@@ -392,9 +397,10 @@ button{
     width: 95%;
   }
   #resources .resourcesWords h3{
-   font-weight: 500;
+   font-family:'Poppins';
+   font-weight:600;
    font-size: 25px;
-   line-height: 48px;
+   line-height: 40px;
   }
   #resources .resourcesWords p{
    font-weight: normal;
@@ -459,9 +465,10 @@ button{
    width: 95%;
   }
   #agent .agentWords h3{
-    font-weight: 500;
+    font-family:'Poppins';
+    font-weight: 600;
     font-size: 25px;
-    line-height: 48px;
+    line-height: 40px;
    }
    #agent .agentWords p{
     font-weight: normal;
@@ -475,7 +482,7 @@ button{
      height: 42px;
      border: transparent;
      border-radius: 30px;
-     font-family: poppins;
+     font-family:'Poppins';
    }
 /* 
   =========================
@@ -494,10 +501,11 @@ button{
     width: 95%;
   }
   #games .gamesWords h3{
+    font-family:'Poppins';
     color: #fff;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 25px;
-    line-height: 48px
+    line-height: 40px
   }
   #games .gamesWords p{
     color: #fff;
@@ -551,13 +559,14 @@ button{
    text-align: center;
  }
  #unlimited .unlimitedWords h3{
-   font-weight: 500;
+   font-family:'Poppins';
+   font-weight: 600;
    font-size: 30px;
    line-height: 48px;
    color: #16323E;
  }
  #unlimited .unlimitedWords button{
-   font-family: poppins;
+   font-family:'Poppins';
    width: 150px;
    height: 42px;
    background-color: #20495B;
@@ -723,7 +732,7 @@ button{
     width: 89%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
   }
   #why .whyImg {
     display: block;
@@ -900,7 +909,10 @@ button{
     width: 60%;
     padding: 0 2em;
   }
-
+  #healthWallet  .healthTabs .tabs{
+    width: 295px;
+    margin: 25px;
+  }
   #benefits .benefitWords{
     padding: 0 2em;
   } 
@@ -930,7 +942,7 @@ button{
   }
   #heroBg .heroContent .heroWords{
     width: 50%;
-    margin: 0 0 0 8em;
+    margin: 0 0 0 7.5em;
   }
   #heroBg .heroContent .heroImg .hero2{
     position: absolute;
@@ -947,7 +959,7 @@ button{
     width: 50%;
   }
   #healthWallet  .healthTabs .tabs{
-    width: 350px;
+    width: 332px;
     margin: 25px;
   }
   #benefits .benefitWords{

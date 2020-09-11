@@ -115,15 +115,16 @@ class home extends Component {
                         </div>
                         <div className="tabs">
                             <img src={Steto} alt="stetoscope" /><br/>
-                            <b>Consult a dietician</b>
+                            <b>Consult a dietician / Nutritionist</b>
                             <p>Get in touch with a dietician, get proven meal plans suited to you, get educated on food,
                             health, physical therapy and fitness solutions that will get you fast and sustainable results</p>
                         </div>
                         <div className="tabs">
                             <img src={Docbag} alt="Doctor Bag" /><br/>
-                            <b>Consult a nutritionist</b>
-                            <p>Get nutrition support, diet prescription and nutritient intake information from a professional
-                                Nutritionist, for yourself, family, and many more</p>
+                            <b>Consult for Mental Health</b>
+                            <p>Speak with trained and highly friendly and trustworthy personnels, who will guide you through a better 
+                                mental well being while ensuring your utmost privacy .
+                            </p>
                         </div>
                         <div className="tabs">
                             <img src={Planner} alt="planner" /><br/>
@@ -133,7 +134,7 @@ class home extends Component {
                         </div>
                         <div className="tabs">
                             <img src={Clock} alt="clock" /><br/>
-                            <b>Use Symptom Check</b>
+                            <b>Use Symptom Checker</b>
                             <p>Get quick potential diagnosis as you Enter your symptoms and Specific conditions to get an insight into
                             possible ailments you have.</p>
                         </div>
@@ -179,7 +180,7 @@ class home extends Component {
                         <button>&#8620;</button>
                     </div>
                     <div className="tab">
-                        <b>Health Community</b><br/>
+                        <b>Join Health Community</b><br/>
                         <p>Join the largest growing community of health conscious minds and get valuable health 
                         tips, also get a chance to create awareness on health in Africa. </p>
                         <button>&#8620;</button>

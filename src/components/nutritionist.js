@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
-export class nutritionist extends Component {
+export class Nutritionist extends Component {
     render() {
             const {formSubmitted} = this.props;
 
@@ -59,4 +59,4 @@ export class nutritionist extends Component {
     }
 }
 
-export default UpdatedComponent(nutritionist)
+export default UpdatedComponent(Nutritionist)

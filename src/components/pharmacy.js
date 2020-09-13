@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
-export class pharmacy extends Component {
+export class Pharmacy extends Component {
     render() {
             const {formSubmitted} = this.props;
 
@@ -48,4 +48,4 @@ export class pharmacy extends Component {
     }
 }
 
-export default UpdatedComponent(pharmacy)
+export default UpdatedComponent(Pharmacy)

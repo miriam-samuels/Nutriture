@@ -20,7 +20,7 @@ import Tweet from '../Images/Twitter.svg';
 import Whatsapp from '../Images/Whatsapp.svg';
 import Android from '../Images/adr.svg';
 import Ios from '../Images/ios.svg';
-class home extends Component {    
+class Home extends Component {    
     render() {
         return (
             <div>
@@ -169,13 +169,13 @@ class home extends Component {
                     <div className="resourcesTabs">
                     <div className="tab">
                         <b>Learn About Your Health</b><br/>
-                        <p>You can learn a lt about how to maintain a healthy lifestyle, ranging from 
+                        <p>You can learn a lot about how to maintain a healthy lifestyle, ranging from 
                             nutritional facts to daily ealth tips and all other mediums you need to stay healthy. </p>
                         <button>&#8620;</button>
                     </div>
                     <div className="tab">
                         <b>Visit Health Market</b><br/>
-                        <p>Shop for health supplements, gadgets, and nutritious and organic food products from our various food-
+                        <p>Shop for health supplements, gadgets, and nutritious and organic food products from our various food and
                         Nutrition Brands and health-based Vendors </p>
                         <button>&#8620;</button>
                     </div>
@@ -227,12 +227,6 @@ class home extends Component {
                 <div className="credits">
             <div className="credit lg">
                 <img src={Logo} alt="Logo" className="logo" /><br/>
-                <div className="connect"><br/>
-                <span><Link to="/"><img src={Fb} alt=""/></Link></span>
-                <span><Link to="/menu"><img src={Ig} alt=""/></Link></span>
-                <span><Link to="/blog"><img src={Tweet} alt=""/></Link></span>
-                <span><Link to="/about"><img src={Whatsapp} alt=""/></Link></span>
-                </div>
             </div>
             <div className="credit links">
             <div className="link">
@@ -263,8 +257,13 @@ class home extends Component {
                 <li><b>App Download</b></li>
             <li><Link to="/AddRestaurant"><img src={Ios} alt="IOS"/></Link></li>
             <li><Link to="/AddDriver"><img src={Android} alt="Andriod"/></Link></li>
-
                         </ul>
+                        <div className="connect"><br/>
+                <span><Link to="/"><img src={Fb} alt=""/></Link></span>
+                <span><Link to="/menu"><img src={Ig} alt=""/></Link></span>
+                <span><Link to="/blog"><img src={Tweet} alt=""/></Link></span>
+                <span><Link to="/about"><img src={Whatsapp} alt=""/></Link></span>
+                </div>
 
             </div>
             <p>&copy;copyright 2020 TasteClan All Right Reserved</p>
@@ -276,4 +275,4 @@ class home extends Component {
     }
 }
 
-export default home
+export default Home

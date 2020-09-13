@@ -8,13 +8,13 @@ const UpdatedComponent = (WrappedComponent) => {
             this.state = {
                 firstname:"",
                 surname:"",
-                username:"",
-                email: " ",
-                number:"",
+                username:"John Doe",
+                email: "John@gmail.com ",
+                number:"  xxx-xxx-xxx-xxx",
                 genotype:"",
                 bloodgroup:"",
-                height:"",
-                weight:"",
+                height:"cm",
+                weight:"kg",
                 hospital:"",
                 address:"",
                 country:"",
@@ -88,6 +88,11 @@ const UpdatedComponent = (WrappedComponent) => {
                 weight: e.target.value,
             })
         }
+        heightChange = (e) => {
+            this.setState({
+                height: e.target.value,
+            })
+        }
         hospitalChange = (e) => {
             this.setState({
                 hospital: e.target.value,
@@ -101,8 +106,7 @@ const UpdatedComponent = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
-            const { firstname, surname,username, email, password,cpassword, number, country, licenseNum, gender, genotype,bloodgroup, weight, hospital,address } = this.state;
-
+            const { firstname, surname,username, email, password,cpassword, number, country, licenseNum, gender, genotype,bloodgroup, weight,height, hospital,address } = this.state;
             return (
                 <WrappedComponent
                     firstname={firstname} nameChange={this.nameChange}
@@ -118,6 +122,7 @@ const UpdatedComponent = (WrappedComponent) => {
                     genotype={genotype} genotypeChange={this.genotypeChange}
                     bloodgroup={bloodgroup} bloodgroupChange={this.bloodgroupChange}
                     weight={weight} weightChange={this.weightChange}
+                    height={height} heightChange={this.heightChange}
                     hospital={hospital} hospitalChange={this.hospitalChange}
                     address={address} addressChange={this.addressChange}
                     formSubmitted={this.formSubmitted}

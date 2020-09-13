@@ -10,11 +10,12 @@
   color: #16323E;
 }
 #signup .logo{
-  display: block;
   margin: 0 10px;
+  width: 100px;
 }
 #signup .vector{
   width: 100%;
+  display: block;
   position: absolute;
   bottom: 0%;
 }
@@ -54,8 +55,8 @@
   color: #16323E;
 }
 #login .logo{
-  display: block;
   margin: 0 10px;
+  width: 100px;
 }
 #login .vector{
   width: 100%;
@@ -107,6 +108,7 @@
     user signup
 ===========================
  */
+ 
  #login .userlogin{
    width: 95%;
    margin: auto;
@@ -156,7 +158,7 @@
   padding:13px ;
   border: transparent;
   border-radius: 15px;
-  margin: 25px 0 10em 10px;
+  margin: 25px 0 9em 10px;
   background-color: #20495B;
   color: #ffffff;
 

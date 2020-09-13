@@ -5,7 +5,7 @@ import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
 
 
-class login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props)
     
@@ -36,4 +36,4 @@ class login extends Component {
     }
 }
 
-export default UpdatedComponent(login)
+export default UpdatedComponent(Login)

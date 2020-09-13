@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UpdatedComponent from "../components/mothercomp.js"
 import {Link} from 'react-router-dom'
 import Logo from '../Images/whitelogo.svg'
 import Dashboard from '../Images/dashboard.svg';
@@ -13,7 +14,7 @@ import Dropdown from '../Images/Dropdown.svg';
 import Avatar from '../Images/avatar6.png';
 
 let n = 0;
-class userProfile extends Component {
+class UserProfile extends Component {
     constructor(props) {
         super(props)
 
@@ -74,6 +75,9 @@ class userProfile extends Component {
         setTimeout(this.showDetails(0), 1);
     }
     render() {
+        const {username,email,number,genotype,bloodgroup,height,weight} = this.props;
+        const {usernameChange,emailChange,numberChange,genotypeChange,bloodgroupChange,heightChange,weightChange} = this.props;
+
         return (
             <div>
                 <section id="profileBar">
@@ -83,7 +87,7 @@ class userProfile extends Component {
                         <span className="notifications"><img src={Notify} alt="." /> </span>
                         <span className="avatar">
                         <img id="output" src={Avatar} className="userpic" alt="FilePic"/>
-                        <b>Username <br/> nutriture.email.com</b>
+                        <b>{username} <br/>{email}</b>
                         </span>
                     </div>
                 </section>
@@ -156,38 +160,38 @@ class userProfile extends Component {
                     <div className="account view">
                         <div className="profile tab">
                         <img id="output2" src={Avatar}  alt="FilePic"/>
-                            <h6>username</h6>
-                            <p>occupation</p>
+                            <h6>{username}</h6>
+                            <p>{email}</p>
                         </div>
                         <div className="edit tab">
                             <nav>
                             <b  onClick={() => this.showDetails(0)}>Edit profile</b>
                             <b  onClick={() => this.showDetails(1)}>Upload Files</b>
-                            <b  onClick={() => this.showDetails(2)}>Bank Details</b>
+                            <b  onClick={() => this.showDetails(2)}>Bank Detail</b>
                             <b  onClick={() => this.showDetails(3)}>Prescriptions</b>
                             </nav>
 
                             <div className="editProfile details">
-                                <form>
+                                <form onSubmit={(e) => {e.preventDefault()}}>
                                 <label htmlFor="email">Email</label>
-                                <input type="email" id="email" required />
-                                <span><label htmlFor="username">Username</label>
-                                <input type="text" id="username" required />
+                                <input type="email" id="email" value={email} onChange={emailChange}  />
+                                <span><label htmlFor="username" >Username</label>
+                                <input type="text" id="username" value={username} onChange={usernameChange}  />
                                 </span>
                                 <span><label htmlFor="number">Phone Number</label>
-                                <input type="tel" id="number" required />
+                                <input type="tel" id="number" value={number} onChange={numberChange}  />
                                 </span>
                                 <span><label htmlFor="genotype">Genotype</label>
-                                <input type="text" id="genotype" required />
+                                <input type="text" id="genotype" value={genotype} onChange={genotypeChange} />
                                 </span>
                                 <span><label htmlFor="bloodgroup">Blood Group</label>
-                                <input type="text" id="bloodgroup" required />
+                                <input type="text" id="bloodgroup" value={bloodgroup} onChange={bloodgroupChange} />
                                 </span>
                                 <span><label htmlFor="height">Height</label>
-                                <input type="text" id="height" required />
+                                <input type="text" id="height" value={height} onChange={heightChange} />
                                 </span>
                                 <span><label htmlFor="weight">Weight</label>
-                                <input type="text" id="weight" required />
+                                <input type="text" id="weight" value={weight} onChange={weightChange} />
                                 </span>
                                  <button type="submit">Update Profile</button><br/>
 
@@ -226,4 +230,4 @@ class userProfile extends Component {
     }
 }
 
-export default userProfile
+export default UpdatedComponent(UserProfile) ;

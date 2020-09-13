@@ -183,7 +183,7 @@ button{
   font-family:'Poppins';
   font-weight: 600; 
   font-size: 23px;
-  line-height: 40px;
+  line-height: 30px;
   text-align: center;margin: 0;
 
  }
@@ -194,20 +194,22 @@ button{
  }
  #why .whyWords ul{
   text-align: center;
+  padding: 0;
  }
  #why .whyWords li{
   display: inline-block;
-  width: 120px;
+  width: 130px;
   margin: 10px 0;
-  list-style: none;
   font-size: 14px;
  }
  #why .whyWords ul li::before {
-  content: "\2021";
+  content: ".";
+  font-size: 50px;
+  line-height: 0;
   font-weight: bolder;
   display: inline-block; 
-  width: 1em;
-  margin-left: -2.5em;
+  width: 0.5em;
+  color: #02BE75;
 }
   /* 
   =========================
@@ -228,7 +230,7 @@ button{
 #who .whoWords h3{
   font-family:'Poppins';
   font-weight: 600;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 25px;
   margin: 0;
  }
@@ -239,7 +241,7 @@ button{
  }
  #who button{
   display: inline-block;
-  font-family:'Poppins';
+  font-family:'new times roman';
   margin:10px;
   padding: 10px 0;
   width: 110px;
@@ -281,7 +283,7 @@ button{
 #healthWallet .walletWords h3{
   font-family:'Poppins';
   font-weight: 600;
-  line-height: 40px;
+  line-height: 30px;
   font-size: 25px;
  }
  #healthWallet .walletWords p{
@@ -313,6 +315,7 @@ button{
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  font-family:'new times roman';
  }
  /* 
   ===============================
@@ -339,7 +342,7 @@ button{
     font-family:'Poppins';
     font-weight: 600;
     font-size: 25px;
-    line-height: 40px;
+    line-height: 30px;
     margin: 0;
     }
     #benefits .benefitWords p{
@@ -357,7 +360,7 @@ button{
       border-radius: 35px;
       background-color: #02BE75;
       color: #fff;
-      font-family:'Poppins';
+      font-family:'new times roman';
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
@@ -367,21 +370,21 @@ button{
       position: absolute;
       width: 28.03px;
       height: 27.3px;
-      left: 10%;
+      left: 7%;
       bottom: 40%;
     }
     #benefits .union12{
       position: absolute;
       width: 28.03px;
       height: 27.3px;
-      left: 100.98px;
-      bottom: 25%;
+      left: 3%;
+      bottom: 26%;
     }
     #benefits .union13{
       position: absolute;
       width: 28.03px;
       height: 27.3px;
-      left: 10%;
+      left: 7%;
       bottom: 14%;
     }
 /* 
@@ -400,7 +403,7 @@ button{
    font-family:'Poppins';
    font-weight:600;
    font-size: 25px;
-   line-height: 40px;
+   line-height: 30px;
   }
   #resources .resourcesWords p{
    font-weight: normal;
@@ -430,6 +433,7 @@ button{
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    font-family:'new times roman';
   }
   #resources .resourcesTabs .tab button{
     float: right;
@@ -468,7 +472,7 @@ button{
     font-family:'Poppins';
     font-weight: 600;
     font-size: 25px;
-    line-height: 40px;
+    line-height: 30px;
    }
    #agent .agentWords p{
     font-weight: normal;
@@ -505,7 +509,7 @@ button{
     color: #fff;
     font-weight: 600;
     font-size: 25px;
-    line-height: 40px
+    line-height: 30px
   }
   #games .gamesWords p{
     color: #fff;
@@ -624,16 +628,15 @@ button{
 }
 .credits .lg img{
   width: 100px;
-}
-.credits .lg b{
-  margin-left: 20px;
+  margin: 0 0 20px 0;
+
 }
 .credits b{
   color: #16323E;
   font-size: 14px;
 }
 .credits p{
-  color: #16323E;
+  margin: 20px 0;
   font-size: 12px;
 }
  /* 
@@ -701,38 +704,38 @@ button{
 
   }
   #heroBg .heroContent .heroWords{
-    width: 98%;
+    width: 70%;
     margin: 0 1em;
     text-align: left;
   }
   #heroBg .heroContent .heroWords h2{
     color: #fff;
     margin: 0;
-    font-size: 40px;
-    line-height: 60px;
+    font-size: 35px;
+    line-height: 50px;
   }
   #heroBg .heroContent .heroWords p{
     color: #fff;
   }
   #heroBg .heroContent .heroImg .hero2{
     position: absolute;
-    width: 300px;
+    width: 320px;
     right: 4%;
-    top: 23%;
+    top: 20%;
   }
   #heroBg .heroContent .heroImg .hero1{
     display: block;
     position: absolute;
-    width: 250px;
+    width: 270px;
     right: 2%;
     top: 35%;
   }
   #why{
     box-shadow: none;
-    width: 89%;
+    /* width: 89%; */
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
   }
   #why .whyImg {
     display: block;
@@ -783,17 +786,16 @@ button{
   }
   #agent .agentImg {
     text-align: center;
-    width: 80%;
+    width: 50%;
     display: block;
    }
    #agent .agentImg img {
     width: 300px;
     height: 270px;
-
    }
    #agent .agentWords{
     padding: 0 0 0 2em;
-    width: 90%;
+    width: 50%;
    }
    #games{
     padding: 1em 0;
@@ -804,39 +806,70 @@ button{
   }
    #games .gamesWords{
     width: 50%;
+    padding: 0 0 0 2em;
   }
   #games .gamesWords img{
-    width: 160px;
-    margin: 0 15px 0 0;
+    width: 145px;
   }
    #games .gamesImg{
-    margin: 0 2em;
+     width: 50%;
+    padding: 0 2em;
     display: block;
+    text-align: center;
   }
   #games .gamesImg img{
     height: 361.47px;
   }
 }
+@media (min-width:850px){
+  #heroBg .heroContent .heroWords{
+    width: 70%;
+    margin: 0 0 0 2em;
+  }
+}
+@media (min-width:900px){
+  #heroBg .heroContent .heroWords{
+    width: 60%;
+    margin: 0 0 0 3em ;
+  }
+  #heroBg .heroContent .heroWords h2{
+    line-height: 50px;
+  }
+  #heroBg .heroContent .heroImg .hero2{
+    width: 370px;
+    right: 5%;
+    top: 17%;
+  }
+  #heroBg .heroContent .heroImg .hero1{
+    width: 310px;
+    right: 2%;
+    top: 33%;
+  }
+}
 @media (min-width:1000px){
   #heroBg .heroContent{
-    height: 580px;
+    height: 520px;
   }
   #heroBg .heroContent .heroWords{
     margin: 0 2em;
-    width: 70%;
+    width: 60%;
+  }
+  #heroBg .heroContent .heroWords h2{
+    font-size: 40px;
+    line-height: 50px;
   }
   #heroBg .heroContent .heroImg .hero2{
     position: absolute;
-    width: 400px;
-    right: 7%;
-    top: 25%;
+    width: 425px;
+    right: 5%;
+    top: 18%;
   }
   #heroBg .heroContent .heroImg .hero1{
     display: block;
     position: absolute;
-    width: 300px;
-    right: 4%;
-    top: 37%;
+    width: 330px;
+    right: 2%;
+    top: 35%;
   }
   #why{
     box-shadow: none;
@@ -865,41 +898,53 @@ button{
   #benefits .benefitBtns{
     width: 80%;
     text-align: center;
+    margin: auto;
   } 
   #resources .resourcesTabs .tab{
     width: 270px;
     margin: 20px 11px;
   }
+  #agent .agentImg img {
+    width: 400px;
+    height: 270px;
+   }
+  #games .gamesWords{
+    padding: 0 0 0 3em;
+  }
 }
 @media (min-width:1200px){
   #heroBg .heroContent{
-    height: 610px;
+    height: 600px;
   }
   #heroBg .heroContent .heroWords{
     width: 55%;
-    margin: 0 0 0 7em;
+    margin: 0 0 0 5em;
   }
   #heroBg .heroContent .heroImg .hero2{
-    width: 430px;
-    right: 8%;
-    top: 22%;
+    width: 480px;
+    right: 6%;
+    top: 17%;
   }
   #heroBg .heroContent .heroImg .hero1{
-    width: 360px;
-    right: 5%;
-    top: 34%;
+    width: 370px;
+    height: 400;
+    right: 3%;
+    top: 32%;
   }
   #why{
     box-shadow: none;
     width: 70%;
     display: flex;
   }
+  #why .whyImg{
+    width: 50%;
+  }
   #why .whyImg img{
-    width: 460px;
+    width: 402px;
   }
   #why .whyWords{
     text-align: left;
-    width: 40%;
+    width: 50%;
     padding: 0em 0 0 5em;
    }
   .whoWords{
@@ -918,7 +963,6 @@ button{
   } 
   #benefits .benefitBtns{
     width: 70%;
-    text-align: center;
   }
   #resources .resourcesWords{
     width: 60%;
@@ -929,31 +973,38 @@ button{
     margin: 20px;
   }
   #agent .agentImg {
-    width: 70%;
+    padding: 0 2em ;
+    width: 50%;
+   }
+   #agent .agentImg img {
+    width: 518px;
+    height: 370px;
    }
   #agent .agentWords{
-    padding: 0 2em 0 0;
+    padding: 0 2em ;
     width: 50%;
    }
 }
 @media (min-width:1300px){
   #heroBg .heroContent{
-    height: 650px;
+    height: 600px;
   }
   #heroBg .heroContent .heroWords{
     width: 50%;
-    margin: 0 0 0 7.5em;
+    margin: 0 0 0 5.5em;
   }
   #heroBg .heroContent .heroImg .hero2{
     position: absolute;
-    width: 520px;
-    right: 10%;
-    top: 20%;
+    width: 560px;
+    height: 339px;
+    right: 8%;
+    top: 15%;
   }
   #heroBg .heroContent .heroImg .hero1{
     width: 410px;
-    right: 6%;
-    top: 35%;
+    height: 440;
+    right: 5%;
+    top: 32%;
   }
   #healthWallet .walletWords{
     width: 50%;
@@ -967,10 +1018,6 @@ button{
   }
   #benefits .benefitBtns{
     width: 60%;
-    text-align: center;
-    margin: auto;
   }
-  #games .gamesWords{
-    width: 40%;
-  }
+ 
 }

@@ -785,12 +785,11 @@ button{
     justify-content: center;
   }
   #agent .agentImg {
-    text-align: center;
     width: 50%;
     display: block;
    }
    #agent .agentImg img {
-    width: 300px;
+    width: 350px;
     height: 270px;
    }
    #agent .agentWords{
@@ -977,8 +976,8 @@ button{
     width: 50%;
    }
    #agent .agentImg img {
-    width: 518px;
-    height: 370px;
+    width: 500px;
+    height: 350px;
    }
   #agent .agentWords{
     padding: 0 2em ;

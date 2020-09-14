@@ -1,3 +1,8 @@
+// NOTE
+// the company/pharmacy name is the username for companies or pharmacies
+// so when referring to state use this.state.username as the organization name, pharmacy name or hospital name
+// refer to mothercomp.js for the state object
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
@@ -23,10 +28,24 @@ class Patient extends Component {
                         <input type="tel" id="number" value={number} onChange={numberChange} required />
                         </span>
                         <span><label htmlFor="genotype">Genotype</label>
-                        <input type="text" id="genotype" value={genotype} onChange={genotypeChange} required />
+                                <select id="genotype" value={genotype} onChange={genotypeChange}>
+                                    <option>AA</option>
+                                    <option>AS</option>
+                                    <option>SS</option>
+                                    <option>AC</option>
+                                </select>
                         </span>
                         <span><label htmlFor="bloodgroup">Blood Group</label>
-                        <input type="text" id="bloodgroup" value={bloodgroup} onChange={bloodgroupChange} required />
+                                <select id="bloodgroup" value={bloodgroup} onChange={bloodgroupChange} >
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                </select>
                         </span>
                         <span><label htmlFor="height">Height</label>
                         <input type="text" id="height" value={height} onChange={heightChange} required />

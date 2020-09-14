@@ -37,6 +37,7 @@
   width: 133px;
   height: 40px;
   margin: 9px;
+  display: inline-block;
   border: transparent;
   border-radius: 15px;
   background-color: #20495B;
@@ -127,7 +128,7 @@
    width: 46.3%;
    margin: 10px 10px 5px 0;
  }
- #login .userlogin input{
+ #login .userlogin input, #login .userlogin select{
   border: 1px solid #D8D8D8;
   border-radius: 15px;
   width:92%;
@@ -328,7 +329,7 @@
    width: 46.3%;
    margin: 10px 10px 5px 0;
  }
- #userProfile .account .edit .editProfile input{
+ #userProfile .account .edit .editProfile input, #userProfile .account .edit .editProfile select{
   border: 1px solid #D8D8D8;
   border-radius: 15px;
   width:92%;

@@ -93,17 +93,19 @@ class UserProfile extends Component {
                 </section>
                 <img src={Dropdown} alt="." width="35px" className="drpDwn" onClick={this.show} />
                 <section id="userProfile">
-
+                    {/* -----------------PROFILE MENU OPTIONS -------------------- */}
                     <div className="profileMenu">
                         <div onClick={() => this.showSlides(0)}><img src={Dashboard} alt="." />Dashboard</div>
                         <div onClick={() => this.showSlides(1)}><img src={Consultation} alt="." />Consultation History</div>
                         <div onClick={() => this.showSlides(2)}><img src={Appointment} alt="." />Appointments</div>
-                        <div onClick={() => this.showSlides(3)}><img src={Payment} alt="." />Payments</div>
-                        <div onClick={() => this.showSlides(4)}><img src={Account} alt="." />Account</div>
-                        <div onClick={() => this.showSlides(5)}><img src={Setting} alt="." />Settings</div>
-                        <div onClick={() => this.showSlides(6)}><img src={Logout} alt="." />Log out</div>
+                        <div onClick={() => this.showSlides(3)}><img src={Account} alt="." />Account</div>
+                        <div onClick={() => this.showSlides(4)}><img src={Appointment} alt="." />Meal Plans</div>
+                        <div onClick={() => this.showSlides(5)}><img src={Appointment} alt="." />Recipes</div>
+                        <div onClick={() => this.showSlides(6)}><img src={Payment} alt="." />Payments</div>
+                        <div onClick={() => this.showSlides(7)}><img src={Setting} alt="." />Settings</div>
+                        <div onClick={() => this.showSlides(8)}><img src={Logout} alt="." />Log out</div>
                     </div>
-                    {/* ------------------ */}
+                    {/* ------------------DASHBOARD---------------------- */}
                     <div className="dash view ">
                         <div className="availableDocs tab">
                             <b>Available Doctors</b>
@@ -132,7 +134,7 @@ class UserProfile extends Component {
 
                         <div className="transactions tab">
                             <b>Payment Transaction</b>
-                            <button onClick={() => this.showSlides(3)}>View all</button>
+                            <button onClick={() => this.showSlides(6)}>View all</button>
                         </div>
                         
                         <div className="appointments tab">
@@ -141,22 +143,16 @@ class UserProfile extends Component {
                         </div>
                     </div>
 
-                    {/* ------------- */}
+                    {/* ----------------------CONSULTATIONS----------------------- */}
                     <div className="consultHistory view">
 
                     </div>
 
-                    {/* ------------- */}
+                    {/* ---------------------------APPOINTMENTS------------------- */}
                     <div className="allAppointment view">
 
                     </div>
-
-                    {/* ------------- */}
-                    <div className="payments view">
-
-                    </div>
-
-                    {/* ------------- */}
+                    {/* --------------------------ACCOUNT--------------------------- */}
                     <div className="account view">
                         <div className="profile tab">
                         <img id="output2" src={Avatar}  alt="FilePic"/>
@@ -182,10 +178,24 @@ class UserProfile extends Component {
                                 <input type="tel" id="number" value={number} onChange={numberChange}  />
                                 </span>
                                 <span><label htmlFor="genotype">Genotype</label>
-                                <input type="text" id="genotype" value={genotype} onChange={genotypeChange} />
+                                <select id="genotype" value={genotype} onChange={genotypeChange}>
+                                    <option>AA</option>
+                                    <option>AS</option>
+                                    <option>SS</option>
+                                    <option>AC</option>
+                                </select>
                                 </span>
                                 <span><label htmlFor="bloodgroup">Blood Group</label>
-                                <input type="text" id="bloodgroup" value={bloodgroup} onChange={bloodgroupChange} />
+                                <select id="bloodgroup" value={bloodgroup} onChange={bloodgroupChange} >
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                </select>
                                 </span>
                                 <span><label htmlFor="height">Height</label>
                                 <input type="text" id="height" value={height} onChange={heightChange} />
@@ -213,14 +223,25 @@ class UserProfile extends Component {
                              
                             </div>
                         </div>
-
+                    </div>
+                    {/* -------------------------MEAL PLAN---------------------- */}
+                    <div className="mealPlan view">
 
                     </div>
-                    {/* ------------- */}
+                    {/* --------------------------RECIPE----------------------- */}
+                    <div className="Recipe view">
+
+                    </div>
+                    {/* -----------------------PAYMENTS----------------------- */}
+                    <div className="payments view">
+
+                    </div>
+
+                    {/* -------------------------SETTINGS---------------------- */}
                     <div className="settings view">
 
                     </div>
-                    {/* ------------- */}
+                    {/* --------------------------LOGOUT----------------------- */}
                     <div className="logout view">
 
                     </div>

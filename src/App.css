@@ -4,7 +4,7 @@ head , body {
 body{
   font-style: normal;
   background-color: rgb(253, 253, 253);
-  color:  #16323E;;
+  color:  #16323E;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;

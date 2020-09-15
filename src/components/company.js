@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
-export class Company extends Component {
+class Company extends Component {
     render() {
         const {formSubmitted,username,firstname,surname,email,number,address,country,password,cpassword} = this.props;
         const {usernameChange,nameChange,surnameChange,emailChange,numberChange,addressChange,countryChange,passwordChange,cpasswordChange} = this.props;

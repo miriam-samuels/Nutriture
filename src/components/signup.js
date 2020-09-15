@@ -3,7 +3,7 @@ import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import { Link } from 'react-router-dom';
 
-function signup() {
+function Signup() {
     return (
         <div id="signup"> 
             <Link to = "/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
@@ -28,5 +28,5 @@ function signup() {
     )
 }
 
-export default signup
+export default Signup
 

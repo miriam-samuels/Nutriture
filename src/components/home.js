@@ -227,6 +227,12 @@ class Home extends Component {
                 <div className="credits">
             <div className="credit lg">
                 <img src={Logo} alt="Logo" className="logo" /><br/>
+                <div className="connect"><br/>
+                <span><Link to="/"><img src={Fb} alt=""/></Link></span>
+                <span><Link to="/menu"><img src={Ig} alt=""/></Link></span>
+                <span><Link to="/blog"><img src={Tweet} alt=""/></Link></span>
+                <span><Link to="/about"><img src={Whatsapp} alt=""/></Link></span>
+                </div>
             </div>
             <div className="credit links">
             <div className="link">
@@ -258,12 +264,6 @@ class Home extends Component {
             <li><Link to="/AddRestaurant"><img src={Ios} alt="IOS"/></Link></li>
             <li><Link to="/AddDriver"><img src={Android} alt="Andriod"/></Link></li>
                         </ul>
-                        <div className="connect"><br/>
-                <span><Link to="/"><img src={Fb} alt=""/></Link></span>
-                <span><Link to="/menu"><img src={Ig} alt=""/></Link></span>
-                <span><Link to="/blog"><img src={Tweet} alt=""/></Link></span>
-                <span><Link to="/about"><img src={Whatsapp} alt=""/></Link></span>
-                </div>
 
             </div>
             <p>&copy;copyright 2020 TasteClan All Right Reserved</p>

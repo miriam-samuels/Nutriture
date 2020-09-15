@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
-export class Doctor extends Component {
+class Doctor extends Component {
     render() {
         const { formSubmitted, hospital, gender, firstname, surname, email, number, licenseNum, address, country, password, cpassword } = this.props;
         const { genderChange, hospitalChange, nameChange, surnameChange, emailChange, numberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;

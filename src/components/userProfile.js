@@ -230,6 +230,7 @@ class UserProfile extends Component {
                     </div>
                     {/* --------------------------RECIPE----------------------- */}
                     <div className="Recipe view">
+                    <input type="text" placeholder="&#9906; Search Recipe" />
 
                     </div>
                     {/* -----------------------PAYMENTS----------------------- */}

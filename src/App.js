@@ -9,7 +9,8 @@ import Doctor from './components/doctor.js';
 import Nutritionist from './components/nutritionist.js';
 import Pharmacy from './components/pharmacy.js';
 import Company from './components/company';
-import Profile from './components/userProfile.js';
+import PatientProfile from './components/patientProfile.js';
+import DoctorProfile from './components/doctorProfile.js';
 
 import './App.css';
 import './acct.css';
@@ -26,7 +27,8 @@ function App() {
         <Route path = '/nutritionist' exact component = {Nutritionist} />
         <Route path = '/pharmacy' exact component = {Pharmacy} />
         <Route path = '/company' exact component = {Company} />
-        <Route path = '/profile' exact component = {Profile} />
+        <Route path = '/profile/patient' exact component = {PatientProfile} />
+        <Route path = '/profile/doctor' exact component = {DoctorProfile} />
 
         <Route path = "/" component = {Error404} />
         {/* <Route path ='/' render={()=><div>404 ERROR</div>}/> */}

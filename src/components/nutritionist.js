@@ -7,9 +7,17 @@ import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
 class Nutritionist extends Component {
+
+    formSubmitted = (event) => {
+        console.log("logged in");
+        const { history } = this.props;
+        alert(`Welcome to Nutriture ${this.state.firstname}`);
+        history.push('/profile/doctor');
+        event.preventDefault()
+    }
     render() {
-        const { formSubmitted, hospital, gender, firstname, surname, email, number, licenseNum, address, country, password, cpassword } = this.props;
-        const { genderChange, hospitalChange, nameChange, surnameChange, emailChange, numberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;
+        const { hospital, gender, firstname, surname, demail, dnumber, licenseNum, address, country, password, cpassword } = this.props;
+        const { genderChange, hospitalChange, nameChange, surnameChange, demailChange, dnumberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;
 
         return (
             <div id="login">
@@ -17,9 +25,9 @@ class Nutritionist extends Component {
                 <div className="userlogin">
                     <h1 id="heading">Register as Nutritionist</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={formSubmitted}>
+                    <form onSubmit={this.formSubmitted}>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={email} onChange={emailChange} required />
+                        <input type="email" id="email" value={demail} onChange={demailChange} required />
                         <span><label htmlFor="fname">First Name</label>
                             <input type="text" id="fname" value={firstname} onChange={nameChange} required />
                         </span>
@@ -33,7 +41,7 @@ class Nutritionist extends Component {
                             </select>
                         </span>
                         <span><label htmlFor="number">Phone Number</label>
-                            <input type="tel" id="number" value={number} onChange={numberChange} required />
+                            <input type="tel" id="number" value={dnumber} onChange={dnumberChange} required />
                         </span>
                         <label htmlFor="hospital">Hospital Name</label>
                         <input type="text" id="hospital" value={hospital} onChange={hospitalChange} />

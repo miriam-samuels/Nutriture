@@ -9,23 +9,31 @@ import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
 class Patient extends Component {
+
+    formSubmitted = (event) => {
+        console.log("logged in");
+        const { history } = this.props;
+        alert(`Welcome to Nutriture ${this.state.firstname}`);
+        history.push('/profile/patient');
+        event.preventDefault()
+    }
     render() {
-        const {formSubmitted,username,email,number,genotype,bloodgroup,height,weight,password,cpassword} = this.props;
-        const {usernameChange,emailChange,numberChange,genotypeChange,bloodgroupChange,heightChange,weightChange,passwordChange,cpasswordChange} = this.props;
+        const {username,pemail,pnumber,genotype,bloodgroup,height,weight,password,cpassword} = this.props;
+        const {usernameChange,pemailChange,pnumberChange,genotypeChange,bloodgroupChange,heightChange,weightChange,passwordChange,cpasswordChange} = this.props;
         return (
             <div id="login">
                 <Link to = "/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
                 <div className="userlogin">
                     <h1>Register as Patient</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={formSubmitted}>
+                    <form onSubmit={this.formSubmitted}>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={email} onChange={emailChange}  required />
+                        <input type="email" id="email" value={pemail} onChange={pemailChange}  required />
                         <span><label htmlFor="username" >Username</label>
                         <input type="text" id="username" value={username} onChange={usernameChange} required />
                         </span>
                         <span><label htmlFor="number">Phone Number</label>
-                        <input type="tel" id="number" value={number} onChange={numberChange} required />
+                        <input type="tel" id="number" value={pnumber} onChange={pnumberChange} required />
                         </span>
                         <span><label htmlFor="genotype">Genotype</label>
                                 <select id="genotype" value={genotype} onChange={genotypeChange}>

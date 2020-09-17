@@ -76,7 +76,7 @@ class UserProfile extends Component {
     }
     render() {
         const {firstname,surname,email,number} = this.props;
-        const {nameChange,surnameChange,emailChange,numberChange} =this.props;
+        const {emailChange,numberChange} =this.props;
 
 
         return (
@@ -100,11 +100,9 @@ class UserProfile extends Component {
                         <div onClick={() => this.showSlides(1)}><img src={Consultation} alt="." />Consultation History</div>
                         <div onClick={() => this.showSlides(2)}><img src={Appointment} alt="." />Appointments</div>
                         <div onClick={() => this.showSlides(3)}><img src={Account} alt="." />Account</div>
-                        <div onClick={() => this.showSlides(4)}><img src={Appointment} alt="." />Meal Plans</div>
-                        <div onClick={() => this.showSlides(5)}><img src={Appointment} alt="." />Recipes</div>
-                        <div onClick={() => this.showSlides(6)}><img src={Payment} alt="." />Payments</div>
-                        <div onClick={() => this.showSlides(7)}><img src={Setting} alt="." />Settings</div>
-                        <div onClick={() => this.showSlides(8)}><img src={Logout} alt="." />Log out</div>
+                        <div onClick={() => this.showSlides(4)}><img src={Payment} alt="." />Payments</div>
+                        <div onClick={() => this.showSlides(5)}><img src={Setting} alt="." />Settings</div>
+                        <div onClick={() => this.showSlides(6)}><img src={Logout} alt="." />Log out</div>
                     </div>
                     {/* ------------------DASHBOARD---------------------- */}
                     <div className="dash view ">
@@ -194,15 +192,6 @@ class UserProfile extends Component {
                              
                             </div>
                         </div>
-                    </div>
-                    {/* -------------------------MEAL PLAN---------------------- */}
-                    <div className="mealPlan view">
-
-                    </div>
-                    {/* --------------------------RECIPE----------------------- */}
-                    <div className="Recipe view">
-                    <input type="text" placeholder="&#9906; Search Recipe" />
-
                     </div>
                     {/* -----------------------PAYMENTS----------------------- */}
                     <div className="payments view">

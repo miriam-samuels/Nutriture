@@ -8,9 +8,7 @@ const UpdatedComponent = (WrappedComponent) => {
             this.state = {
                 patient:[
                 {
-                    pemail: "xxxxx@gmail.com ",
                     username:"xxxxxxx xxxx",
-                    pnumber:"  xxx-xxx-xxx-xxx",
                     genotype:"AA",
                     bloodgroup:"O+",
                     height:"cm",
@@ -19,10 +17,8 @@ const UpdatedComponent = (WrappedComponent) => {
                 ],
                 doctor:[
                 {
-                    demail: "xxxxx@gmail.com ",
                     firstname:"",
                     surname:"",
-                    dnumber:"  xxx-xxx-xxx-xxx",
                     gender: "Female",
                     hospital:"",
                     country:"",
@@ -30,7 +26,8 @@ const UpdatedComponent = (WrappedComponent) => {
                 }
                 ],
 
-
+                email: "xxxxx@gmail.com ",
+                number:"  xxx-xxx-xxx-xxx",
                 address:"",
                 password:"",
                 cpassword:"",
@@ -114,20 +111,18 @@ const UpdatedComponent = (WrappedComponent) => {
         // }
 
         render() {
-            const {username, pemail, pnumber, genotype,bloodgroup, weight,height} = this.state.patient;
-            const {firstname, surname, demail,licenseNum, gender, hospital, dnumber, country,address} = this.state.doctor;
-            const {  password,cpassword, } = this.state;
+            const [{username, genotype,bloodgroup, weight,height}] = this.state.patient;
+            const {firstname, surname,licenseNum, gender, hospital, country,address} = this.state.doctor;
+            const {  password,cpassword,email,number } = this.state;
             return (
                 <WrappedComponent
                     firstname={firstname} nameChange={this.nameChange}
                     surname={surname} surnameChange={this.surnameChange}
                     username={username} usernameChange={this.usernameChange}
-                    pemail={pemail} pemailChange={this.pemailChange}
-                    demail={demail} demailChange={this.demailChange}
+                    email={email} emailChange={this.emailChange}
                     password={password} passwordChange={this.passwordChange}
                     cpassword={cpassword} cpasswordChange={this.cpasswordChange}
-                    pnumber={pnumber} pnumberChange={this.pnumberChange}
-                    dnumber={dnumber} dnumberChange={this.dnumberChange}
+                    number={number} numberChange={this.numberChange}
                     country={country} countryChange={this.countryChange}
                     licenseNum={licenseNum} licenseNumChange={this.licenseNumChange}
                     gender={gender} genderChange={this.genderChange}

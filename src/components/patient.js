@@ -18,8 +18,8 @@ class Patient extends Component {
         event.preventDefault()
     }
     render() {
-        const {username,pemail,pnumber,genotype,bloodgroup,height,weight,password,cpassword} = this.props;
-        const {usernameChange,pemailChange,pnumberChange,genotypeChange,bloodgroupChange,heightChange,weightChange,passwordChange,cpasswordChange} = this.props;
+        const {username,email,number,genotype,bloodgroup,height,weight,password,cpassword} = this.props;
+        const {usernameChange,emailChange,numberChange,genotypeChange,bloodgroupChange,heightChange,weightChange,passwordChange,cpasswordChange} = this.props;
         return (
             <div id="login">
                 <Link to = "/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
@@ -28,12 +28,12 @@ class Patient extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={pemail} onChange={pemailChange}  required />
+                        <input type="email" id="email" value={email} onChange={emailChange}  required />
                         <span><label htmlFor="username" >Username</label>
                         <input type="text" id="username" value={username} onChange={usernameChange} required />
                         </span>
                         <span><label htmlFor="number">Phone Number</label>
-                        <input type="tel" id="number" value={pnumber} onChange={pnumberChange} required />
+                        <input type="tel" id="number" value={number} onChange={numberChange} required />
                         </span>
                         <span><label htmlFor="genotype">Genotype</label>
                                 <select id="genotype" value={genotype} onChange={genotypeChange}>

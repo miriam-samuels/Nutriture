@@ -16,8 +16,8 @@ class Doctor extends Component {
         event.preventDefault()
     }
     render() {
-        const { hospital, gender, firstname, surname, demail, dnumber, licenseNum, address, country, password, cpassword } = this.props;
-        const { genderChange, hospitalChange, nameChange, surnameChange, demailChange, dnumberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;
+        const { hospital, gender, firstname, surname, email, number, licenseNum, address, country, password, cpassword } = this.props;
+        const { genderChange, hospitalChange, nameChange, surnameChange, emailChange, numberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;
 
         return (
             <div id="login">
@@ -27,7 +27,7 @@ class Doctor extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={demail} onChange={demailChange} required />
+                        <input type="email" id="email" value={email} onChange={emailChange} required />
                         <span><label htmlFor="fname">First Name</label>
                             <input type="text" id="fname" value={firstname} onChange={nameChange} required />
                         </span>
@@ -41,7 +41,7 @@ class Doctor extends Component {
                             </select>
                         </span>
                         <span><label htmlFor="number">Phone Number</label>
-                            <input type="tel" id="number" value={dnumber} onChange={dnumberChange} required />
+                            <input type="tel" id="number" value={number} onChange={numberChange} required />
                         </span>
                         <label htmlFor="hospital">Hospital Name</label>
                         <input type="text" id="hospital" value={hospital} onChange={hospitalChange} />

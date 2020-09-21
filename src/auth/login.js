@@ -6,14 +6,12 @@ import UpdatedComponent from "../components/mothercomp.js"
 
 
 class Login extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-
-        }
+    formSubmitted = (event) => {
+        const { history } = this.props;
+        history.push('/profile/doctor');
+        event.preventDefault()
     }
-
     render() {
         const { email, password } = this.props;
         const { emailChange, passwordChange, formSubmitted } = this.props;

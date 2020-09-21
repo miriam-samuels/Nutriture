@@ -22,48 +22,10 @@ button{
    */
 #heroBg{
   margin: 0;
-  /* background-color: #20495B; */
   background: linear-gradient(115.51deg, #1E4B62 -2.19%, #2D6650 6.95%, #1F4D61 13.72%, #1E4B62 66.86%, #1E4B62 80.35%, #20495B 90.78%, #02BE75 110.88%);
   position: relative;
   display: block;
 }
-#heroBg .union{
-  position: absolute;
-  width: 35.82px;
-  opacity: 70%;
-}
-#heroBg .union1{
-  right: 8%;
-  top: 50%;
-}
-#heroBg .union2{
-  right: 4%;
-  bottom: 20%;
-}
-#heroBg .union3{
-  right: 10%;
-  top: 10%;  
-}
-#heroBg .union4{
-  left: 50%;
-  top: 20%; 
-}
-#heroBg .union5{
-  left: 50%;
-  bottom: 10%;  
-}
-#heroBg .union6{
-  left: 10%;
-  top: 25%;  
-}
-#heroBg .union7{
-  left: 7%;
-  bottom:25%;
-  }
-  #heroBg .union8{
-  left: 37%;
-  bottom: 27%;
-  }
 #heroBg .navBar {
   background-color: #fff;
   width: 100%;
@@ -639,6 +601,38 @@ button{
   margin: 20px 0;
   font-size: 12px;
 }
+/* 
+==============================
+    Contact
+==============================
+ */
+ /* #contact .logo{
+   width: 100px;
+   margin: 20px 10px;
+ } */
+ .contact{
+  margin:20px auto;
+}
+.contact .getintouch{
+  margin-left: 10px;
+}
+.msg{
+  padding-left:10px;
+}
+.contact .msg input, .contact .msg textarea{
+  width: 90%;
+  padding: 9px 5px;
+  margin: 15px 0px;
+  border:1px solid #e5e4e4;
+  border-radius: 7px;
+}
+.contact .msg button{
+  width: 92%;
+  border: transparent;
+  padding: 10px 0;
+  border-radius: 10px;color: #fff;
+  background-color: #1E4B62;
+}
  /* 
 ================================
      for bigger screens
@@ -668,6 +662,18 @@ button{
 }
 #heroBg .heroContent .heroImg{
   width:65%;
+}
+.contact {
+  display: flex;
+  justify-content :center ;
+  vertical-align: top;
+}
+.contact .getintouch{
+  width: 40%;
+  margin-right: 2em;
+}
+.contact .msg{
+  width: 47%;
 }
 }
 @media (min-width:680px){

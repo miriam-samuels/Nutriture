@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './home/home.js';
+import Contact from './home/contact.js'
 import Error404 from './error404/404Error.js';
 import Signup from './auth/signup.js';
 import Login from './auth/login.js';
@@ -21,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/contact' exact component={Contact} />
           <Route path='/signup' exact component={Signup} />
           <Route path='/login' exact component={Login} />
           <Route path='/patient' exact component={Patient} />

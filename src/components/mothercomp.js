@@ -67,7 +67,7 @@ const UpdatedComponent = (WrappedComponent) => {
         }
         licenseNumChange = (e) => {
             this.setState({
-                state: e.target.value,
+                licenseNum: e.target.value,
             })
         }
         genderChange = (e) => {
@@ -100,7 +100,11 @@ const UpdatedComponent = (WrappedComponent) => {
                 hospital: e.target.value,
             })
         }
-
+        addressChange = (e) => {
+            this.setState({
+                address: e.target.value,
+            })
+        }
         render() {
             const { username, genotype, bloodgroup, weight, height, firstname, surname, licenseNum, gender, hospital, country, address, password, cpassword, email, number } = this.state;
             return (

@@ -14,12 +14,7 @@ import Ellipse from '../Images/ellipse.png';
 import Playstore from '../Images/playstore.png'
 import Applestore from '../Images/applestore.png'
 import Frutty from '../Images/frutty.png'
-import Fb from '../Images/Facebook.svg';
-import Ig from '../Images/Instagram.svg';
-import Tweet from '../Images/Twitter.svg';
-import Whatsapp from '../Images/Whatsapp.svg';
-import Android from '../Images/adr.svg';
-import Ios from '../Images/ios.svg';
+import Footer from './footer.js'
 class Home extends Component {
     render() {
         return (
@@ -45,21 +40,13 @@ class Home extends Component {
                                 Prepare for the Future, Get all-round Happiness, Just make one choice
                                 ... "Get Nutriture"
                         </p>
-                            <button>Sign Up</button>
+                            <Link to="/signup"><button>Sign Up</button></Link>
                         </div>
                         <div className="heroImg">
                             <img src={Hero2} alt="hero" className="hero2" />
                             <img src={Hero1} alt="hero" className="hero1" />
                         </div>
                     </div>
-                    <img src={Union} alt="union" className="union1 union" />
-                    <img src={Union} alt="union" className="union2 union" />
-                    <img src={Union} alt="union" className="union3 union" />
-                    <img src={Union} alt="union" className="union4 union" />
-                    <img src={Union} alt="union" className="union5 union" />
-                    <img src={Union} alt="union" className="union6 union" />
-                    <img src={Union} alt="union" className="union7 union" />
-                    <img src={Union} alt="union" className="union8 union" />
                 </section>
 
                 <section id="why">
@@ -95,8 +82,6 @@ class Home extends Component {
                         <button>Health Vendors</button>
                         {/* <button>HMOs</button> */}
                     </div>
-                    {/* <img src={Union} alt="union" className="union9"/> */}
-                    {/* <img src={Union} alt="union" className="union10"/> */}
                 </section>
 
                 <section id="healthWallet">
@@ -171,7 +156,7 @@ class Home extends Component {
                             <b>Learn About Your Health</b><br />
                             <p>You can learn a lot about how to maintain a healthy lifestyle, ranging from
                             nutritional facts to daily ealth tips and all other mediums you need to stay healthy. </p>
-                            <button>&#8620;</button>
+                            <a href="http://m.me/nutriturehealth"><button>&#8620;</button></a>
                         </div>
                         <div className="tab">
                             <b>Visit Health Market</b><br />
@@ -183,7 +168,7 @@ class Home extends Component {
                             <b>Join Health Community</b><br />
                             <p>Join the largest growing community of health conscious minds and get valuable health
                         tips, also get a chance to create awareness on health in Africa. </p>
-                            <button>&#8620;</button>
+                           <a href = "https://www.facebook.com/groups/fortifiedfoodsinititiative/"><button>&#8620;</button></a>
                         </div>
                     </div>
                 </section>
@@ -224,51 +209,7 @@ class Home extends Component {
                 </section>
 
                 <footer>
-                    <div className="credits">
-                        <div className="credit lg">
-                            <img src={Logo} alt="Logo" className="logo" /><br />
-                            <div className="connect"><br />
-                                <span><Link to="/"><img src={Fb} alt="" /></Link></span>
-                                <span><Link to="/menu"><img src={Ig} alt="" /></Link></span>
-                                <span><Link to="/blog"><img src={Tweet} alt="" /></Link></span>
-                                <span><Link to="/about"><img src={Whatsapp} alt="" /></Link></span>
-                            </div>
-                        </div>
-                        <div className="credit links">
-                            <div className="link">
-                                <ul>
-                                    <li> <b>QuickLinks</b></li>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/products">Products</Link></li>
-                                    <li><Link to="/blog">Blog</Link></li>
-                                    <li><Link to="/about">About</Link></li>
-                                    <li><Link to="/contact">Contact</Link></li>
-                                </ul>
-                            </div>
-                            <div className="link">
-                                <ul>
-                                    <li><b>Nutriture</b></li>
-                                    <li><Link to="/products">Products</Link></li>
-                                    <li><Link to="/terms">Terms of use</Link></li>
-                                    <li><Link to="/privacy">Privacy Policy</Link></li>
-                                    <li><Link to="/market">Health Market</Link></li>
-                                    <li><Link to="/community">Helth Community</Link></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <div className="credit">
-
-                            <ul>
-                                <li><b>App Download</b></li>
-                                <li><Link to="/AddRestaurant"><img src={Ios} alt="IOS" /></Link></li>
-                                <li><Link to="/AddDriver"><img src={Android} alt="Andriod" /></Link></li>
-                            </ul>
-
-                        </div>
-                        <p>&copy;copyright 2020 TasteClan All Right Reserved</p>
-
-                    </div>
+                    <Footer />
                 </footer>
             </div>
         )

@@ -10,10 +10,9 @@ import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
 import UpdatedComponent from "../components/mothercomp.js"
 class Company extends Component {
+    
     formSubmitted = (event) => {
-        console.log("logged in");
         const { history } = this.props;
-        alert(`Welcome to Nutriture ${this.state.firstname}`);
         history.push('/profile/company');
         event.preventDefault()
     }
@@ -50,7 +49,7 @@ class Company extends Component {
                         <input type="password" id="password" value={password} onChange={passwordChange} required />
                         <label htmlFor="cpassword">Confirm Password</label>
                         <input type="password" id="cpassword" value={cpassword} onChange={cpasswordChange} required />
-                        <input type="checkbox" id="agree" />
+                        <input type="checkbox" id="agree" checked required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <span>terms of service</span></label>
                         <button type="submit">Sign Up</button><br />
                     </form>

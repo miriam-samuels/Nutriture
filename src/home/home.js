@@ -25,8 +25,8 @@ class Home extends Component {
                         <ul>
                             <li className="navItem" ><Link to="/about" >About</Link></li>
                             <li className="navItem"><Link to="/products" >Products</Link></li>
-                            <li className="navItem"><Link to="/blog" >Blog</Link></li>
-                            <li className="navItem"><Link to="/contact" >Contact</Link></li>
+                            {/* <li className="navItem"><Link to="/blog" >Blog</Link></li> */}
+                            <li className="navItem contact">Contact  <span>nutritureinfo@gmail.com</span></li>
                         </ul>
                         <div className="login">
                             <span><Link to="/login">Log In </Link></span>
@@ -80,7 +80,7 @@ class Home extends Component {
                         <button>Nuritionists</button>
                         <button>Companies</button>
                         <button>Health Vendors</button>
-                        {/* <button>HMOs</button> */}
+                        <button>HMOs</button>
                     </div>
                 </section>
 
@@ -154,20 +154,20 @@ class Home extends Component {
                     <div className="resourcesTabs">
                         <div className="tab">
                             <b>Learn About Your Health</b><br />
-                            <p>You can learn a lot about how to maintain a healthy lifestyle, ranging from
-                            nutritional facts to daily ealth tips and all other mediums you need to stay healthy. </p>
+                            <p>Learn how to maintain a healthy lifestyle, ranging from
+                            nutritional facts to daily health tips with all other mediums you need to stay very healthy. </p>
                             <a href="http://m.me/nutriturehealth"><button>&#8620;</button></a>
                         </div>
                         <div className="tab">
                             <b>Visit Health Market</b><br />
-                            <p>Shop for health supplements, gadgets, and nutritious and organic food products from our various food and
-                        Nutrition Brands and health-based Vendors </p>
+                            <p>Shop for health supplements, gadgets, nutritious, and organic food products from our various food and
+                            Nutrition Brands, and health - based Vendors </p>
                             <button>&#8620;</button>
                         </div>
                         <div className="tab">
                             <b>Join Health Community</b><br />
                             <p>Join the largest growing community of health conscious minds and get valuable health
-                        tips, also get a chance to create awareness on health in Africa. </p>
+                            tips, also get a chance to create awareness on health in Africa. </p>
                            <a href = "https://www.facebook.com/groups/fortifiedfoodsinititiative/"><button>&#8620;</button></a>
                         </div>
                     </div>

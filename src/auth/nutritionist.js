@@ -62,7 +62,7 @@ class Nutritionist extends Component {
                         <label htmlFor="cpassword">Confirm Password</label>
                         <input type="password" id="cpassword" value={cpassword} onChange={cpasswordChange} required />
                         <input type="checkbox" id="agree" checked required />
-                        <label htmlFor="agree" className="agree">By signing up, you agree to our <span>terms of service</span></label>
+                        <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>bel>
                         <button type="submit">Sign Up</button><br />
                     </form>
                 </div>

@@ -149,7 +149,8 @@
 #login .userlogin .agree{
   font-size: 13px;
 }
-#login .userlogin .agree span{
+#login .userlogin .agree a {
+  text-decoration: none;
   color: #02BE75;
   padding: 0;
   display: inline;

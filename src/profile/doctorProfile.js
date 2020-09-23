@@ -17,7 +17,7 @@ import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
 
-let n = 3;
+let n = 0;
 class UserProfile extends Component {
     constructor(props) {
         super(props)

@@ -9,7 +9,7 @@ class Login extends Component {
 
     formSubmitted = (event) => {
         const { history } = this.props;
-        history.push('/profile/doctor');
+        history.push('/profile/');
         event.preventDefault()
     }
     render() {

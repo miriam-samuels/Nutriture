@@ -130,7 +130,7 @@ class Home extends Component {
                     <img src={Ellipse} alt="ellipse" className="ellipse" />
                     <div className="benefitWords">
                         <h3>Amazing Benefits</h3>
-                        <p>Nutriture health is your best health companion, with which you can be assured many things lacking,
+                        <p>Nutriture health is your best health companion, with which you can be assured many amazing benefits,
                         including:</p>
                     </div>
                     <div className="benefitBtns">

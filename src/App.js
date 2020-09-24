@@ -23,13 +23,13 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/signup' exact component={Signup} />
           <Route path='/login' exact component={Login} />
-          <Route path='/patient' exact component={Patient} />
-          <Route path='/doctor' exact component={Doctor} />
-          <Route path='/nutritionist' exact component={Nutritionist} />
-          <Route path='/pharmacy' exact component={Pharmacy} />
-          <Route path='/company' exact component={Company} />
+          <Route path='/signup' exact component={Signup} />
+          <Route path='/signup/patient' exact component={Patient} />
+          <Route path='/signup/doctor' exact component={Doctor} />
+          <Route path='/signup/nutritionist' exact component={Nutritionist} />
+          <Route path='/signup/pharmacy' exact component={Pharmacy} />
+          <Route path='/signup/company' exact component={Company} />
           <Route path='/profile/patient' exact component={PatientProfile} />
           <Route path='/profile/doctor' exact component={DoctorProfile} />
           <Route path='/profile/company' exact component={CompanyProfile} />

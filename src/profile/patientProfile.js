@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import UpdatedComponent from "../components/mothercomp"
 import Drpdwn from './drpDwn';
 import Consultations from './consultaion.js'
-import Appointments from './appintment.js'
+import Appointments from './appointment.js'
 import Payments from './payments.js'
 import Card from './bankDetails.js'
 import { Link } from 'react-router-dom'
@@ -97,11 +97,14 @@ class UserProfile extends Component {
                     </div>
                     {/* ------------------DASHBOARD---------------------- */}
                     <div className="dash view ">
+
+                        {/* ------AVAILABLE DOCTORS TAB----- */}
                         <div className="availableDocs tab">
                             <b>Available Doctors</b>
                             <button>View all</button>
                         </div>
 
+                        {/* ------CONSULTATION TAB------ */}
                         <div className="consultations tab">
                             <b>Consultation History</b>
                             <div className="sub">
@@ -122,11 +125,13 @@ class UserProfile extends Component {
                             <button onClick={() => this.showSlides(1)}>View all</button>
                         </div>
 
+                        {/* ------TRANSACTION TAB------ */}
                         <div className="transactions tab">
                             <b>Payment Transaction</b>
                             <button onClick={() => this.showSlides(6)}>View all</button>
                         </div>
 
+                        {/* ------APPOINTMENT TAB------ */}
                         <div className="appointments tab">
                             <b>Appointments</b>
                             <button onClick={() => this.showSlides(2)}>View all</button>
@@ -155,6 +160,8 @@ class UserProfile extends Component {
                             <b>Weight: {weight} </b>
                             <b>Height: {height} </b>
                         </div>
+
+                    {/* ------EDIT TAB------ */}
                         <div className="edit tab">
                             <nav>
                                 <b onClick={() => this.showDetails(0)}>Edit profile</b>

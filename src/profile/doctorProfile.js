@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import UpdatedComponent from "../components/mothercomp";
 import Drpdwn from './drpDwn.js';
 import Consultations from './consultaion.js';
-import Appointments from './appintment.js';
+import Appointments from './appointment.js';
 import Payments from './payments.js';
 import Card from './bankDetails.js'
 import { Link } from 'react-router-dom';
@@ -24,17 +24,16 @@ class UserProfile extends Component {
         this.showDetails = this.showDetails.bind(this);
         this.showSlides = this.showSlides.bind(this);
         this.loadimg = this.loadimg.bind(this);
-
     }
 
-    loadimg (e) {
+    loadimg(e) {
         let img = document.getElementById('output');
         let img2 = document.getElementById('output2');
         img.src = URL.createObjectURL(e.target.files[0]);
         img2.src = URL.createObjectURL(e.target.files[0]);
     }
 
-    showSlides (slideIndex)  {
+    showSlides(slideIndex) {
         const bar = Array.from(document.querySelectorAll("   #userProfile .profileMenu div"));
         const slides = Array.from(document.querySelectorAll("  #userProfile .view"));
 
@@ -48,7 +47,7 @@ class UserProfile extends Component {
         bar[slideIndex].style.background = "#000";
     }
 
-    showDetails (slideIndex) {
+    showDetails(slideIndex) {
         const bar = Array.from(document.querySelectorAll(" #userProfile .account .edit b"));
         const slides = Array.from(document.querySelectorAll("#userProfile .account .edit .details"));
 
@@ -89,17 +88,22 @@ class UserProfile extends Component {
                         <div onClick={() => this.showSlides(1)}><img src={Consultation} alt="." />Consultation History</div>
                         <div onClick={() => this.showSlides(2)}><img src={Appointment} alt="." />Appointments</div>
                         <div onClick={() => this.showSlides(3)}><img src={Account} alt="." />Account</div>
-                        <div onClick={() => this.showSlides(4)}><img src={Payment} alt="." />Payments</div>
-                        <div onClick={() => this.showSlides(5)}><img src={Setting} alt="." />Settings</div>
-                        <div onClick={() => this.showSlides(6)}><img src={Logout} alt="." />Log out</div>
+                        <div onClick={() => this.showSlides(4)}><img src={Appointment} alt="." />Meal Plans</div>
+                        <div onClick={() => this.showSlides(5)}><img src={Appointment} alt="." />Recipes</div>
+                        <div onClick={() => this.showSlides(6)}><img src={Payment} alt="." />Payments</div>
+                        <div onClick={() => this.showSlides(7)}><img src={Setting} alt="." />Settings</div>
+                        <div onClick={() => this.showSlides(8)}><img src={Logout} alt="." />Log out</div>
                     </div>
                     {/* ------------------DASHBOARD---------------------- */}
                     <div className="dash view ">
+
+                        {/* ------AVAILABLE DOCTORS TAB----- */}
                         <div className="availableDocs tab">
                             <b>Available Doctors</b>
                             <button>View all</button>
                         </div>
 
+                        {/* ------CONSULTATION TAB------ */}
                         <div className="consultations tab">
                             <b>Consultation History</b>
                             <div className="sub">
@@ -120,11 +124,13 @@ class UserProfile extends Component {
                             <button onClick={() => this.showSlides(1)}>View all</button>
                         </div>
 
+                        {/* ------TRANSACTION TAB------ */}
                         <div className="transactions tab">
                             <b>Payment Transaction</b>
                             <button onClick={() => this.showSlides(6)}>View all</button>
                         </div>
 
+                        {/* ------APPOINTMENT TAB------ */}
                         <div className="appointments tab">
                             <b>Appointments</b>
                             <button onClick={() => this.showSlides(2)}>View all</button>
@@ -187,6 +193,14 @@ class UserProfile extends Component {
 
                             </div>
                         </div>
+                    </div>
+                    {/* -------------------------MEAL PLAN---------------------- */}
+                    <div className="mealPlan view">
+
+                    </div>
+                    {/* --------------------------RECIPE----------------------- */}
+                    <div className="Recipe view">
+
                     </div>
                     {/* -----------------------PAYMENTS----------------------- */}
                     <div className="payments view">

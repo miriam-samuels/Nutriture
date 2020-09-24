@@ -15,12 +15,12 @@ function Signup() {
                 organization. 
             </p>
             <div className="signupBtns">
-                <Link to = "/patient"><button>Patients</button></Link>
-                <Link to = "/doctor"><button>Doctor</button></Link>
-                <Link to = "/nutritionist"><button>Nutritionist</button></Link>
-                <Link to = "/doctor"><button>Health Pros</button></Link>
-                <Link to = "/pharmacy"><button>Pharmacy</button></Link>
-                <Link to = "/company"><button>Company</button></Link>
+                <Link to = "/signup/patient"><button>Patients</button></Link>
+                <Link to = "/signup/doctor"><button>Doctor</button></Link>
+                <Link to = "/signup/nutritionist"><button>Nutritionist</button></Link>
+                <Link to = "/signup/doctor"><button>Health Pros</button></Link>
+                <Link to = "/signup/pharmacy"><button>Pharmacy</button></Link>
+                <Link to = "/signup/company"><button>Company</button></Link>
             </div>
             </div>
             <img src={Vector} alt="nutriture vector" className="vector" />

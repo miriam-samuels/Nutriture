@@ -117,6 +117,9 @@
  #login .userlogin h1, #login .userlogin p{
   text-align: center;
 }
+#login .userlogin p{
+  margin:0 0 50px 0;
+}
  #login .userlogin label{
   font-size: 14px;
   line-height: 24px;
@@ -231,6 +234,7 @@
 }
 #userProfile .profileMenu div img{
   margin: 0 5px;
+  vertical-align: bottom;
 }
 /* 
 ===============================

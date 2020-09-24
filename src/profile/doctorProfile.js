@@ -21,34 +21,20 @@ let n = 0;
 class UserProfile extends Component {
     constructor(props) {
         super(props)
+        this.showDetails = this.showDetails.bind(this);
+        this.showSlides = this.showSlides.bind(this);
+        this.loadimg = this.loadimg.bind(this);
 
-        this.state = {
-            show: false,
-        }
     }
 
-    loadimg = (e) => {
+    loadimg (e) {
         let img = document.getElementById('output');
         let img2 = document.getElementById('output2');
         img.src = URL.createObjectURL(e.target.files[0]);
         img2.src = URL.createObjectURL(e.target.files[0]);
     }
-    show = () => {
-        let click = document.querySelector("#userProfile .profileMenu");
-        if (this.state.show === false) {
-            click.style.display = "block";
-            this.setState({
-                show: true,
-            });
-        }
-        else {
-            click.style.display = "none";
-            this.setState({
-                show: false,
-            })
-        }
-    }
-    showSlides = (slideIndex) => {
+
+    showSlides (slideIndex)  {
         const bar = Array.from(document.querySelectorAll("   #userProfile .profileMenu div"));
         const slides = Array.from(document.querySelectorAll("  #userProfile .view"));
 
@@ -60,9 +46,9 @@ class UserProfile extends Component {
         slides[slideIndex].style.display = "block";
         bar[slideIndex].style.color = "#FFF";
         bar[slideIndex].style.background = "#000";
-
     }
-    showDetails = (slideIndex) => {
+
+    showDetails (slideIndex) {
         const bar = Array.from(document.querySelectorAll(" #userProfile .account .edit b"));
         const slides = Array.from(document.querySelectorAll("#userProfile .account .edit .details"));
 

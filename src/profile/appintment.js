@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 
 export class Appintment extends Component {
-    showDetails = (slideIndex) => {
+    constructor() {
+        super();
+
+        this.showDetails = this.showDetails.bind(this);
+    }
+    showDetails(slideIndex) {
         const bar = Array.from(document.getElementsByClassName("slide"));
         const slides = Array.from(document.getElementsByClassName("page"));
 

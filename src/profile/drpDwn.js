@@ -8,8 +8,9 @@ class profileMenu extends Component {
         this.state = {
             show: false,
         }
+        this.show = this.show.bind(this);
     }
-    show = () => {
+    show () {
         let click = document.querySelector("#userProfile .profileMenu");
         if (this.state.show === false) {
             click.style.display = "block";

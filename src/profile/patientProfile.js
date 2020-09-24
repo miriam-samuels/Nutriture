@@ -19,15 +19,22 @@ import Avatar from '../Images/avatar6.png';
 
 let n = 0;
 class UserProfile extends Component {
+    constructor(props) {
+        super(props)
 
+        this.showDetails = this.showDetails.bind(this);
+        this.showSlides = this.showSlides.bind(this);
+        this.loadimg = this.loadimg.bind(this);
 
-    loadimg = (e) => {
+    }
+
+    loadimg(e) {
         let img = document.getElementById('output');
         let img2 = document.getElementById('output2');
         img.src = URL.createObjectURL(e.target.files[0]);
         img2.src = URL.createObjectURL(e.target.files[0]);
     }
-    showSlides = (slideIndex) => {
+    showSlides(slideIndex) {
         const bar = Array.from(document.querySelectorAll("   #userProfile .profileMenu div"));
         const slides = Array.from(document.querySelectorAll("  #userProfile .view"));
 
@@ -41,7 +48,7 @@ class UserProfile extends Component {
         bar[slideIndex].style.background = "#000";
 
     }
-    showDetails = (slideIndex) => {
+    showDetails(slideIndex) {
         const bar = Array.from(document.querySelectorAll(" #userProfile .account .edit b"));
         const slides = Array.from(document.querySelectorAll("#userProfile .account .edit .details"));
 

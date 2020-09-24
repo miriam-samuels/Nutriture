@@ -24,83 +24,99 @@ const UpdatedComponent = (WrappedComponent) => {
                 cpassword: "",
 
             }
+            this.nameChange = this.nameChange.bind(this);
+            this.surnameChange = this.surnameChange.bind(this);
+            this.usernameChange = this.usernameChange.bind(this);
+            this.emailChange = this.emailChange.bind(this);
+            this.passwordChange = this.passwordChange.bind(this);
+            this.cpasswordChange = this.cpasswordChange.bind(this);
+            this.numberChange = this.numberChange.bind(this);
+            this.countryChange = this.countryChange.bind(this);
+            this.licenseNumChange = this.licenseNumChange.bind(this);
+            this.genderChange = this.genderChange.bind(this);
+            this.genotypeChange = this.genotypeChange.bind(this);
+            this.bloodgroupChange = this.bloodgroupChange.bind(this);
+            this.weightChange = this.weightChange.bind(this);
+            this.heightChange = this.heightChange.bind(this);
+            this.hospitalChange = this.hospitalChange.bind(this);
+            this.addressChange = this.addressChange.bind(this);
         }
-        nameChange = (e) => {
+        nameChange(e) {
             this.setState({
                 firstname: e.target.value,
             })
         }
-        surnameChange = (e) => {
+        surnameChange(e) {
             this.setState({
                 surname: e.target.value,
             })
         }
-        usernameChange = (e) => {
+        usernameChange(e) {
             this.setState({
                 patient: e.target.value,
             })
         }
-        emailChange = (e) => {
+        emailChange(e) {
             this.setState({
                 email: e.target.value,
             })
         }
-        passwordChange = (e) => {
+        passwordChange(e) {
             this.setState({
                 password: e.target.value,
             })
         }
-        cpasswordChange = (e) => {
+        cpasswordChange(e) {
             this.setState({
                 cpassword: e.target.value,
             })
         }
-        numberChange = (e) => {
+        numberChange(e) {
             this.setState({
                 tel: e.target.value,
             })
         }
-        countryChange = (e) => {
+        countryChange(e) {
             this.setState({
                 country: e.target.value,
             })
         }
-        licenseNumChange = (e) => {
+        licenseNumChange(e) {
             this.setState({
                 licenseNum: e.target.value,
             })
         }
-        genderChange = (e) => {
+        genderChange(e) {
             this.setState({
                 gender: e.target.value,
             })
         }
-        genotypeChange = (e) => {
+        genotypeChange(e) {
             this.setState({
                 genotype: e.target.value,
             })
         }
-        bloodgroupChange = (e) => {
+        bloodgroupChange(e) {
             this.setState({
                 bloodgroup: e.target.value,
             })
         }
-        weightChange = (e) => {
+        weightChange(e) {
             this.setState({
                 weight: e.target.value,
             })
         }
-        heightChange = (e) => {
+        heightChange(e) {
             this.setState({
                 height: e.target.value,
             })
         }
-        hospitalChange = (e) => {
+        hospitalChange(e) {
             this.setState({
                 hospital: e.target.value,
             })
         }
-        addressChange = (e) => {
+        addressChange(e) {
             this.setState({
                 address: e.target.value,
             })

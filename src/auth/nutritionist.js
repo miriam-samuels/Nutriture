@@ -25,7 +25,7 @@ class Nutritionist extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="nutritionistEmail">Email</label>
-                        <input type="nutritionistEmail" id="nutritionistEmail" value={nutritionistEmail} onChange={nutritionistEmailChange} required />
+                        <input type="email" id="nutritionistEmail" value={nutritionistEmail} onChange={nutritionistEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>
                             <input type="text" id="fname" value={nutritionistFirstname} onChange={nameChange} required />
                         </span>
@@ -58,9 +58,9 @@ class Nutritionist extends Component {
                             <input type="text" id="nutritionistCountry" value={nutritionistCountry} onChange={nutritionistCountryChange} required />
                         </span>
                         <label htmlFor="nutritionistPassword">Password</label>
-                        <input type="nutritionistPassword" id="nutritionistPassword" value={nutritionistPassword} onChange={nutritionistPasswordChange} required />
+                        <input type="password" id="nutritionistPassword" value={nutritionistPassword} onChange={nutritionistPasswordChange} required />
                         <label htmlFor="cnutritionistPassword">Confirm Password</label>
-                        <input type="nutritionistPassword" id="cnutritionistPassword" value={cnutritionistPassword} onChange={cnutritionistPasswordChange} required />
+                        <input type="password" id="cnutritionistPassword" value={cnutritionistPassword} onChange={cnutritionistPasswordChange} required />
                         <input type="checkbox" id="agree" checked required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button><br />

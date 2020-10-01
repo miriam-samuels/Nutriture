@@ -26,7 +26,7 @@ class Patient extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="patientEmail">Email</label>
-                        <input type="patientEmail" id="patientEmail" value={patientEmail} onChange={patientEmailChange} required />
+                        <input type="email" id="patientEmail" value={patientEmail} onChange={patientEmailChange} required />
                         <span><label htmlFor="patientUsername" >Username</label>
                             <input type="text" id="patientUsername" value={patientUsername} onChange={patientUsernameChange} required />
                         </span>
@@ -60,9 +60,9 @@ class Patient extends Component {
                             <input type="text" id="patientWeight" value={patientWeight} onChange={patientWeightChange} required />
                         </span>
                         <label htmlFor="patientPassword">Password</label>
-                        <input type="patientPassword" id="patientPassword" value={patientPassword} onChange={patientPasswordChange} required />
+                        <input type="password" id="patientPassword" value={patientPassword} onChange={patientPasswordChange} required />
                         <label htmlFor="cpatientPassword">Confirm Password</label>
-                        <input type="patientPassword" id="cpatientPassword" value={cpatientPassword} onChange={cpatientPasswordChange} required />
+                        <input type="password" id="cpatientPassword" value={cpatientPassword} onChange={cpatientPasswordChange} required />
                         <input type="checkbox" id="agree" checked required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button>

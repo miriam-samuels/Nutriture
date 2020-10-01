@@ -25,7 +25,7 @@ class Doctor extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="doctorEmail">Email</label>
-                        <input type="doctorEmail" id="doctorEmail" value={doctorEmail} onChange={doctorEmailChange} required />
+                        <input type="email" id="doctorEmail" value={doctorEmail} onChange={doctorEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>
                             <input type="text" id="fname" value={doctorFirstname} onChange={nameChange} required />
                         </span>
@@ -58,9 +58,9 @@ class Doctor extends Component {
                             <input type="text" id="doctorCountry" value={doctorCountry} onChange={doctorCountryChange} required />
                         </span>
                         <label htmlFor="doctorPassword">Password</label>
-                        <input type="doctorPassword" id="doctorPassword" value={doctorPassword} onChange={doctorPasswordChange} required />
+                        <input type="password" id="doctorPassword" value={doctorPassword} onChange={doctorPasswordChange} required />
                         <label htmlFor="cdoctorPassword">Confirm Password</label>
-                        <input type="doctorPassword" id="cdoctorPassword" value={cdoctorPassword} onChange={cdoctorPasswordChange} required />
+                        <input type="password" id="cdoctorPassword" value={cdoctorPassword} onChange={cdoctorPasswordChange} required />
                         <input type="checkbox" id="agree"  required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button><br />

@@ -27,7 +27,7 @@ class Company extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="companyEmail">Email</label>
-                        <input type="companyEmail" id="companyEmail" value={companyEmail} onChange={companyEmailChange} required />
+                        <input type="email" id="companyEmail" value={companyEmail} onChange={companyEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>
                             <input type="text" id="fname" value={companyFirstname} onChange={companyFirstnameChange} required />
                         </span>
@@ -45,9 +45,9 @@ class Company extends Component {
                         <label htmlFor="companyAddress">Company Address</label>
                         <input type="text" id="companyAddress" value={companyAddress} onChange={companyAddressChange} required />
                         <label htmlFor="companyPassword">Password</label>
-                        <input type="companyPassword" id="companyPassword" value={companyPassword} onChange={companyPasswordChange} required />
+                        <input type="password" id="companyPassword" value={companyPassword} onChange={companyPasswordChange} required />
                         <label htmlFor="ccompanyPassword">Confirm Password</label>
-                        <input type="companyPassword" id="ccompanyPassword" value={ccompanyPassword} onChange={ccompanyPasswordChange} required />
+                        <input type="password" id="ccompanyPassword" value={ccompanyPassword} onChange={ccompanyPasswordChange} required />
                         <input type="checkbox" id="agree" required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button><br />

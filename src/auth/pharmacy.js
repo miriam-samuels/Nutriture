@@ -19,7 +19,7 @@ class Pharmacy extends Component {
     }
     render() {
         const { pharmacyName, pharmacyFirstname, pharmacyLastname, pharmacyEmail, pharmacyNumber, pharmacyAddress, pharmacyCountry, pharmacyPassword, cpharmacyPassword } = this.props;
-        const { pharmacyNameChange, pharmacyFirstnameChange, pharmacyLastnameChange,  pharmacyNumberChange, pharmacyAddressChange, pharmacyCountryChange, pharmacyPasswordChange, cpharmacyPasswordChange } = this.props;
+        const { pharmacyNameChange, pharmacyFirstnameChange, pharmacyLastnameChange,pharmacyEmailChange,  pharmacyNumberChange, pharmacyAddressChange, pharmacyCountryChange, pharmacyPasswordChange, cpharmacyPasswordChange } = this.props;
         return (
             <div id="login">
                 <Link to="/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
@@ -28,7 +28,7 @@ class Pharmacy extends Component {
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
                         <label htmlFor="pharmacyEmail">Email</label>
-                        <input type="email" id="pharmacyEmail" value={pharmacyEmail}  required />
+                        <input type="email" id="pharmacyEmail" value={pharmacyEmail} onChange={pharmacyEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>
                             <input type="text" id="fname" value={pharmacyFirstname} onChange={pharmacyFirstnameChange} required />
                         </span>
@@ -49,7 +49,7 @@ class Pharmacy extends Component {
                         <input type="password" id="pharmacyPassword" value={pharmacyPassword} onChange={pharmacyPasswordChange} required />
                         <label htmlFor="cpharmacyPassword">Confirm Password</label>
                         <input type="password" id="cpharmacyPassword" value={cpharmacyPassword} onChange={cpharmacyPasswordChange} required />
-                        <input type="checkbox" id="agree" checked required />
+                        <input type="checkbox" id="agree" required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button><br />
                     </form>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import UpdatedComponent from "../components/mothercomp";
 import Drpdwn from './drpDwn.js';
 import Consultations from './consultaion.js';
 import Appointments from './appointment.js';
@@ -16,6 +15,7 @@ import Setting from '../Images/settings.svg';
 import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
+import DoctorHOC from '../components/doctorHOC';
 
 let n = 0;
 class UserProfile extends Component {
@@ -64,7 +64,8 @@ class UserProfile extends Component {
         setTimeout(this.showDetails(0), 1);
     }
     render() {
-        const { firstname, surname, email, number, gender, hospital, licenseNum, country, address } = this.props;
+        const { doctorHospital, doctorGender, doctorFirstname, doctorLastname, doctorEmail, doctorNumber, doctorLicenseId, doctorAddress, doctorCountry} = this.props;
+
 
 
         return (
@@ -76,7 +77,7 @@ class UserProfile extends Component {
                         <span className="notifications"><img src={Notify} alt="." /> </span>
                         <span className="avatar">
                             <img id="output" src={Avatar} className="userpic" alt="FilePic" />
-                            <b>{firstname} {surname} <br />{email}</b>
+                            <b>{doctorFirstname} {doctorLastname} <br />{doctorEmail}</b>
                         </span>
                     </div>
                 </section>
@@ -150,15 +151,15 @@ class UserProfile extends Component {
                     <div className="account view">
                         <div className="profile tab">
                             <img id="output2" src={Avatar} alt="FilePic" />
-                            <h4>{firstname} {surname}</h4>
+                            <h4>{doctorFirstname} {doctorLastname}</h4>
                             <h5>Doctor</h5>
-                            <b>E-mail : {email} </b>
-                            <b>Gender : {gender} </b>
-                            <b>Phone Number : {number} </b>
-                            <b>License ID Number : {licenseNum} </b>
-                            <b>Hospital Name : {hospital} </b>
-                            <b>Address : {address} </b>
-                            <b>Country : {country} </b>
+                            <b>E-mail : {doctorEmail} </b>
+                            <b>Gender : {doctorGender} </b>
+                            <b>Phone Number : {doctorNumber} </b>
+                            <b>License ID Number : {doctorLicenseId} </b>
+                            <b>Hospital Name : {doctorHospital} </b>
+                            <b>Address : {doctorAddress} </b>
+                            <b>Country : {doctorCountry} </b>
 
                         </div>
                         <div className="edit tab">
@@ -221,4 +222,4 @@ class UserProfile extends Component {
     }
 }
 
-export default UpdatedComponent(UserProfile);
+export default DoctorHOC(UserProfile);

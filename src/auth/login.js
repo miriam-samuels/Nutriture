@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
-import UpdatedComponent from "../components/mothercomp.js"
+// import UpdatedComponent from "../components/mothercomp.js"
 
 
 class Login extends Component {
@@ -13,16 +13,16 @@ class Login extends Component {
         event.preventDefault()
     }
     render() {
-        const { email, password } = this.props;
-        const { emailChange, passwordChange, formSubmitted } = this.props;
+
+        const { formSubmitted } = this.props;
         return (
             <div id="login">
                 <Link to="/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
                 <div className="login">
                     <h1>Login to your account</h1>
                     <form onSubmit={formSubmitted}>
-                        <input type="email" placeholder="Email" value={email} onChange={emailChange} required />
-                        <input type="password" placeholder="Password" value={password} onChange={passwordChange} required />
+                        <input type="email" placeholder="Email"  required />
+                        <input type="password" placeholder="Password"  required />
                         <label className="forgot">Forgot Password ?</label><br />
                         <button type="submit">Log In</button><br />
                         <label>Don't have an account ? <span><Link to="/signup">Create account</Link></span></label>
@@ -34,4 +34,4 @@ class Login extends Component {
     }
 }
 
-export default UpdatedComponent(Login)
+export default Login

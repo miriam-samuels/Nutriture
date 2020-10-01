@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UpdatedComponent from "../components/mothercomp"
+// import UpdatedComponent from "../components/mothercomp"
 import Drpdwn from './drpDwn';
 import Consultations from './consultaion.js'
 import Appointments from './appointment.js'
@@ -16,6 +16,7 @@ import Setting from '../Images/settings.svg';
 import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
+import PatientHOC from '../components/patientHoc';
 
 let n = 0;
 class UserProfile extends Component {
@@ -65,8 +66,7 @@ class UserProfile extends Component {
         setTimeout(this.showDetails(0), 1);
     }
     render() {
-        const { username, email, number, height, weight, genotype, bloodgroup } = this.props;
-        const { usernameChange, emailChange, numberChange, heightChange, weightChange } = this.props;
+        const { patientUsername, patientEmail, patientNumber, patientGenotype, patientBloodgroup, patientHeight, patientWeight} = this.props;
 
         return (
             <div>
@@ -77,7 +77,7 @@ class UserProfile extends Component {
                         <span className="notifications"><img src={Notify} alt="." /> </span>
                         <span className="avatar">
                             <img id="output" src={Avatar} className="userpic" alt="FilePic" />
-                            <b>{username} <br />{email}</b>
+                            <b>{patientUsername} <br />{patientEmail}</b>
                         </span>
                     </div>
                 </section>
@@ -151,14 +151,14 @@ class UserProfile extends Component {
                     <div className="account view">
                         <div className="profile tab">
                             <img id="output2" src={Avatar} alt="FilePic" />
-                            <h4>{username}</h4>
+                            <h4>{patientUsername}</h4>
                             <h5>Patient</h5>
-                            <b>E-mail : {email} </b>
-                            <b>Phone Number : {number} </b>
-                            <b>Genotype : {genotype} </b>
-                            <b>Blood Group : {bloodgroup} </b>
-                            <b>Weight: {weight} </b>
-                            <b>Height: {height} </b>
+                            <b>E-mail : {patientEmail} </b>
+                            <b>Phone Number : {patientNumber} </b>
+                            <b>Genotype : {patientGenotype} </b>
+                            <b>Blood Group : {patientBloodgroup} </b>
+                            <b>Weight: {patientWeight} </b>
+                            <b>Height: {patientHeight} </b>
                         </div>
 
                     {/* ------EDIT TAB------ */}
@@ -172,21 +172,7 @@ class UserProfile extends Component {
 
                             <div className="editProfile details">
                                 <form onSubmit={(e) => { e.preventDefault() }}>
-                                    <label htmlFor="email">Email</label>
-                                    <input type="email" id="email" value={email} onChange={emailChange} />
-                                    <span><label htmlFor="username" >Username</label>
-                                        <input type="text" id="username" value={username} onChange={usernameChange} />
-                                    </span>
-                                    <span><label htmlFor="number">Phone Number</label>
-                                        <input type="tel" id="number" value={number} onChange={numberChange} />
-                                    </span>
-                                    <span><label htmlFor="height">Height</label>
-                                        <input type="text" id="height" value={height} onChange={heightChange} />
-                                    </span>
-                                    <span><label htmlFor="weight">Weight</label>
-                                        <input type="text" id="weight" value={weight} onChange={weightChange} />
-                                    </span>
-                                    <button type="submit">Update Profile</button><br />
+
 
                                 </form>
                             </div>
@@ -234,4 +220,4 @@ class UserProfile extends Component {
     }
 }
 
-export default UpdatedComponent(UserProfile);
+export default PatientHOC(UserProfile);

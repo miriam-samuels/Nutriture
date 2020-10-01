@@ -1,13 +1,13 @@
 // NOTE
-// the company/pharmacy name is the username for companies or pharmacies
-// so when referring to state use this.state.username as the organization name, pharmacy name or hospital name
+// the company/pharmacy name is the patientUsername for companies or pharmacies
+// so when referring to state use this.state.patientUsername as the organization name, pharmacy name or hospital name
 // refer to mothercomp.js for the state object
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
-import UpdatedComponent from "../components/mothercomp.js"
+import PatientHoc from '../components/patientHoc';
 class Patient extends Component {
     
     formSubmitted = (event) => {
@@ -16,8 +16,8 @@ class Patient extends Component {
         event.preventDefault()
     }
     render() {
-        const { username, email, number, genotype, bloodgroup, height, weight, password, cpassword } = this.props;
-        const { usernameChange, emailChange, numberChange, genotypeChange, bloodgroupChange, heightChange, weightChange, passwordChange, cpasswordChange } = this.props;
+        const { patientUsername, patientEmail, patientNumber, patientGenotype, patientBloodgroup, patientHeight, patientWeight, patientPassword, cpatientPassword } = this.props;
+        const { patientUsernameChange, patientEmailChange, patientNumberChange, patientGenotypeChange, patientBloodgroupChange, patientHeightChange, patientWeightChange, patientPasswordChange, cpatientPasswordChange } = this.props;
         return (
             <div id="login">
                 <Link to="/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
@@ -25,24 +25,24 @@ class Patient extends Component {
                     <h1>Register as Patient</h1>
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={email} onChange={emailChange} required />
-                        <span><label htmlFor="username" >Username</label>
-                            <input type="text" id="username" value={username} onChange={usernameChange} required />
+                        <label htmlFor="patientEmail">Email</label>
+                        <input type="patientEmail" id="patientEmail" value={patientEmail} onChange={patientEmailChange} required />
+                        <span><label htmlFor="patientUsername" >Username</label>
+                            <input type="text" id="patientUsername" value={patientUsername} onChange={patientUsernameChange} required />
                         </span>
-                        <span><label htmlFor="number">Phone Number</label>
-                            <input type="tel" id="number" value={number} onChange={numberChange} required />
+                        <span><label htmlFor="patientNumber">Phone Number</label>
+                            <input type="tel" id="patientNumber" value={patientNumber} onChange={patientNumberChange} required />
                         </span>
-                        <span><label htmlFor="genotype">Genotype</label>
-                            <select id="genotype" value={genotype} onChange={genotypeChange}>
+                        <span><label htmlFor="patientGenotype">Genotype</label>
+                            <select id="patientGenotype" value={patientGenotype} onChange={patientGenotypeChange}>
                                 <option>AA</option>
                                 <option>AS</option>
                                 <option>SS</option>
                                 <option>AC</option>
                             </select>
                         </span>
-                        <span><label htmlFor="bloodgroup">Blood Group</label>
-                            <select id="bloodgroup" value={bloodgroup} onChange={bloodgroupChange} >
+                        <span><label htmlFor="patientBloodgroup">Blood Group</label>
+                            <select id="patientBloodgroup" value={patientBloodgroup} onChange={patientBloodgroupChange} >
                                 <option>A+</option>
                                 <option>A-</option>
                                 <option>B+</option>
@@ -53,16 +53,16 @@ class Patient extends Component {
                                 <option>O-</option>
                             </select>
                         </span>
-                        <span><label htmlFor="height">Height</label>
-                            <input type="text" id="height" value={height} onChange={heightChange} required />
+                        <span><label htmlFor="patientHeight">Height</label>
+                            <input type="text" id="patientHeight" value={patientHeight} onChange={patientHeightChange} required />
                         </span>
-                        <span><label htmlFor="weight">Weight</label>
-                            <input type="text" id="weight" value={weight} onChange={weightChange} required />
+                        <span><label htmlFor="patientWeight">Weight</label>
+                            <input type="text" id="patientWeight" value={patientWeight} onChange={patientWeightChange} required />
                         </span>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" value={password} onChange={passwordChange} required />
-                        <label htmlFor="cpassword">Confirm Password</label>
-                        <input type="password" id="cpassword" value={cpassword} onChange={cpasswordChange} required />
+                        <label htmlFor="patientPassword">Password</label>
+                        <input type="patientPassword" id="patientPassword" value={patientPassword} onChange={patientPasswordChange} required />
+                        <label htmlFor="cpatientPassword">Confirm Password</label>
+                        <input type="patientPassword" id="cpatientPassword" value={cpatientPassword} onChange={cpatientPasswordChange} required />
                         <input type="checkbox" id="agree" checked required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button>
@@ -74,4 +74,4 @@ class Patient extends Component {
     }
 }
 
-export default UpdatedComponent(Patient)
+export default PatientHoc(Patient)

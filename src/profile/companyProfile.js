@@ -16,6 +16,7 @@ import Setting from '../Images/settings.svg';
 import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
+import CompanyHOC from '../components/companyHOC';
 
 let n = 0;
 class UserProfile extends Component {
@@ -64,11 +65,13 @@ class UserProfile extends Component {
         setTimeout(this.showDetails(0), 1);
     }
     render() {
-        const {username, email, number, country, address } = this.props;
+        const { companyName,companyEmail, companyNumber, companyAddress, companyCountry } = this.props;
+        console.log(companyName)
 
 
         return (
             <div>
+                <UpdatedComponent />
                 <section id="profileBar">
                     <Link to="/" ><img src={Logo} alt="logo" className="logo" /></Link>
                     <input type="text" placeholder="&#9906; Search" />
@@ -76,7 +79,7 @@ class UserProfile extends Component {
                         <span className="notifications"><img src={Notify} alt="." /> </span>
                         <span className="avatar">
                             <img id="output" src={Avatar} className="userpic" alt="FilePic" />
-                            <b>{username} <br />{email}</b>
+                            <b>{companyName} <br />{companyEmail}</b>
                         </span>
                     </div>
                 </section>
@@ -148,13 +151,13 @@ class UserProfile extends Component {
                     <div className="account view">
                         <div className="profile tab">
                             <img id="output2" src={Avatar} alt="FilePic" />
-                            <h4>{username}</h4>
+                            <h4>{companyName}</h4>
                             <h5>Organization</h5>
-                            <b>Organization Name : {username} </b>
-                            <b>E-mail : {email} </b>
-                            <b>Phone Number : {number} </b>
-                            <b>Address : {address} </b>
-                            <b>Country : {country} </b>
+                            <b>Organization Name : {companyName} </b>
+                            <b>E-mail : {companyEmail} </b>
+                            <b>Phone Number : {companyNumber} </b>
+                            <b>Address : {companyAddress} </b>
+                            <b>Country : {companyCountry} </b>
 
                         </div>
                         <div className="edit tab">
@@ -204,4 +207,4 @@ class UserProfile extends Component {
     }
 }
 
-export default UpdatedComponent(UserProfile);
+export default CompanyHOC(UserProfile) ;

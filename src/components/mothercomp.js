@@ -1,154 +1,29 @@
 import React, { Component } from 'react'
-const UpdatedComponent = (WrappedComponent) => {
+// import Company from './companyHOC'
 
-    class NewComponent extends Component {
-        constructor(props) {
-            super(props)
 
-            this.state = {
-                username: "xxxxxxx xxxx",
-                genotype: "AA",
-                bloodgroup: "O+",
-                height: "cm",
-                weight: "kg",
-                firstname: "jxxx",
-                surname: "dxx",
-                gender: "Female",
-                hospital: "",
-                country: "",
-                licenseNum: 0,
-                email: "xxxxx@gmail.com ",
-                number: "  xxx-xxx-xxx-xxx",
-                address: "",
-                password: "",
-                cpassword: "",
+class mothercomp extends Component {
+    constructor(props) {
+        super(props)
 
-            }
-            this.nameChange = this.nameChange.bind(this);
-            this.surnameChange = this.surnameChange.bind(this);
-            this.usernameChange = this.usernameChange.bind(this);
-            this.emailChange = this.emailChange.bind(this);
-            this.passwordChange = this.passwordChange.bind(this);
-            this.cpasswordChange = this.cpasswordChange.bind(this);
-            this.numberChange = this.numberChange.bind(this);
-            this.countryChange = this.countryChange.bind(this);
-            this.licenseNumChange = this.licenseNumChange.bind(this);
-            this.genderChange = this.genderChange.bind(this);
-            this.genotypeChange = this.genotypeChange.bind(this);
-            this.bloodgroupChange = this.bloodgroupChange.bind(this);
-            this.weightChange = this.weightChange.bind(this);
-            this.heightChange = this.heightChange.bind(this);
-            this.hospitalChange = this.hospitalChange.bind(this);
-            this.addressChange = this.addressChange.bind(this);
-        }
-        nameChange(e) {
-            this.setState({
-                firstname: e.target.value,
-            })
-        }
-        surnameChange(e) {
-            this.setState({
-                surname: e.target.value,
-            })
-        }
-        usernameChange(e) {
-            this.setState({
-                patient: e.target.value,
-            })
-        }
-        emailChange(e) {
-            this.setState({
-                email: e.target.value,
-            })
-        }
-        passwordChange(e) {
-            this.setState({
-                password: e.target.value,
-            })
-        }
-        cpasswordChange(e) {
-            this.setState({
-                cpassword: e.target.value,
-            })
-        }
-        numberChange(e) {
-            this.setState({
-                tel: e.target.value,
-            })
-        }
-        countryChange(e) {
-            this.setState({
-                country: e.target.value,
-            })
-        }
-        licenseNumChange(e) {
-            this.setState({
-                licenseNum: e.target.value,
-            })
-        }
-        genderChange(e) {
-            this.setState({
-                gender: e.target.value,
-            })
-        }
-        genotypeChange(e) {
-            this.setState({
-                genotype: e.target.value,
-            })
-        }
-        bloodgroupChange(e) {
-            this.setState({
-                bloodgroup: e.target.value,
-            })
-        }
-        weightChange(e) {
-            this.setState({
-                weight: e.target.value,
-            })
-        }
-        heightChange(e) {
-            this.setState({
-                height: e.target.value,
-            })
-        }
-        hospitalChange(e) {
-            this.setState({
-                hospital: e.target.value,
-            })
-        }
-        addressChange(e) {
-            this.setState({
-                address: e.target.value,
-            })
-        }
-        render() {
-            const { username, genotype, bloodgroup, weight, height, firstname, surname, licenseNum, gender, hospital, country, address, password, cpassword, email, number } = this.state;
-            return (
-                <WrappedComponent
-                    firstname={firstname} nameChange={this.nameChange}
-                    surname={surname} surnameChange={this.surnameChange}
-                    username={username} usernameChange={this.usernameChange}
-                    email={email} emailChange={this.emailChange}
-                    password={password} passwordChange={this.passwordChange}
-                    cpassword={cpassword} cpasswordChange={this.cpasswordChange}
-                    number={number} numberChange={this.numberChange}
-                    country={country} countryChange={this.countryChange}
-                    licenseNum={licenseNum} licenseNumChange={this.licenseNumChange}
-                    gender={gender} genderChange={this.genderChange}
-                    genotype={genotype} genotypeChange={this.genotypeChange}
-                    bloodgroup={bloodgroup} bloodgroupChange={this.bloodgroupChange}
-                    weight={weight} weightChange={this.weightChange}
-                    height={height} heightChange={this.heightChange}
-                    hospital={hospital} hospitalChange={this.hospitalChange}
-                    address={address} addressChange={this.addressChange}
-                    formSubmitted={this.formSubmitted}
+        this.state = {
+            patient: this.props.patient,
+            doctor: this.props.doctor,
+            nutritionist: this.props.nutritionist,
+            pharmacy: this.props.pharmacy,
+            company: this.props.company,
 
-                    {...this.props}
-                />
-            )
         }
     }
 
-    return NewComponent;
+    render() {
+
+        console.log(this.state)
+        return (
+            <div>
+            </div>
+        )
+    }
 }
-export default UpdatedComponent;
+
+export default mothercomp

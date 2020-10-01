@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
-import UpdatedComponent from "../components/mothercomp.js"
+import DoctorHOC from "../components/doctorHOC"
 class Doctor extends Component {
     
     formSubmitted = (event) => {
@@ -14,8 +14,8 @@ class Doctor extends Component {
         event.preventDefault()
     }
     render() {
-        const { hospital, gender, firstname, surname, email, number, licenseNum, address, country, password, cpassword } = this.props;
-        const { genderChange, hospitalChange, nameChange, surnameChange, emailChange, numberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;
+        const { doctorHospital, doctorGender, doctorFirstname, doctorLastname, doctorEmail, doctorNumber, doctorLicenseId, doctorAddress, doctorCountry, doctorPassword, cdoctorPassword } = this.props;
+        const { doctorGenderChange, doctorHospitalChange, nameChange, doctorLastnameChange, doctorEmailChange, doctorNumberChange, doctorLicenseIdChange, doctorAddressChange, doctorCountryChange, doctorPasswordChange, cdoctorPasswordChange } = this.props;
 
         return (
             <div id="login">
@@ -24,29 +24,29 @@ class Doctor extends Component {
                     <h1 id="heading">Register as Doctor</h1>
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={email} onChange={emailChange} required />
+                        <label htmlFor="doctorEmail">Email</label>
+                        <input type="doctorEmail" id="doctorEmail" value={doctorEmail} onChange={doctorEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>
-                            <input type="text" id="fname" value={firstname} onChange={nameChange} required />
+                            <input type="text" id="fname" value={doctorFirstname} onChange={nameChange} required />
                         </span>
-                        <span><label htmlFor="surname">Last Name</label>
-                            <input type="text" id="surname" value={surname} onChange={surnameChange} required />
+                        <span><label htmlFor="doctorLastname">Last Name</label>
+                            <input type="text" id="doctorLastname" value={doctorLastname} onChange={doctorLastnameChange} required />
                         </span>
-                        <span><label htmlFor="gender">Gender</label>
-                            <select id="gender" value={gender} onChange={genderChange} >
+                        <span><label htmlFor="doctorGender">Gender</label>
+                            <select id="doctorGender" value={doctorGender} onChange={doctorGenderChange} >
                                 <option>Female</option>
                                 <option>Male</option>
                             </select>
                         </span>
-                        <span><label htmlFor="number">Phone Number</label>
-                            <input type="tel" id="number" value={number} onChange={numberChange} required />
+                        <span><label htmlFor="doctorNumber">Phone Number</label>
+                            <input type="tel" id="doctorNumber" value={doctorNumber} onChange={doctorNumberChange} required />
                         </span>
-                        <label htmlFor="hospital">Hospital Name</label>
-                        <input type="text" id="hospital" value={hospital} onChange={hospitalChange} required />
-                        <label htmlFor="address">Hospital Address</label>
-                        <input type="text" id="address" value={address} onChange={addressChange} required />
-                        <span><label htmlFor="licenseNum">License ID Number</label>
-                            <input type="text" id="licenseNum" value={licenseNum} onChange={licenseNumChange} required />
+                        <label htmlFor="doctorHospital">Hospital Name</label>
+                        <input type="text" id="doctorHospital" value={doctorHospital} onChange={doctorHospitalChange} required />
+                        <label htmlFor="doctorAddress">Hospital Address</label>
+                        <input type="text" id="doctorAddress" value={doctorAddress} onChange={doctorAddressChange} required />
+                        <span><label htmlFor="doctorLicenseId">License ID Number</label>
+                            <input type="text" id="doctorLicenseId" value={doctorLicenseId} onChange={doctorLicenseIdChange} required />
                         </span>
                         <span><label htmlFor="issueDate">License Issue Date</label>
                             <input type="date" id="issueDate" required />
@@ -54,14 +54,14 @@ class Doctor extends Component {
                         <span><label htmlFor="expiryDate">License Expiry Date</label>
                             <input type="date" id="expiryDate" required />
                         </span>
-                        <span><label htmlFor="country">Country</label>
-                            <input type="text" id="country" value={country} onChange={countryChange} required />
+                        <span><label htmlFor="doctorCountry">Country</label>
+                            <input type="text" id="doctorCountry" value={doctorCountry} onChange={doctorCountryChange} required />
                         </span>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" value={password} onChange={passwordChange} required />
-                        <label htmlFor="cpassword">Confirm Password</label>
-                        <input type="password" id="cpassword" value={cpassword} onChange={cpasswordChange} required />
-                        <input type="checkbox" id="agree" checked required />
+                        <label htmlFor="doctorPassword">Password</label>
+                        <input type="doctorPassword" id="doctorPassword" value={doctorPassword} onChange={doctorPasswordChange} required />
+                        <label htmlFor="cdoctorPassword">Confirm Password</label>
+                        <input type="doctorPassword" id="cdoctorPassword" value={cdoctorPassword} onChange={cdoctorPasswordChange} required />
+                        <input type="checkbox" id="agree"  required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button><br />
                     </form>
@@ -72,4 +72,4 @@ class Doctor extends Component {
     }
 }
 
-export default UpdatedComponent(Doctor)
+export default DoctorHOC(Doctor)

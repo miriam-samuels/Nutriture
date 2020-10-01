@@ -5,48 +5,48 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Logo from '../Images/nutriturelogo.png';
 import Vector from '../Images/vector.png'
-import UpdatedComponent from "../components/mothercomp.js"
+import NutritionistHOC from "../components/nutritionistHOC"
 class Nutritionist extends Component {
     
     formSubmitted = (event) => {
         const { history } = this.props;
-        history.push('/profile/doctor');
+        history.push('/profile/nutritionist');
         event.preventDefault()
     }
     render() {
-        const { hospital, gender, firstname, surname, email, number, licenseNum, address, country, password, cpassword } = this.props;
-        const { genderChange, hospitalChange, nameChange, surnameChange, emailChange, numberChange, licenseNumChange, addressChange, countryChange, passwordChange, cpasswordChange } = this.props;
+        const { nutritionistHospital, nutritionistGender, nutritionistFirstname, nutritionistLastname, nutritionistEmail, nutritionistNumber, nutritionistLicenseId, nutritionistAddress, nutritionistCountry, nutritionistPassword, cnutritionistPassword } = this.props;
+        const { nutritionistGenderChange, nutritionistHospitalChange, nameChange, nutritionistLastnameChange, nutritionistEmailChange, nutritionistNumberChange, nutritionistLicenseIdChange, nutritionistAddressChange, nutritionistCountryChange, nutritionistPasswordChange, cnutritionistPasswordChange } = this.props;
 
         return (
             <div id="login">
                 <Link to="/"><img src={Logo} alt="nutriture logo" className="logo" /></Link>
                 <div className="userlogin">
-                    <h1 id="heading">Register as Nutritionist</h1>
+                    <h1 id="heading">Register as nutritionist</h1>
                     <p>Kindly fill in your details as requested</p>
                     <form onSubmit={this.formSubmitted}>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" value={email} onChange={emailChange} required />
+                        <label htmlFor="nutritionistEmail">Email</label>
+                        <input type="nutritionistEmail" id="nutritionistEmail" value={nutritionistEmail} onChange={nutritionistEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>
-                            <input type="text" id="fname" value={firstname} onChange={nameChange} required />
+                            <input type="text" id="fname" value={nutritionistFirstname} onChange={nameChange} required />
                         </span>
-                        <span><label htmlFor="surname">Last Name</label>
-                            <input type="text" id="surname" value={surname} onChange={surnameChange} required />
+                        <span><label htmlFor="nutritionistLastname">Last Name</label>
+                            <input type="text" id="nutritionistLastname" value={nutritionistLastname} onChange={nutritionistLastnameChange} required />
                         </span>
-                        <span><label htmlFor="gender">Gender</label>
-                            <select id="gender" value={gender} onChange={genderChange} >
+                        <span><label htmlFor="nutritionistGender">Gender</label>
+                            <select id="nutritionistGender" value={nutritionistGender} onChange={nutritionistGenderChange} >
                                 <option>Female</option>
                                 <option>Male</option>
                             </select>
                         </span>
-                        <span><label htmlFor="number">Phone Number</label>
-                            <input type="tel" id="number" value={number} onChange={numberChange} required />
+                        <span><label htmlFor="nutritionistNumber">Phone Number</label>
+                            <input type="tel" id="nutritionistNumber" value={nutritionistNumber} onChange={nutritionistNumberChange} required />
                         </span>
-                        <label htmlFor="hospital">Hospital Name</label>
-                        <input type="text" id="hospital" value={hospital} onChange={hospitalChange} />
-                        <label htmlFor="address">Address</label>
-                        <input type="text" id="address" value={address} onChange={addressChange} required />
-                        <span><label htmlFor="licenseNum">License ID Number</label>
-                            <input type="text" id="licenseNum" value={licenseNum} onChange={licenseNumChange} required />
+                        <label htmlFor="nutritionistHospital">Hospital Name</label>
+                        <input type="text" id="nutritionistHospital" value={nutritionistHospital} onChange={nutritionistHospitalChange} required />
+                        <label htmlFor="nutritionistAddress">Hospital Address</label>
+                        <input type="text" id="nutritionistAddress" value={nutritionistAddress} onChange={nutritionistAddressChange} required />
+                        <span><label htmlFor="nutritionistLicenseId">License ID Number</label>
+                            <input type="text" id="nutritionistLicenseId" value={nutritionistLicenseId} onChange={nutritionistLicenseIdChange} required />
                         </span>
                         <span><label htmlFor="issueDate">License Issue Date</label>
                             <input type="date" id="issueDate" required />
@@ -54,15 +54,15 @@ class Nutritionist extends Component {
                         <span><label htmlFor="expiryDate">License Expiry Date</label>
                             <input type="date" id="expiryDate" required />
                         </span>
-                        <span><label htmlFor="country">Country</label>
-                            <input type="text" id="country" value={country} onChange={countryChange} required />
+                        <span><label htmlFor="nutritionistCountry">Country</label>
+                            <input type="text" id="nutritionistCountry" value={nutritionistCountry} onChange={nutritionistCountryChange} required />
                         </span>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" value={password} onChange={passwordChange} required />
-                        <label htmlFor="cpassword">Confirm Password</label>
-                        <input type="password" id="cpassword" value={cpassword} onChange={cpasswordChange} required />
+                        <label htmlFor="nutritionistPassword">Password</label>
+                        <input type="nutritionistPassword" id="nutritionistPassword" value={nutritionistPassword} onChange={nutritionistPasswordChange} required />
+                        <label htmlFor="cnutritionistPassword">Confirm Password</label>
+                        <input type="nutritionistPassword" id="cnutritionistPassword" value={cnutritionistPassword} onChange={cnutritionistPasswordChange} required />
                         <input type="checkbox" id="agree" checked required />
-                        <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>bel>
+                        <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button><br />
                     </form>
                 </div>
@@ -72,4 +72,4 @@ class Nutritionist extends Component {
     }
 }
 
-export default UpdatedComponent(Nutritionist)
+export default NutritionistHOC(Nutritionist)

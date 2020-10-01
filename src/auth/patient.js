@@ -63,7 +63,7 @@ class Patient extends Component {
                         <input type="password" id="patientPassword" value={patientPassword} onChange={patientPasswordChange} required />
                         <label htmlFor="cpatientPassword">Confirm Password</label>
                         <input type="password" id="cpatientPassword" value={cpatientPassword} onChange={cpatientPasswordChange} required />
-                        <input type="checkbox" id="agree" checked required />
+                        <input type="checkbox" id="agree" required />
                         <label htmlFor="agree" className="agree">By signing up, you agree to our <Link to="/terms"><span>terms of service</span></Link></label>
                         <button type="submit">Sign Up</button>
                     </form>

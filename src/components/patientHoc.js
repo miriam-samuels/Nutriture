@@ -79,7 +79,11 @@ const PatientHOC = (WrappedComponent) => {
                 height: e.target.value,
             })
         }
-
+        formSubmitted = (event) => {
+            const { history } = this.props;
+            history.push('/profile/patient');
+            event.preventDefault()
+        }
         render() {
             return (
                 <>
@@ -94,6 +98,8 @@ const PatientHOC = (WrappedComponent) => {
 
                                 patientEmailChange={this.patientEmailChange} patientNumberChange={this.patientNumberChange} patientUsernameChange={this.patientUsernameChange} patientGenotypeChange={this.patientGenotypeChange} patientBloodgroupChange={this.patientBloodgroupChange}
                                 patientHeightChange={this.patientHeightChange} patientWeightChange={this.patientWeightChange} patientPasswordChange={this.patientPasswordChange} cpatientPasswordChange={this.cpatientPasswordChange}
+                                
+                                formSubmitted = {this.formSubmitted}
                                 {...this.props}
                             />
                             )

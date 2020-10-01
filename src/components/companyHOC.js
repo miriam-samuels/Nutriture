@@ -30,6 +30,8 @@ const CompanyHOC = (WrappedComponent) => {
             this.companyCountryChange = this.companyCountryChange.bind(this);
             this.companyAddressChange = this.companyAddressChange.bind(this);
             this.companyPasswordChange = this.companyPasswordChange.bind(this);
+
+            // this.addUser = React.createRef();
         }
 
         companyFirstnameChange(e) {
@@ -77,21 +79,27 @@ const CompanyHOC = (WrappedComponent) => {
                 address: e.target.value,
             })
         }
+        formSubmitted = (event) => {
+            const { history } = this.props;
+            history.push('/profile/company');
+            event.preventDefault()
+        }
         render() {
             return (
                 <>
                {
-                this.state.company.map((person, index) => {
-                    const { username, firstname, surname, country, address, password,cpassword, email, number } = person;
+                this.state.company.map((company, index) => {
+                    const { username, firstname, surname, country, address, password,cpassword, email, number } = company;
                     console.log(username)
                     return (<WrappedComponent key={index}
 
-                        companyName={username} companyEmail={email} companyNumber={number} companyFirstname={firstname} companyLastname={surname} companyCountry={country}
-                        companyAddress={address} companyPassword={password} ccompanyPassword={cpassword}
+                        companyName={username} companyEmail={email} companyNumber={number} companyFirstname={firstname} companyLastname={surname} 
+                        companyCountry={country} companyAddress={address} companyPassword={password} ccompanyPassword={cpassword}
 
-                        companyNameChange={this.companyNameChange} companyEmailChange={this.companyEmailChange} companyNumberChange={this.companyNumberChange} companyFirstnameChange={this.companyFirstnameChange} companyLastnameChange={this.companyLastnameChange} companyCountryChange={this.companyCountryChange}
-                        companyAddressChange={this.companyAddressChange} companyPasswordChange={this.companyPasswordChange} ccompanyPasswordChange={this.ccompanyPasswordChange}
+                        companyNameChange={this.companyNameChange} companyEmailChange={this.companyEmailChange} companyNumberChange={this.companyNumberChange} companyFirstnameChange={this.companyFirstnameChange} 
+                        companyLastnameChange={this.companyLastnameChange} companyCountryChange={this.companyCountryChange} companyAddressChange={this.companyAddressChange} companyPasswordChange={this.companyPasswordChange} ccompanyPasswordChange={this.ccompanyPasswordChange}
 
+                        formSubmitted = {this.formSubmitted}
                         {...this.props}
                     />
                     )

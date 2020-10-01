@@ -12,12 +12,8 @@ import Vector from '../Images/vector.png'
 import PharmacyHOC from '../components/pharmacyHOC';
 class Pharmacy extends Component {
     
-    formSubmitted = (event) => {
-        const { history } = this.props;
-        history.push('/profile/pharmacy');
-        event.preventDefault()
-    }
     render() {
+        const {formSubmitted} = this.props;
         const { pharmacyName, pharmacyFirstname, pharmacyLastname, pharmacyEmail, pharmacyNumber, pharmacyAddress, pharmacyCountry, pharmacyPassword, cpharmacyPassword } = this.props;
         const { pharmacyNameChange, pharmacyFirstnameChange, pharmacyLastnameChange,pharmacyEmailChange,  pharmacyNumberChange, pharmacyAddressChange, pharmacyCountryChange, pharmacyPasswordChange, cpharmacyPasswordChange } = this.props;
         return (
@@ -26,7 +22,7 @@ class Pharmacy extends Component {
                 <div className="userlogin">
                     <h1 id="heading">Register as a pharmacy</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={this.formSubmitted}>
+                    <form onSubmit={formSubmitted}>
                         <label htmlFor="pharmacyEmail">Email</label>
                         <input type="email" id="pharmacyEmail" value={pharmacyEmail} onChange={pharmacyEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>

@@ -10,12 +10,8 @@ import Vector from '../Images/vector.png'
 import PatientHoc from '../components/patientHoc';
 class Patient extends Component {
     
-    formSubmitted = (event) => {
-        const { history } = this.props;
-        history.push('/profile/patient');
-        event.preventDefault()
-    }
     render() {
+        const {formSubmitted} = this.props;
         const { patientUsername, patientEmail, patientNumber, patientGenotype, patientBloodgroup, patientHeight, patientWeight, patientPassword, cpatientPassword } = this.props;
         const { patientUsernameChange, patientEmailChange, patientNumberChange, patientGenotypeChange, patientBloodgroupChange, patientHeightChange, patientWeightChange, patientPasswordChange, cpatientPasswordChange } = this.props;
         return (
@@ -24,7 +20,7 @@ class Patient extends Component {
                 <div className="userlogin">
                     <h1>Register as Patient</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={this.formSubmitted}>
+                    <form onSubmit={formSubmitted}>
                         <label htmlFor="patientEmail">Email</label>
                         <input type="email" id="patientEmail" value={patientEmail} onChange={patientEmailChange} required />
                         <span><label htmlFor="patientUsername" >Username</label>

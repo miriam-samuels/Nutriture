@@ -92,13 +92,18 @@ const NutritionistHOC = (WrappedComponent) => {
                 address: e.target.value,
             })
         }
+        formSubmitted = (event) => {
+            const { history } = this.props;
+            history.push('/profile/doctor');
+            event.preventDefault()
+        }
         render() {
             return (
                 <>
                     {
                         this.state.company.map((person, index) => {
-                            const { username, firstname, surname, gender, hospital, licenseNum, country, address, password,cpassword, email, number } = person;
-                            console.log(username)
+                            const {firstname, surname, gender, hospital, licenseNum, country, address, password,cpassword, email, number } = person;
+                            console.log(firstname)
                             return (<WrappedComponent key={index}
 
                                 nutritionistEmail={email} nutritionistNumber={number} nutritionistFirstname={firstname} nutritionistLastname={surname} nutritionistGender={gender} nutritionistHospital={hospital}
@@ -106,6 +111,8 @@ const NutritionistHOC = (WrappedComponent) => {
 
                                 nutritionistEmailChange={this.nutritionistEmailChange} nutritionistrNumberChange={this.nutritionistNumberChange} nutritionistFirstnameChange={this.nutritionistFirstnameChange} nutritionistLastnameChange={this.nutritionistLastnameChange} nutritionistGenderChange={this.nutritionistGenderChange} nutritionistHospitalChange={this.nutritionistHospitalChange}
                                 nutritionistLicenseIdChange={this.nutritionistLicenseIdChange} nutritionistCountryChange={this.nutritionistCountryChange} nutritionistAddressChange={this.nutritionistAddressChange} nutritionistPasswordChange={this.nutritionistPasswordChange} cnutritionistPasswordChange={this.cnutritionistPasswordChange}
+                               
+                                formSubmitted = {this.formSubmitted}
                                 {...this.props}
                             />
                             )

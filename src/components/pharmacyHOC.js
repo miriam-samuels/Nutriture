@@ -80,6 +80,11 @@ const PharmacyHOC = (WrappedComponent) => {
                 address: e.target.value,
             })
         }
+        formSubmitted = (event) => {
+            const { history } = this.props;
+            history.push('/profile/company');
+            event.preventDefault()
+        }
         render() {
             
             return (
@@ -96,6 +101,7 @@ const PharmacyHOC = (WrappedComponent) => {
                         pharmacyNameChange={this.pharmacyNameChange} pharmacyEmailChange={this.pharmacyEmailChange} pharmacyNumberChange={this.pharmacyNumberChange} pharmacyFirstnameChange={this.pharmacyFirstnameChange} pharmacyLastnameChange={this.pharmacyLastnameChange} pharmacyCountryChange={this.pharmacyCountryChange}
                         pharmacyAddressChange={this.pharmacyAddressChange} pharmacyPasswordChange={this.pharmacyPasswordChange}
 
+                        formSubmitted = {this.formSubmitted}
                         {...this.props}
                     />
                     )

@@ -8,12 +8,8 @@ import Vector from '../Images/vector.png'
 import DoctorHOC from "../components/doctorHOC"
 class Doctor extends Component {
     
-    formSubmitted = (event) => {
-        const { history } = this.props;
-        history.push('/profile/doctor');
-        event.preventDefault()
-    }
     render() {
+        const {formSubmitted} = this.props;
         const { doctorHospital, doctorGender, doctorFirstname, doctorLastname, doctorEmail, doctorNumber, doctorLicenseId, doctorAddress, doctorCountry, doctorPassword, cdoctorPassword } = this.props;
         const { doctorGenderChange, doctorHospitalChange, nameChange, doctorLastnameChange, doctorEmailChange, doctorNumberChange, doctorLicenseIdChange, doctorAddressChange, doctorCountryChange, doctorPasswordChange, cdoctorPasswordChange } = this.props;
 
@@ -23,7 +19,7 @@ class Doctor extends Component {
                 <div className="userlogin">
                     <h1 id="heading">Register as Doctor</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={this.formSubmitted}>
+                    <form onSubmit={formSubmitted}>
                         <label htmlFor="doctorEmail">Email</label>
                         <input type="email" id="doctorEmail" value={doctorEmail} onChange={doctorEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>

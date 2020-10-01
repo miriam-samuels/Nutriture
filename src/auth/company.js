@@ -11,12 +11,8 @@ import Vector from '../Images/vector.png'
 import CompanyHOC from '../components/companyHOC';
 class Company extends Component {
     
-    formSubmitted = (event) => {
-        const { history } = this.props;
-        history.push('/profile/company');
-        event.preventDefault()
-    }
     render() {
+        const {formSubmitted} = this.props;
         const { companyName, companyFirstname, companyLastname, companyEmail, companyNumber, companyAddress, companyCountry, companyPassword, ccompanyPassword } = this.props;
         const { companyNameChange, companyFirstnameChange, companyEmailChange, companyLastnameChange,  companyNumberChange, companyAddressChange, companyCountryChange, companyPasswordChange, ccompanyPasswordChange } = this.props;
         return (
@@ -25,7 +21,7 @@ class Company extends Component {
                 <div className="userlogin">
                     <h1 id="heading">Register as a Company</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={this.formSubmitted}>
+                    <form onSubmit={formSubmitted}>
                         <label htmlFor="companyEmail">Email</label>
                         <input type="email" id="companyEmail" value={companyEmail} onChange={companyEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>

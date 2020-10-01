@@ -8,12 +8,8 @@ import Vector from '../Images/vector.png'
 import NutritionistHOC from "../components/nutritionistHOC"
 class Nutritionist extends Component {
     
-    formSubmitted = (event) => {
-        const { history } = this.props;
-        history.push('/profile/nutritionist');
-        event.preventDefault()
-    }
     render() {
+        const {formSubmitted} = this.props;
         const { nutritionistHospital, nutritionistGender, nutritionistFirstname, nutritionistLastname, nutritionistEmail, nutritionistNumber, nutritionistLicenseId, nutritionistAddress, nutritionistCountry, nutritionistPassword, cnutritionistPassword } = this.props;
         const { nutritionistGenderChange, nutritionistHospitalChange, nameChange, nutritionistLastnameChange, nutritionistEmailChange, nutritionistNumberChange, nutritionistLicenseIdChange, nutritionistAddressChange, nutritionistCountryChange, nutritionistPasswordChange, cnutritionistPasswordChange } = this.props;
 
@@ -23,7 +19,7 @@ class Nutritionist extends Component {
                 <div className="userlogin">
                     <h1 id="heading">Register as nutritionist</h1>
                     <p>Kindly fill in your details as requested</p>
-                    <form onSubmit={this.formSubmitted}>
+                    <form onSubmit={formSubmitted}>
                         <label htmlFor="nutritionistEmail">Email</label>
                         <input type="email" id="nutritionistEmail" value={nutritionistEmail} onChange={nutritionistEmailChange} required />
                         <span><label htmlFor="fname">First Name</label>

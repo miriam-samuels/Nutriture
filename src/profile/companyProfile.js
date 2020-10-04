@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-<<<<<<< Updated upstream
-import UpdatedComponent from "../components/mothercomp";
-=======
 import Upload from "./Upload.js"
->>>>>>> Stashed changes
 import Drpdwn from './drpDwn.js';
 import Consultations from './consultaion.js';
 import Appointments from './appointment.js';
@@ -27,13 +23,6 @@ let n = 0;
 class UserProfile extends Component {
     constructor(props) {
         super(props)
-<<<<<<< Updated upstream
-        this.showDetails = this.showDetails.bind(this);
-        this.showSlides = this.showSlides.bind(this);
-        this.loadimg = this.loadimg.bind(this);
-    }
-=======
->>>>>>> Stashed changes
 
         this.showSlides = this.showSlides.bind(this);
     }
@@ -59,11 +48,6 @@ class UserProfile extends Component {
 
         return (
             <div>
-<<<<<<< Updated upstream
-                <UpdatedComponent />
-=======
-
->>>>>>> Stashed changes
                 <section id="profileBar">
                     <Link to="/" ><img src={Logo} alt="logo" className="logo" /></Link>
                     <input type="text" placeholder="&#9906; Search" />

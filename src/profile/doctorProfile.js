@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Upload from "./Upload.js"
 import Drpdwn from './drpDwn.js';
 import Consultations from './consultaion.js';
 import Appointments from './appointment.js';
@@ -16,23 +17,15 @@ import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
 import DoctorHOC from '../components/doctorHOC';
+import AccountTab from './accountTab.js';
 
 let n = 0;
 class UserProfile extends Component {
     constructor(props) {
         super(props)
-        this.showDetails = this.showDetails.bind(this);
+
         this.showSlides = this.showSlides.bind(this);
-        this.loadimg = this.loadimg.bind(this);
     }
-
-    loadimg(e) {
-        let img = document.getElementById('output');
-        let img2 = document.getElementById('output2');
-        img.src = URL.createObjectURL(e.target.files[0]);
-        img2.src = URL.createObjectURL(e.target.files[0]);
-    }
-
     showSlides(slideIndex) {
         const bar = Array.from(document.querySelectorAll("   #userProfile .profileMenu div"));
         const slides = Array.from(document.querySelectorAll("  #userProfile .view"));
@@ -46,25 +39,11 @@ class UserProfile extends Component {
         bar[slideIndex].style.color = "#FFF";
         bar[slideIndex].style.background = "#000";
     }
-
-    showDetails(slideIndex) {
-        const bar = Array.from(document.querySelectorAll(" #userProfile .account .edit b"));
-        const slides = Array.from(document.querySelectorAll("#userProfile .account .edit .details"));
-
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            bar[i].style.color = "#D8D8D8";
-        }
-        slides[slideIndex].style.display = "block";
-        bar[slideIndex].style.color = "#000";
-
-    }
     componentDidMount() {
         setTimeout(this.showSlides(n), 1);
-        setTimeout(this.showDetails(0), 1);
     }
     render() {
-        const { doctorHospital, doctorGender, doctorFirstname, doctorLastname, doctorEmail, doctorNumber, doctorLicenseId, doctorAddress, doctorCountry} = this.props;
+        const { doctorHospital, doctorGender, doctorFirstname, doctorLastname, doctorEmail, doctorNumber, doctorLicenseId, doctorAddress, doctorCountry } = this.props;
 
 
 
@@ -164,28 +143,14 @@ class UserProfile extends Component {
                         </div>
                         <div className="edit tab">
                             <nav>
-                                <b onClick={() => this.showDetails(0)}>More Info</b>
-                                <b onClick={() => this.showDetails(1)}>Upload Files</b>
-                                <b onClick={() => this.showDetails(2)}>Bank Detail</b>
-                                <b onClick={() => this.showDetails(3)}>Prescriptions</b>
+                                <AccountTab />
                             </nav>
 
                             <div className="editProfile details">
-                                <form onSubmit={(e) => { e.preventDefault() }}>
-                                    <label htmlFor="specialty">Specialty</label>
-                                    <input type="text" id="specialty" />
 
-                                    <button type="submit">Submit</button><br />
-
-                                </form>
                             </div>
                             <div className="upload details">
-                                <label htmlFor="file">Upload Your Profile Image</label>
-                                <input type="file" name="image" id="file" onChange={this.loadimg} />
-                                <label htmlFor="records">Upload Medical Certificate</label>
-                                <input type="file" id="records" />
-                                <label htmlFor="extra">Upload Any Other File</label>
-                                <input type="file" id="extra" />
+                                <Upload />
                             </div>
                             <div className="bank details">
                                 <Card />

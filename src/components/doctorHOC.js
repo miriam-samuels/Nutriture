@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Mothercomp from './mothercomp.js'
 
 const DoctorHOC = (WrappedComponent) => {
 
@@ -8,7 +7,7 @@ const DoctorHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                doctor: [
+                doctor:
                     {
                         firstname: "jxxx",
                         surname: "dxx",
@@ -22,72 +21,59 @@ const DoctorHOC = (WrappedComponent) => {
                         password: "",
                         cpassword: "",
                     }
-                ],
-            }
-            this.doctorFirstnameChange = this.doctorFirstnameChange.bind(this);
-            this.doctorLastnameChange = this.doctorLastnameChange.bind(this);
-            this.doctorEmailChange = this.doctorEmailChange.bind(this);
-            this.doctorNumberChange = this.doctorNumberChange.bind(this);
-            this.doctorCountryChange = this.doctorCountryChange.bind(this);
-            this.doctorGenderChange = this.doctorGenderChange.bind(this);
-            this.doctorLicenseIdChange = this.doctorLicenseIdChange.bind(this);
-            this.doctorHospitalChange = this.doctorHospitalChange.bind(this);
-            this.doctorAddressChange = this.doctorAddressChange.bind(this);
-            this.doctorPasswordChange = this.doctorPasswordChange.bind(this);
-            this.cdoctorPasswordChange = this.cdoctorPasswordChange.bind(this);
-        }
+           }   }
 
-        doctorFirstnameChange(e) {
+        doctorFirstnameChange = (e) => {
             this.setState({
                 firstname: e.target.value,
             })
         }
-        doctorLastnameChange(e) {
+        doctorLastnameChange = (e) => {
             this.setState({
                 surname: e.target.value,
             })
         }
-        doctorEmailChange(e) {
+        doctorEmailChange = (e) => {
             this.setState({
                 email: e.target.value,
             })
         }
-        doctorPasswordChange(e) {
+        doctorPasswordChange = (e) => {
             this.setState({
                 password: e.target.value,
             })
         }
-        cdoctorPasswordChange(e) {
+        cdoctorPasswordChange = (e) => {
             this.setState({
                 cpassword: e.target.value,
             })
         }
-        doctorNumberChange(e) {
+        doctorNumberChange = (e) => {
             this.setState({
                 tel: e.target.value,
             })
         }
-        doctorCountryChange(e) {
+        doctorCountryChange = (e) => {
             this.setState({
                 country: e.target.value,
             })
         }
-        doctorLicenseIdChange(e) {
+        doctorLicenseIdChange = (e) => {
             this.setState({
                 licenseNum: e.target.value,
             })
         }
-        doctorGenderChange(e) {
+        doctorGenderChange = (e) => {
             this.setState({
                 gender: e.target.value,
             })
         }
-        doctorHospitalChange(e) {
+        doctorHospitalChange = (e) => {
             this.setState({
                 hospital: e.target.value,
             })
         }
-        doctorAddressChange(e) {
+        doctorAddressChange = (e) => {
             this.setState({
                 address: e.target.value,
             })
@@ -98,14 +84,9 @@ const DoctorHOC = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
+            const {firstname, surname, gender, hospital, licenseNum, country, address, password,cpassword, email, number } = this.state.doctor;
             return (
-
-                <>
-                    {
-                        this.state.doctor.map((doctor, index) => {
-                            const {firstname, surname, gender, hospital, licenseNum, country, address, password,cpassword, email, number } = doctor;
-                            console.log(firstname)
-                            return (<WrappedComponent key={index}
+                    <WrappedComponent
 
                                 doctorEmail={email} doctorNumber={number} doctorFirstname={firstname} doctorLastname={surname} doctorGender={gender} doctorHospital={hospital}
                                 doctorLicenseId={licenseNum} doctorCountry={country} doctorAddress={address} doctorPassword={password} cdoctorPassword={cpassword}
@@ -117,12 +98,9 @@ const DoctorHOC = (WrappedComponent) => {
                                 {...this.props}
                             />
                             )
-                        })
+                      
                     }
-                    <Mothercomp doctor={this.state.doctor} />
-                </>
-            )
-        }
+        
     }
 
     return NewComponent;

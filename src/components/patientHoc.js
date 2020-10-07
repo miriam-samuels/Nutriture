@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Mothercomp from './mothercomp.js'
+
 
 const PatientHOC = (WrappedComponent) => {
 
@@ -8,7 +8,7 @@ const PatientHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                patient: [
+                patient: 
                     {
                         email: "xxxxx@gmail.com ",
                         number: "  xxx-xxx-xxx-xxx",
@@ -20,61 +20,53 @@ const PatientHOC = (WrappedComponent) => {
                         password: "",
                         cpassword: "",
                     }
-                ],
+               
             }
-            this.patientWeightChange = this.patientWeightChange.bind(this);
-            this.patientHeightChange = this.patientHeightChange.bind(this);
-            this.patientEmailChange = this.patientEmailChange.bind(this);
-            this.patientNumberChange = this.patientNumberChange.bind(this);
-            this.patientBloodgroupChange = this.patientBloodgroupChange.bind(this);
-            this.patientUsernameChange = this.patientUsernameChange.bind(this);
-            this.patientGenotypeChange = this.patientGenotypeChange.bind(this);
-            this.patientPasswordChange = this.patientPasswordChange.bind(this);
-            this.cpatientPasswordChange = this.cpatientPasswordChange.bind(this);
+
         }
 
 
-        patientUsernameChange(e) {
+        patientUsernameChange = (e) => {
             this.setState({
                 username: e.target.value,
             })
         }
-        patientEmailChange(e) {
+        patientEmailChange = (e) => {
             this.setState({
                 email: e.target.value,
             })
         }
-        patientPasswordChange(e) {
+        patientPasswordChange = (e) => {
             this.setState({
                 password: e.target.value,
             })
         }
-        cpatientPasswordChange(e) {
+        cpatientPasswordChange = (e) => {
             this.setState({
                 cpassword: e.target.value,
             })
         }
-        patientNumberChange(e) {
+        patientNumberChange = (e) => {
             this.setState({
                 tel: e.target.value,
             })
         }
-        patientGenotypeChange(e) {
+        patientGenotypeChange = (e) => {
             this.setState({
                 genotype: e.target.value,
             })
         }
-        patientBloodgroupChange(e) {
+        patientBloodgroupChange = (e) => {
             this.setState({
                 bloodgroup: e.target.value,
             })
         }
-        patientWeightChange(e) {
+        patientWeightChange = (e) => {
             this.setState({
                 weight: e.target.value,
             })
         }
-        patientHeightChange(e) {
+        patientHeightChange = (e) => {
             this.setState({
                 height: e.target.value,
             })
@@ -85,13 +77,9 @@ const PatientHOC = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
+            const { username, bloodgroup, genotype, height, weight, password,cpassword ,email, number } = this.state.patient;
             return (
-                <>
-                    {
-                        this.state.patient.map((person, index) => {
-                            const { username, bloodgroup, genotype, height, weight, password,cpassword ,email, number } = person;
-                            console.log(username)
-                            return (<WrappedComponent key={index}
+<WrappedComponent 
 
                                 patientEmail={email} patientNumber={number} patientUsername={username} patientGenotype={genotype} patientBloodgroup={bloodgroup}
                                 patientHeight={height} patientWeight={weight} patientPassword={password} cpatientPassword={cpassword}
@@ -103,11 +91,7 @@ const PatientHOC = (WrappedComponent) => {
                                 {...this.props}
                             />
                             )
-                        })
-                    }
-                    <Mothercomp patient={this.state.patient} />
-                </>
-            )
+   
         }
     }
     return NewComponent;

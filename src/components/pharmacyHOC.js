@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Mothercomp from './mothercomp.js'
+
 
 const PharmacyHOC = (WrappedComponent) => {
 
@@ -8,7 +8,7 @@ const PharmacyHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                pharmacy: [
+                pharmacy: 
                     {
                         username: "xxxxxxx xxxx",
                         firstname: "jxxx",
@@ -20,62 +20,54 @@ const PharmacyHOC = (WrappedComponent) => {
                         password: "",
                         cpassword: "",
                     }
-                ]
+                
             }
 
-            this.pharmacyNameChange = this.pharmacyNameChange.bind(this);
-            this.pharmacyFirstnameChange = this.pharmacyFirstnameChange.bind(this);
-            this.pharmacyLastnameChange = this.pharmacyLastnameChange.bind(this);
-            this.pharmacyEmailChange = this.pharmacyEmailChange.bind(this);
-            this.pharmacyNumberChange = this.pharmacyNumberChange.bind(this);
-            this.pharmacyCountryChange = this.pharmacyCountryChange.bind(this);
-            this.pharmacyAddressChange = this.pharmacyAddressChange.bind(this);
-            this.pharmacyPasswordChange = this.pharmacyPasswordChange.bind(this);
 
 
         }
         
-        pharmarcyFirstnameChange(e) {
+        pharmarcyFirstnameChange = (e) => {
             this.setState({
                 firstname: e.target.value,
             })
         }
-        pharmarcyLastnameChange(e) {
+        pharmarcyLastnameChange = (e) => {
             this.setState({
                 surname: e.target.value,
             })
         }
-        pharmarcyNameChange(e) {
+        pharmarcyNameChange = (e) => {
             this.setState({
                 username: e.target.value,
             })
         }
-        pharmarcyEmailChange(e) {
+        pharmarcyEmailChange = (e) => {
             this.setState({
                 email: e.target.value,
             })
         }
-        pharmarcyPasswordChange(e) {
+        pharmarcyPasswordChange = (e) => {
             this.setState({
                 password: e.target.value,
             })
         }
-        cpharmarcyPasswordChange(e) {
+        cpharmarcyPasswordChange = (e) => {
             this.setState({
                 cpassword: e.target.value,
             })
         }
-        pharmarcyNumberChange(e) {
+        pharmarcyNumberChange = (e) => {
             this.setState({
                 tel: e.target.value,
             })
         }
-        pharmarcyCountryChange(e) {
+        pharmarcyCountryChange = (e) => {
             this.setState({
                 country: e.target.value,
             })
         }
-        pharmarcyAddressChange(e) {
+        pharmarcyAddressChange = (e) => {
             this.setState({
                 address: e.target.value,
             })
@@ -87,13 +79,9 @@ const PharmacyHOC = (WrappedComponent) => {
         }
         render() {
             
+            const { username, firstname, surname, country, address, password, email, number } = this.state.pharmacy;
             return (
-               <>
-               {
-                this.state.pharmacy.map((person, index) => {
-                    const { username, firstname, surname, country, address, password, email, number } = person;
-                    console.log(username)
-                    return (<WrappedComponent key={index}
+  <WrappedComponent 
 
                         pharmacyName={username} pharmacyEmail={email} pharmacyNumber={number} pharmacyFirstname={firstname} pharmacyLastname={surname} pharmacyCountry={country}
                         pharmacyAddress={address} pharmacyPassword={password}
@@ -105,11 +93,7 @@ const PharmacyHOC = (WrappedComponent) => {
                         {...this.props}
                     />
                     )
-                })
-            }
-            <Mothercomp pharmacy={this.state.pharmacy} />
-            </>
-            )
+
         }
     }
 

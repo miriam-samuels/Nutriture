@@ -71,7 +71,7 @@ const PharmacyHOC = (WrappedComponent) => {
         }
         formSubmitted = (event) => {
             const { history } = this.props;
-            history.push('/profile/company');
+            history.push('/profile/pharmacy');
             event.preventDefault()
         };
         render() {

@@ -16,7 +16,7 @@ import Setting from '../Images/settings.svg';
 import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
-import CompanyHOC from '../components/companyHOC';
+import nutritionistHOC from '../components/nutritionistHOC';
 import AccountTab from './accountTab.js';
 
 let n = 0;
@@ -26,7 +26,6 @@ class UserProfile extends Component {
 
         this.showSlides = this.showSlides.bind(this);
     }
-
     showSlides(slideIndex) {
         const bar = Array.from(document.querySelectorAll("   #userProfile .profileMenu div"));
         const slides = Array.from(document.querySelectorAll("  #userProfile .view"));
@@ -44,7 +43,9 @@ class UserProfile extends Component {
         setTimeout(this.showSlides(n), 1);
     }
     render() {
-        const { companyName, companyEmail, companyNumber, companyAddress, companyCountry } = this.props;
+        const { nutritionistHospital, nutritionistGender, nutritionistFirstname, nutritionistLastname, nutritionistEmail, nutritionistNumber, nutritionistLicenseId, nutritionistAddress, nutritionistCountry } = this.props;
+
+
 
         return (
             <div>
@@ -55,7 +56,7 @@ class UserProfile extends Component {
                         <span className="notifications"><img src={Notify} alt="." /> </span>
                         <span className="avatar">
                             <img id="output" src={Avatar} className="userpic" alt="FilePic" />
-                            <b>{companyName} <br />{companyEmail}</b>
+                            <b>{nutritionistFirstname} {nutritionistLastname} <br />{nutritionistEmail}</b>
                         </span>
                     </div>
                 </section>
@@ -65,19 +66,21 @@ class UserProfile extends Component {
                     <div className="profileMenu">
                         <div onClick={() => this.showSlides(0)}><img src={Dashboard} alt="." />Dashboard</div>
                         <div onClick={() => this.showSlides(1)}><img src={Consultation} alt="." />Consultation History</div>
-                        <div onClick={() => this.showSlides(2)}><img src={Appointment} alt="." />Employees</div>
+                        <div onClick={() => this.showSlides(2)}><img src={Appointment} alt="." />Appointments</div>
                         <div onClick={() => this.showSlides(3)}><img src={Account} alt="." />Account</div>
-                        <div onClick={() => this.showSlides(4)}><img src={Payment} alt="." />Payments</div>
-                        <div onClick={() => this.showSlides(5)}><img src={Setting} alt="." />Settings</div>
-                        <div onClick={() => this.showSlides(6)}><img src={Logout} alt="." />Log out</div>
+                        <div onClick={() => this.showSlides(4)}><img src={Appointment} alt="." />Meal Plans</div>
+                        <div onClick={() => this.showSlides(5)}><img src={Appointment} alt="." />Recipes</div>
+                        <div onClick={() => this.showSlides(6)}><img src={Payment} alt="." />Payments</div>
+                        <div onClick={() => this.showSlides(7)}><img src={Setting} alt="." />Settings</div>
+                        <div onClick={() => this.showSlides(8)}><img src={Logout} alt="." />Log out</div>
                     </div>
                     {/* ------------------DASHBOARD---------------------- */}
                     <div className="dash view ">
 
-                        {/* ------AVAILABLE DOCTORS TAB----- */}
+                        {/* ------AVAILABLE nutritionistS TAB----- */}
                         <div className="availableDocs tab">
-                            <b>Available Doctors</b>
-                            <button onClick={() => this.showSlides(2)}>View all</button>
+                            <b>Available nutritionists</b>
+                            <button>View all</button>
                         </div>
 
                         {/* ------CONSULTATION TAB------ */}
@@ -85,7 +88,7 @@ class UserProfile extends Component {
                             <b>Consultation History</b>
                             <div className="sub">
                                 <div className="docVisited">
-                                    <b>Doctor </b>
+                                    <b>nutritionist </b>
 
                                 </div>
                                 <div className="activity">
@@ -127,13 +130,15 @@ class UserProfile extends Component {
                     <div className="account view">
                         <div className="profile tab">
                             <img id="output2" src={Avatar} alt="FilePic" />
-                            <h4>{companyName}</h4>
-                            <h5>Company</h5>
-                            <b>Company Name : {companyName} </b>
-                            <b>E-mail : {companyEmail} </b>
-                            <b>Phone Number : {companyNumber} </b>
-                            <b>Address : {companyAddress} </b>
-                            <b>Country : {companyCountry} </b>
+                            <h4>{nutritionistFirstname} {nutritionistLastname}</h4>
+                            <h5>Nutritionist</h5>
+                            <b>E-mail : {nutritionistEmail} </b>
+                            <b>Gender : {nutritionistGender} </b>
+                            <b>Phone Number : {nutritionistNumber} </b>
+                            <b>License ID Number : {nutritionistLicenseId} </b>
+                            <b>Hospital Name : {nutritionistHospital} </b>
+                            <b>Address : {nutritionistAddress} </b>
+                            <b>Country : {nutritionistCountry} </b>
 
                         </div>
                         <div className="edit tab">
@@ -155,7 +160,14 @@ class UserProfile extends Component {
                             </div>
                         </div>
                     </div>
+                    {/* -------------------------MEAL PLAN---------------------- */}
+                    <div className="mealPlan view">
 
+                    </div>
+                    {/* --------------------------RECIPE----------------------- */}
+                    <div className="Recipe view">
+
+                    </div>
                     {/* -----------------------PAYMENTS----------------------- */}
                     <div className="payments view">
                         <Payments />
@@ -175,4 +187,4 @@ class UserProfile extends Component {
     }
 }
 
-export default CompanyHOC(UserProfile);
+export default nutritionistHOC(UserProfile);

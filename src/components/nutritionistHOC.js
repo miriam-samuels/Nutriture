@@ -81,7 +81,7 @@ const NutritionistHOC = (WrappedComponent) => {
         }
         formSubmitted = (event) => {
             const { history } = this.props;
-            history.push('/profile/doctor');
+            history.push('/profile/nutritionist');
             event.preventDefault()
         }
         render() {

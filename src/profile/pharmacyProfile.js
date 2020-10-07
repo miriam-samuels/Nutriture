@@ -16,7 +16,7 @@ import Setting from '../Images/settings.svg';
 import Logout from '../Images/logout.svg';
 import Notify from '../Images/notification.svg';
 import Avatar from '../Images/avatar6.png';
-import CompanyHOC from '../components/companyHOC';
+import pharmacyHOC from '../components/pharmacyHOC';
 import AccountTab from './accountTab.js';
 
 let n = 0;
@@ -44,7 +44,7 @@ class UserProfile extends Component {
         setTimeout(this.showSlides(n), 1);
     }
     render() {
-        const { companyName, companyEmail, companyNumber, companyAddress, companyCountry } = this.props;
+        const { pharmacyName, pharmacyEmail, pharmacyNumber, pharmacyAddress, pharmacyCountry } = this.props;
 
         return (
             <div>
@@ -55,7 +55,7 @@ class UserProfile extends Component {
                         <span className="notifications"><img src={Notify} alt="." /> </span>
                         <span className="avatar">
                             <img id="output" src={Avatar} className="userpic" alt="FilePic" />
-                            <b>{companyName} <br />{companyEmail}</b>
+                            <b>{pharmacyName} <br />{pharmacyEmail}</b>
                         </span>
                     </div>
                 </section>
@@ -127,13 +127,13 @@ class UserProfile extends Component {
                     <div className="account view">
                         <div className="profile tab">
                             <img id="output2" src={Avatar} alt="FilePic" />
-                            <h4>{companyName}</h4>
-                            <h5>Company</h5>
-                            <b>Company Name : {companyName} </b>
-                            <b>E-mail : {companyEmail} </b>
-                            <b>Phone Number : {companyNumber} </b>
-                            <b>Address : {companyAddress} </b>
-                            <b>Country : {companyCountry} </b>
+                            <h4>{pharmacyName}</h4>
+                            <h5>Pharmacy</h5>
+                            <b>Pharmacy Name : {pharmacyName} </b>
+                            <b>E-mail : {pharmacyEmail} </b>
+                            <b>Phone Number : {pharmacyNumber} </b>
+                            <b>Address : {pharmacyAddress} </b>
+                            <b>Country : {pharmacyCountry} </b>
 
                         </div>
                         <div className="edit tab">
@@ -175,4 +175,4 @@ class UserProfile extends Component {
     }
 }
 
-export default CompanyHOC(UserProfile);
+export default pharmacyHOC(UserProfile);

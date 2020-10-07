@@ -11,7 +11,9 @@ import Pharmacy from './auth/pharmacy.js';
 import Company from './auth/company';
 import PatientProfile from './profile/patientProfile.js';
 import DoctorProfile from './profile/doctorProfile.js';
+import NutritionistProfile from './profile/nutritionistProfile.js';
 import CompanyProfile from './profile/companyProfile.js';
+import PharmacyProfile from './profile/pharmacyProfile.js';
 import Privacy_Policy from './terms/privacypolicy'
 import Terms from './terms/termsofservice'
 
@@ -32,7 +34,9 @@ function App() {
           <Route path='/signup/company' exact component={Company} />
           <Route path='/profile/patient' exact component={PatientProfile} />
           <Route path='/profile/doctor' exact component={DoctorProfile} />
+          <Route path='/profile/nutritionist' exact component={NutritionistProfile} />
           <Route path='/profile/company' exact component={CompanyProfile} />
+          <Route path='/profile/pharmacy' exact component={PharmacyProfile} />
           <Route path='/privacy_policy' exact component={Privacy_Policy} />
           <Route path='/terms' exact component={Terms} />
 

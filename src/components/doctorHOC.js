@@ -7,21 +7,21 @@ const DoctorHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                doctor:
-                    {
-                        firstname: "jxxx",
-                        surname: "dxx",
-                        email: "xxxxx@gmail.com ",
-                        number: "  xxx-xxx-xxx-xxx",
-                        gender: "Female",
-                        hospital: "",
-                        country: "",
-                        licenseNum: 0,
-                        address: "",
-                        password: "",
-                        cpassword: "",
-                    }
-           }   }
+        
+                    firstname: "jxxx",
+                    surname: "dxx",
+                    email: "xxxxx@gmail.com ",
+                    number: "  xxx-xxx-xxx-xxx",
+                    gender: "Female",
+                    hospital: "",
+                    country: "",
+                    licenseNum: 0,
+                    address: "",
+                    password: "",
+                    cpassword: "",
+                }
+         
+        }
 
         doctorFirstnameChange = (e) => {
             this.setState({
@@ -84,23 +84,23 @@ const DoctorHOC = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
-            const {firstname, surname, gender, hospital, licenseNum, country, address, password,cpassword, email, number } = this.state.doctor;
+            const { firstname, surname, gender, hospital, licenseNum, country, address, password, cpassword, email, number } = this.state;
             return (
-                    <WrappedComponent
+                <WrappedComponent
 
-                                doctorEmail={email} doctorNumber={number} doctorFirstname={firstname} doctorLastname={surname} doctorGender={gender} doctorHospital={hospital}
-                                doctorLicenseId={licenseNum} doctorCountry={country} doctorAddress={address} doctorPassword={password} cdoctorPassword={cpassword}
+                    doctorEmail={email} doctorNumber={number} doctorFirstname={firstname} doctorLastname={surname} doctorGender={gender} doctorHospital={hospital}
+                    doctorLicenseId={licenseNum} doctorCountry={country} doctorAddress={address} doctorPassword={password} cdoctorPassword={cpassword}
 
-                                doctorEmailChange={this.doctorEmailChange} doctorNumberChange={this.doctorNumberChange} doctorFirstnameChange={this.doctorFirstnameChange} doctorLastnameChange={this.doctorLastnameChange} doctorGenderChange={this.doctorGenderChange} doctorHospitalChange={this.doctorHospitalChange}
-                                doctorLicenseIdChange={this.doctorLicenseIdChange} doctorCountryChange={this.doctorCountryChange} doctorAddressChange={this.doctorAddressChange} doctorPasswordChange={this.doctorPasswordChange} cdoctorPasswordChange={this.cdoctorPasswordChange}
-                       
-                                formSubmitted = {this.formSubmitted}
-                                {...this.props}
-                            />
-                            )
-                      
-                    }
-        
+                    doctorEmailChange={this.doctorEmailChange} doctorNumberChange={this.doctorNumberChange} doctorFirstnameChange={this.doctorFirstnameChange} doctorLastnameChange={this.doctorLastnameChange} doctorGenderChange={this.doctorGenderChange} doctorHospitalChange={this.doctorHospitalChange}
+                    doctorLicenseIdChange={this.doctorLicenseIdChange} doctorCountryChange={this.doctorCountryChange} doctorAddressChange={this.doctorAddressChange} doctorPasswordChange={this.doctorPasswordChange} cdoctorPasswordChange={this.cdoctorPasswordChange}
+
+                    formSubmitted={this.formSubmitted}
+                    {...this.props}
+                />
+            )
+
+        }
+
     }
 
     return NewComponent;

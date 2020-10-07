@@ -8,8 +8,7 @@ const NutritionistHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                nutritionist:
-                {
+  
                     firstname: "jxxx",
                     surname: "dxx",
                     email: "xxxxx@gmail.com ",
@@ -21,7 +20,7 @@ const NutritionistHOC = (WrappedComponent) => {
                     address: "",
                     password: "",
                     cpassword: "",
-                }
+              
 
             }
         }
@@ -86,7 +85,7 @@ const NutritionistHOC = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
-            const { firstname, surname, gender, hospital, licenseNum, country, address, password, cpassword, email, number } =this.state.nutritionist;
+            const { firstname, surname, gender, hospital, licenseNum, country, address, password, cpassword, email, number } = this.state;
             return (
                 <WrappedComponent
 
@@ -101,7 +100,8 @@ const NutritionistHOC = (WrappedComponent) => {
                 />
             )
 
-        }}
+        }
+    }
 
     return NewComponent;
 }

@@ -7,19 +7,18 @@ const CompanyHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                company: 
-                    {
-                        username: "xxxxxxx xxxx",
-                        firstname: "jxxx",
-                        surname: "dxx",
-                        email: "xxxxx@gmail.com ",
-                        number: "  xxx-xxx-xxx-xxx",
-                        country: "",
-                        address: "",
-                        password: "",
-                        cpassword: "",
-                    }
-                }
+            
+                    username: "xxxxxxx xxxx",
+                    firstname: "jxxx",
+                    surname: "dxx",
+                    email: "xxxxx@gmail.com ",
+                    number: "  xxx-xxx-xxx-xxx",
+                    country: "",
+                    address: "",
+                    password: "",
+                    cpassword: "",
+              
+            }
 
         }
 
@@ -74,23 +73,23 @@ const CompanyHOC = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
-            const { username, firstname, surname, country, address, password,cpassword, email, number } = this.state.company;
+            const { username, firstname, surname, country, address, password, cpassword, email, number } = this.state;
             return (
-                            <WrappedComponent 
+                <WrappedComponent
 
-                        companyName={username} companyEmail={email} companyNumber={number} companyFirstname={firstname} companyLastname={surname} 
-                        companyCountry={country} companyAddress={address} companyPassword={password} ccompanyPassword={cpassword}
+                    companyName={username} companyEmail={email} companyNumber={number} companyFirstname={firstname} companyLastname={surname}
+                    companyCountry={country} companyAddress={address} companyPassword={password} ccompanyPassword={cpassword}
 
-                        companyNameChange={this.companyNameChange} companyEmailChange={this.companyEmailChange} companyNumberChange={this.companyNumberChange} companyFirstnameChange={this.companyFirstnameChange} 
-                        companyLastnameChange={this.companyLastnameChange} companyCountryChange={this.companyCountryChange} companyAddressChange={this.companyAddressChange} companyPasswordChange={this.companyPasswordChange} ccompanyPasswordChange={this.ccompanyPasswordChange}
+                    companyNameChange={this.companyNameChange} companyEmailChange={this.companyEmailChange} companyNumberChange={this.companyNumberChange} companyFirstnameChange={this.companyFirstnameChange}
+                    companyLastnameChange={this.companyLastnameChange} companyCountryChange={this.companyCountryChange} companyAddressChange={this.companyAddressChange} companyPasswordChange={this.companyPasswordChange} ccompanyPasswordChange={this.ccompanyPasswordChange}
 
-                        formSubmitted = {this.formSubmitted}
-                        {...this.props}
-                    />
-                    )
-                }
-       
+                    formSubmitted={this.formSubmitted}
+                    {...this.props}
+                />
+            )
         }
+
+    }
 
     return NewComponent;
 }

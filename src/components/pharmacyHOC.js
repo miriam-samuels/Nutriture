@@ -8,25 +8,22 @@ const PharmacyHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                pharmacy: 
-                    {
-                        username: "xxxxxxx xxxx",
-                        firstname: "jxxx",
-                        surname: "dxx",
-                        email: "xxxxx@gmail.com ",
-                        number: "  xxx-xxx-xxx-xxx",
-                        country: "",
-                        address: "",
-                        password: "",
-                        cpassword: "",
-                    }
-                
-            }
+
+                    username: "xxxxxxx xxxx",
+                    firstname: "jxxx",
+                    surname: "dxx",
+                    email: "xxxxx@gmail.com ",
+                    number: "  xxx-xxx-xxx-xxx",
+                    country: "",
+                    address: "",
+                    password: "",
+                    cpassword: "",
+                }
 
 
 
         }
-        
+
         pharmarcyFirstnameChange = (e) => {
             this.setState({
                 firstname: e.target.value,
@@ -76,23 +73,23 @@ const PharmacyHOC = (WrappedComponent) => {
             const { history } = this.props;
             history.push('/profile/company');
             event.preventDefault()
-        }
+        };
         render() {
-            
-            const { username, firstname, surname, country, address, password, email, number } = this.state.pharmacy;
+
+            const { username, firstname, surname, country, address, password, email, number } = this.state;
             return (
-  <WrappedComponent 
+                <WrappedComponent
 
-                        pharmacyName={username} pharmacyEmail={email} pharmacyNumber={number} pharmacyFirstname={firstname} pharmacyLastname={surname} pharmacyCountry={country}
-                        pharmacyAddress={address} pharmacyPassword={password}
+                    pharmacyName={username} pharmacyEmail={email} pharmacyNumber={number} pharmacyFirstname={firstname} pharmacyLastname={surname} pharmacyCountry={country}
+                    pharmacyAddress={address} pharmacyPassword={password}
 
-                        pharmacyNameChange={this.pharmacyNameChange} pharmacyEmailChange={this.pharmacyEmailChange} pharmacyNumberChange={this.pharmacyNumberChange} pharmacyFirstnameChange={this.pharmacyFirstnameChange} pharmacyLastnameChange={this.pharmacyLastnameChange} pharmacyCountryChange={this.pharmacyCountryChange}
-                        pharmacyAddressChange={this.pharmacyAddressChange} pharmacyPasswordChange={this.pharmacyPasswordChange}
+                    pharmacyNameChange={this.pharmacyNameChange} pharmacyEmailChange={this.pharmacyEmailChange} pharmacyNumberChange={this.pharmacyNumberChange} pharmacyFirstnameChange={this.pharmacyFirstnameChange} pharmacyLastnameChange={this.pharmacyLastnameChange} pharmacyCountryChange={this.pharmacyCountryChange}
+                    pharmacyAddressChange={this.pharmacyAddressChange} pharmacyPasswordChange={this.pharmacyPasswordChange}
 
-                        formSubmitted = {this.formSubmitted}
-                        {...this.props}
-                    />
-                    )
+                    formSubmitted={this.formSubmitted}
+                    {...this.props}
+                />
+            )
 
         }
     }

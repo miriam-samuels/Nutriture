@@ -8,21 +8,18 @@ const PatientHOC = (WrappedComponent) => {
             super(props)
 
             this.state = {
-                patient: 
-                    {
-                        email: "xxxxx@gmail.com ",
-                        number: "  xxx-xxx-xxx-xxx",
-                        username: "xxxxxxx xxxx",
-                        genotype: "AA",
-                        bloodgroup: "O+",
-                        height: "cm",
-                        weight: "kg",
-                        password: "",
-                        cpassword: "",
-                    }
-               
-            }
 
+                    email: "xxxxx@gmail.com ",
+                    number: "  xxx-xxx-xxx-xxx",
+                    username: "xxxxxxx xxxx",
+                    genotype: "AA",
+                    bloodgroup: "O+",
+                    height: "cm",
+                    weight: "kg",
+                    password: "",
+                    cpassword: "",
+                }
+            
         }
 
 
@@ -77,21 +74,21 @@ const PatientHOC = (WrappedComponent) => {
             event.preventDefault()
         }
         render() {
-            const { username, bloodgroup, genotype, height, weight, password,cpassword ,email, number } = this.state.patient;
+            const { username, bloodgroup, genotype, height, weight, password, cpassword, email, number } = this.state;
             return (
-<WrappedComponent 
+                <WrappedComponent
 
-                                patientEmail={email} patientNumber={number} patientUsername={username} patientGenotype={genotype} patientBloodgroup={bloodgroup}
-                                patientHeight={height} patientWeight={weight} patientPassword={password} cpatientPassword={cpassword}
+                    patientEmail={email} patientNumber={number} patientUsername={username} patientGenotype={genotype} patientBloodgroup={bloodgroup}
+                    patientHeight={height} patientWeight={weight} patientPassword={password} cpatientPassword={cpassword}
 
-                                patientEmailChange={this.patientEmailChange} patientNumberChange={this.patientNumberChange} patientUsernameChange={this.patientUsernameChange} patientGenotypeChange={this.patientGenotypeChange} patientBloodgroupChange={this.patientBloodgroupChange}
-                                patientHeightChange={this.patientHeightChange} patientWeightChange={this.patientWeightChange} patientPasswordChange={this.patientPasswordChange} cpatientPasswordChange={this.cpatientPasswordChange}
-                                
-                                formSubmitted = {this.formSubmitted}
-                                {...this.props}
-                            />
-                            )
-   
+                    patientEmailChange={this.patientEmailChange} patientNumberChange={this.patientNumberChange} patientUsernameChange={this.patientUsernameChange} patientGenotypeChange={this.patientGenotypeChange} patientBloodgroupChange={this.patientBloodgroupChange}
+                    patientHeightChange={this.patientHeightChange} patientWeightChange={this.patientWeightChange} patientPasswordChange={this.patientPasswordChange} cpatientPasswordChange={this.cpatientPasswordChange}
+
+                    formSubmitted={this.formSubmitted}
+                    {...this.props}
+                />
+            )
+
         }
     }
     return NewComponent;

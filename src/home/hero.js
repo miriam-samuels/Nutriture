@@ -16,7 +16,7 @@ function Hero() {
                 </ul>
                 <div className="login">
                     <span><Link to="/login">Log In </Link></span>
-                    <button><Link to="/signup">Sign Up </Link></button>
+                    <button><Link to="/signups">Sign Up </Link></button>
                 </div>
             </nav>
             <div className="heroContent">

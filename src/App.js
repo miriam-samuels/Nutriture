@@ -9,11 +9,6 @@ import Doctor from './auth/doctor.js';
 import Nutritionist from './auth/nutritionist.js';
 import Pharmacy from './auth/pharmacy.js';
 import Company from './auth/company';
-import PatientProfile from './profile/patientProfile.js';
-import DoctorProfile from './profile/doctorProfile.js';
-import NutritionistProfile from './profile/nutritionistProfile.js';
-import CompanyProfile from './profile/companyProfile.js';
-import PharmacyProfile from './profile/pharmacyProfile.js';
 import Privacy_Policy from './terms/privacypolicy'
 import Terms from './terms/termsofservice'
 
@@ -26,22 +21,16 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/login' exact component={Login} />
-          <Route path='/signup' exact component={Signup} />
-          <Route path='/signup/patient' exact component={Patient} />
-          <Route path='/signup/doctor' exact component={Doctor} />
-          <Route path='/signup/nutritionist' exact component={Nutritionist} />
-          <Route path='/signup/pharmacy' exact component={Pharmacy} />
-          <Route path='/signup/company' exact component={Company} />
-          <Route path='/profile/patient' exact component={PatientProfile} />
-          <Route path='/profile/doctor' exact component={DoctorProfile} />
-          <Route path='/profile/nutritionist' exact component={NutritionistProfile} />
-          <Route path='/profile/company' exact component={CompanyProfile} />
-          <Route path='/profile/pharmacy' exact component={PharmacyProfile} />
+          <Route path='/signups' exact component={Signup} />
+          <Route path='/signuppatient' exact component={Patient} />
+          <Route path='/signupdoctor' exact component={Doctor} />
+          <Route path='/signupnutritionist' exact component={Nutritionist} />
+          <Route path='/signuppharmacy' exact component={Pharmacy} />
+          <Route path='/signupcompany' exact component={Company} />
           <Route path='/privacy_policy' exact component={Privacy_Policy} />
           <Route path='/terms' exact component={Terms} />
 
           <Route path="/" component={Error404} />
-          {/* <Route path ='/' render={()=><div>404 ERROR</div>}/> */}
 
         </Switch>
       </BrowserRouter>

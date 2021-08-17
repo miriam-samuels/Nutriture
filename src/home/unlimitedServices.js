@@ -6,7 +6,7 @@ function UnlimitedServices() {
         <>
             <div className="unlimitedWords">
                 <h3>Enjoy unlimited health services</h3>
-                <Link to="/signup"><button>Sign Up</button></Link>
+                <Link to="/signups"><button>Sign Up</button></Link>
             </div>
             <img src={Union} alt="union" className="union1 union" />
             <img src={Union} alt="union" className="union2 union" />

@@ -64,6 +64,7 @@
   position: fixed;
   bottom: 0%;
   left: 0%;
+  z-index:0;
 }
 #login .login{
   text-align: center;
@@ -72,6 +73,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  z-index: 1;
 }
 #login .login input{
   width: 80%;
@@ -463,7 +465,7 @@
 
 @media (min-width:1000px){
   #signup .signupWords{
-    width: 55%;
+    width: 56%;
   } 
   #signup .signupBtns button{
     width: 150px;
@@ -480,7 +482,7 @@
 }
 @media (min-width:1200px){
   #signup .signupWords{
-    width: 50%;
+    width: 51%;
   } 
   #signup .signupBtns button{
     width: 170px;

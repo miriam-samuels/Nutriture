@@ -25,9 +25,10 @@ class Login extends Component {
                         <input type="password" placeholder="Password"  required />
                         <label className="forgot">Forgot Password ?</label><br />
                         <button type="submit">Log In</button><br />
-                        <label>Don't have an account ? <span><Link to="/signup">Create account</Link></span></label>
+                        <label>Don't have an account ? <span><Link to="/signups">Create account</Link></span></label>
                     </form>
                 </div>
+
                 <img src={Vector} alt="vector" className="vector" />
             </div>
         )
